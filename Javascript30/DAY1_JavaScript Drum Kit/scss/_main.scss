@@ -38,7 +38,7 @@ span:active {
         ul{
             display: flex;
             flex-wrap: wrap;
-        
+         
                 .btn_p{
                     margin:2%;
                     background-color: rgba($color: #000, $alpha: 0.8);
@@ -52,8 +52,7 @@ span:active {
                     font-size: 30px;
                     border: 3px rgb(189, 27, 27) solid;
                     box-sizing: border-box;
-                    border-radius: 10px;
-
+                    border-radius: 12px;
                 }
 
                 .play{

@@ -428,7 +428,7 @@ span:active {
   border: 3px #bd1b1b solid;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  border-radius: 10px;
+  border-radius: 12px;
 }
 
 .intro .main_nav ul .play {
