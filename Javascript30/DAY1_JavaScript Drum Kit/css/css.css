@@ -415,28 +415,30 @@ span:active {
 
 .intro .main_nav ul .btn_p {
   margin: 2%;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.8);
   width: 60px;
   line-height: 2;
   display: inline-block;
   border-radius: 10px;
+  -webkit-transition: all .07s;
+  transition: all .07s;
   color: #fff;
   text-align: center;
   font-size: 30px;
-  border: 3px #000 solid;
+  border: 3px #bd1b1b solid;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   border-radius: 10px;
 }
 
-.intro .main_nav ul .btn_p.play, .intro .main_nav ul .btn_p:hover {
+.intro .main_nav ul .play {
   border: #000 solid 2px;
-  -webkit-box-shadow: #ffc600 0px 0px 30px;
-          box-shadow: #ffc600 0px 0px 30px;
+  -webkit-box-shadow: #bd1b1b 0px 0px 50px;
+          box-shadow: #bd1b1b 0px 0px 50px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
+  -webkit-transform: scale(1.4);
+          transform: scale(1.4);
 }
 
 /* loading -----------------------------------------------------------*/
