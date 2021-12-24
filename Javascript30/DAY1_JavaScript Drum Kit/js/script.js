@@ -21,15 +21,13 @@ var myScript = function () {
 
         function removett(e) {
             if (e.propertyName !== 'transform') return;
-
             this.classList.remove('play');
-        }
 
+            console.log(e);
+        }
+        
         const keys = document.querySelectorAll('.btn_p');
         keys.forEach(key => key.addEventListener("transitionend",removett));
-
-
-
 }
 
 
