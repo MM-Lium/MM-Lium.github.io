@@ -1,0 +1,71 @@
+/* BODY,HTML
+--------------------------------------------------------------------------------------*/
+
+html,
+body {
+    width: 100%;
+    background: url('../images/background.jpg');
+    overflow: hidden;
+}
+
+html {
+    -webkit-text-size-adjust: 100%;
+}
+
+
+
+a:focus,
+a:visited,
+a:active,
+span:active {
+    background: transparent;
+    outline: none;
+    outline-offset: none;
+    // color: transparent;
+    // border: none;
+}
+
+.intro{
+    margin: auto;
+    width: 100%;
+    display: block;
+  
+
+    .main_nav{
+        width: 100%;
+        margin: auto;
+        display: block;
+        ul{
+            display: flex;
+            flex-wrap: wrap;
+         
+                .btn_p{
+                    margin:2%;
+                    background-color: rgba($color: #000, $alpha: 0.8);
+                    width: 60px;
+                    line-height: 2;
+                    display: inline-block;
+                    border-radius: 10px;
+                    transition: all .07s;
+                    color: #fff;
+                    text-align: center;
+                    font-size: 30px;
+                    border: 3px rgb(189, 27, 27) solid;
+                    box-sizing: border-box;
+                    border-radius: 12px;
+                }
+
+                .play{
+                    border: #000 solid 2px;
+                    box-shadow: rgb(189, 27, 27) 0px 0px 50px;
+                    box-sizing: border-box;
+                    transform: scale(1.4);
+
+                }
+
+            
+        }
+    }
+}
+
+
