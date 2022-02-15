@@ -26,66 +26,12 @@ span:active {
 }
 
 
-.clock {
-    .circle {
-        width: 500px;
-        height: 500px;
-        background-color: #fff;
-        border: 1px solid coral;
-        border-radius: 600px;
-        position: relative;
 
-        .number {
-            transform: rotate(30deg);
-            margin: auto;
-            position: absolute;
-            width: 0px;
-            height: 470px;
-            padding-top: 30px;
-            display: flex;
-            border-radius: 50px;
-            right: 245px;
-            top: -15px;
-
-            li {
-                height: 100%;
-                width: 100%;
-                font-size: 20px;
-                font-weight: bold;
-                transform-origin: center;
-
-                &:nth-child(1)~&:nth-child(6) {
-                    transform-origin: left bottom;
-                }
-
-                &:nth-child(7)~&:nth-child(12) {
-                    transform-origin: right bottom;
-                }
-            }
-        }
-
-        .line {
-
-            height: 5px;
-            background-color: #000;
-            position: absolute;
-            top: 50%;
-            right: 50%;
-            transform-origin: 100%;
-
-            &.hour {
-                width: 20%;
-            }
-
-            &.minute {
-                width: 40%;
-            }
-
-            &.second {
-                width: 40%;
-                height: 3px;
-            }
-
-        }
-    }
+footer p,header h1{
+    padding: 5%;
+    font-size: 20px;
+    text-align: center;
+    color: #fff;
+    font-family: '微軟正黑體';
+    font-weight: bold;
 }
