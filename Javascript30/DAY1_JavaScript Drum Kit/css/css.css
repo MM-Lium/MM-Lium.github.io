@@ -376,7 +376,7 @@ a {
 html,
 body {
   width: 100%;
-  background: url("../images/background.jpg");
+  background-color: rgba(0, 0, 0, 0.5);
   overflow: hidden;
 }
 

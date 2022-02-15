@@ -4,7 +4,8 @@
 html,
 body {
     width: 100%;
-    background: url('../images/background.jpg');
+    // background: url('../images/background.jpg');
+    background-color: rgba($color: #000, $alpha: 0.5);
     overflow: hidden;
 }
 

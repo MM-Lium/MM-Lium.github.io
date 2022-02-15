@@ -396,6 +396,7 @@ span:active {
 .clock .circle {
   width: 500px;
   height: 500px;
+  margin: auto;
   background-color: #fff;
   border: 1px solid coral;
   border-radius: 600px;
