@@ -25,6 +25,58 @@ span:active {
     // border: none;
 }
 
+:root{
+    --base:#fff00;
+    --spa:10px;
+    --blur:10px;
+}
+
+.page{
+    width: 80%;
+    margin: auto;
+    .control{
+        display: flex;
+
+        .btn{
+            margin: auto;
+            p{
+                color: #fff;
+                font-size: 40px;
+                display: inline-block;
+                vertical-align: middle;
+                font-family: '微軟正黑體';
+            }
+
+            .line{
+                display: inline-block;
+                width: 300px;
+                height: 10px;
+                background-color: #fff;
+                border-radius: 50px;
+                vertical-align: middle;
+                position: relative;
+            }
+
+            .bull{
+                width: 10px;
+                height: 10px;
+                border-radius: 50px;
+                background-color: red;
+                position: absolute;
+                top: 0;
+            }
+
+            .pic{
+                max-width: 300px;
+            }
+
+            img{
+                width: auto;
+            }
+        }
+    }
+}
+
 
 
 footer p,header h1{

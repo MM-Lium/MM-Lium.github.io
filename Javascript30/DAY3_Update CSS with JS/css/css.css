@@ -393,6 +393,56 @@ span:active {
   outline-offset: none;
 }
 
+.page {
+  width: 80%;
+  margin: auto;
+}
+
+.page .control {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.page .control .btn {
+  margin: auto;
+}
+
+.page .control .btn p {
+  color: #fff;
+  font-size: 40px;
+  display: inline-block;
+  vertical-align: middle;
+  font-family: '微軟正黑體';
+}
+
+.page .control .btn .line {
+  display: inline-block;
+  width: 300px;
+  height: 10px;
+  background-color: #fff;
+  border-radius: 50px;
+  vertical-align: middle;
+  position: relative;
+}
+
+.page .control .btn .bull {
+  width: 10px;
+  height: 10px;
+  border-radius: 50px;
+  background-color: red;
+  position: absolute;
+  top: 0;
+}
+
+.page .control .btn .pic {
+  max-width: 300px;
+}
+
+.page .control .btn img {
+  width: auto;
+}
+
 footer p, header h1 {
   padding: 5%;
   font-size: 20px;
