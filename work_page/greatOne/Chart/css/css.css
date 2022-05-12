@@ -1,0 +1,1571 @@
+@charset "UTF-8";
+/* base */
+/*==================================================*\
+        Mixins
+\*==================================================*/
+/*** Pseudo Class ***/
+/** 
+ * div:after{
+ *     @include pseudo;
+ *     top: -1rem; left: -1rem;
+ *     width: 1rem; height: 1rem;
+ * }
+ */
+/*** Media Queries (Mobile First) ***/
+/**
+* .site-header {
+*     padding: 2rem;
+*     font-size: 1.8rem;
+*
+*     @include mq('tablet-wide') {
+*         padding-top: 4rem;
+*         font-size: 2.4rem;
+*     }
+* }
+*/
+/*** Input Placeholder Style ***/
+/**
+* input,  
+* textarea {  
+*     @include placeholderStyle {
+*         color: $grey;
+*     }
+* }
+*/
+/*** Flexbox Setting ***/
+/**
+*	example:
+*	.element {
+*      @include setFlex(stretch, space-between);
+*	}
+*/
+/*** Responsive Ratio ***/
+/**
+* .ifr-wrap{
+*     @include responsive-ratio(16,9);
+* }
+*/
+/*** z-index Setting ***/
+/**
+* example:
+* .site-header {
+*     z-index: z("lightbox");
+* }
+*/
+/*** Width && Height ***/
+/**
+*	example:
+*	.element {
+*      @include wh(100%);
+*	}
+*/
+/*** Full Page Popup ***/
+/**
+*	example:
+*	.element {
+*      @include fullPopup();
+*	}
+*/
+/*** Arrow ***/
+/**
+*  $direction:
+*    1: ↑
+*    2: →
+*    3: ↓
+*    4: ←
+*	example:
+*	.element {
+*      @include arrow($bdc: #000000);
+*	}
+*/
+/*** Triangle ***/
+/**
+*  $direction:
+*    1: ↑
+*    2: →
+*    3: ↓
+*    4: ←
+*	example:
+*	.element {
+*      @include artrianglerow($bdc: #000000);
+*	}
+*/
+/*** Text Indent ***/
+/**
+*  有前綴符號或文字，但又需要文字對齊時使用
+*	example:
+*	.element {
+*      @include textIndent(7px);
+*	}
+*/
+/*
+*******************************************************************************************************************************
+----------  RESET
+*******************************************************************************************************************************
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+font,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+
+:focus {
+  outline: 0;
+}
+
+ins {
+  text-decoration: none;
+}
+
+del {
+  text-decoration: line-through;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* pc */
+/* -------------
+    $ scss
+------------- */
+/* font */
+/* color */
+/* mixin */
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+/* -------------
+    ALL USE
+------------- */
+img {
+  width: auto;
+  max-width: 100%;
+  margin: 0 auto;
+  display: block;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+  color: inherit;
+}
+
+.hide {
+  display: none;
+}
+
+.clearfix:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+._m {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  ._m {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  ._pc {
+    display: none;
+  }
+}
+
+/* vw換算 */
+@-webkit-keyframes aniPlay {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 0 100%;
+  }
+}
+
+@keyframes aniPlay {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 0 100%;
+  }
+}
+
+@-webkit-keyframes indbtn {
+  0% {
+    -webkit-filter: brightness(1);
+            filter: brightness(1);
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  20% {
+    -webkit-filter: brightness(1.1);
+            filter: brightness(1.1);
+    -webkit-transform: scale(1.05);
+            transform: scale(1.05);
+  }
+  40% {
+    -webkit-filter: brightness(1);
+            filter: brightness(1);
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  100% {
+    -webkit-filter: brightness(1);
+            filter: brightness(1);
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes indbtn {
+  0% {
+    -webkit-filter: brightness(1);
+            filter: brightness(1);
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  20% {
+    -webkit-filter: brightness(1.1);
+            filter: brightness(1.1);
+    -webkit-transform: scale(1.05);
+            transform: scale(1.05);
+  }
+  40% {
+    -webkit-filter: brightness(1);
+            filter: brightness(1);
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  100% {
+    -webkit-filter: brightness(1);
+            filter: brightness(1);
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@-webkit-keyframes timelineani {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  70% {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes timelineani {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  70% {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@-webkit-keyframes indinfoani {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  70% {
+    -webkit-transform: translateY(5%);
+            transform: translateY(5%);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes indinfoani {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  70% {
+    -webkit-transform: translateY(5%);
+            transform: translateY(5%);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+/* main */
+/* BODY,HTML
+--------------------------------------------------------------------------------------*/
+html,
+body {
+  width: 100%;
+  background: #fff;
+  font-size: 17px;
+  font-family: YahooSans-r, "微軟正黑體", "Arial", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", "Helvetica", "新細明體", "蘋果儷黑體", Verdana, sans-serif;
+  background-color: #fff;
+  overflow-x: hidden;
+  color: #39393a;
+}
+
+@media screen and (max-width: 1280px) {
+  html,
+  body {
+    font-size: 1.31772vw;
+  }
+}
+
+@media screen and (max-width: 1160px) {
+  html,
+  body {
+    font-size: 1.39092vw;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  html,
+  body {
+    font-size: 4.53333vw;
+  }
+}
+
+html.tour,
+body.tour {
+  overflow: hidden;
+}
+
+.tour_cover::before {
+  content: '';
+  background-color: rgba(0, 0, 0, 0.8);
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: absolute;
+  top: 0;
+  z-index: 10;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+/* 架構
+--------------------------------------------------------------------------------------*/
+.wrapper {
+  width: 100%;
+  position: relative;
+  margin: auto;
+  padding-top: 65px;
+}
+
+@media screen and (max-width: 1366px) {
+  .wrapper {
+    padding-top: 4.75842vw;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .wrapper {
+    padding-top: 15.5vw;
+    padding-bottom: 15vw;
+  }
+}
+
+.wrapper .kvbox {
+  margin-bottom: 20px;
+  position: relative;
+}
+
+@media screen and (max-width: 1366px) {
+  .wrapper .kvbox {
+    margin-bottom: 2.19619vw;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .wrapper .kvbox {
+    margin-bottom: 5vw;
+  }
+}
+
+.wrapper .kvbox .truck_kv {
+  position: absolute;
+  bottom: 10%;
+  left: 20%;
+  max-width: 13.17716vw;
+}
+
+@media screen and (max-width: 768px) {
+  .wrapper .kvbox .truck_kv {
+    max-width: 29.28258vw;
+    left: 5vw;
+    bottom: 3vw;
+  }
+}
+
+.wrapper.space1 {
+  margin-top: 0;
+  padding-top: 20px;
+}
+
+@media screen and (max-width: 768px) {
+  .wrapper.space1 {
+    padding-top: 5vw;
+  }
+}
+
+section {
+  width: 100%;
+  position: relative;
+  margin-bottom: 40px;
+}
+
+@media screen and (max-width: 1366px) {
+  section {
+    margin-bottom: 2.92826vw;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  section {
+    margin-bottom: 10vw;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  section.size {
+    width: 91.5%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.maincontainer {
+  width: 91.5%;
+  max-width: 1222px;
+  margin: auto;
+  position: relative;
+  padding: 0;
+}
+
+@media screen and (max-width: 1280px) {
+  .maincontainer {
+    width: 92.5%;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .maincontainer {
+    width: 95%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .maincontainer {
+    width: 100%;
+  }
+}
+
+.container {
+  width: 100%;
+  margin: auto;
+  position: relative;
+  padding: 0;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    width: 92.5%;
+  }
+}
+
+.container.full {
+  width: 91.5%;
+  max-width: 1222px;
+  margin: auto;
+  position: relative;
+  padding: 0;
+}
+
+@media screen and (max-width: 1280px) {
+  .container.full {
+    width: 92.5%;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .container.full {
+    width: 95%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container.full {
+    width: 92.5%;
+  }
+}
+
+/* 共用
+--------------------------------------------------------------------------------------*/
+/* banner
+--------------------------------------------------------------------------------------*/
+/* header
+--------------------------------------------------------------------------------------*/
+header {
+  width: 100%;
+  background: #f07700;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+
+header .inner {
+  width: 91.5%;
+  max-width: 1220px;
+  margin: auto;
+  position: relative;
+  padding: 0;
+}
+
+@media screen and (max-width: 1366px) {
+  header .inner {
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  header .inner {
+    width: 95%;
+  }
+}
+
+header .logo1 {
+  width: 175px;
+  float: left;
+  padding: 10px 0;
+}
+
+header .logo1 img {
+  width: 150px;
+}
+
+@media screen and (max-width: 1366px) {
+  header .logo1 {
+    width: 12.81113vw;
+    padding: 0.73206vw 0;
+  }
+  header .logo1 img {
+    max-width: 10.98097vw;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  header .logo1 {
+    width: 40vw;
+    float: none;
+    display: inline-block;
+    vertical-align: middle;
+  }
+  header .logo1 img {
+    max-width: 100%;
+  }
+}
+
+header .btnbox {
+  padding: 1vw 0 1vw 0;
+}
+
+header .btnbox .btnbar {
+  vertical-align: middle;
+  display: inline-block;
+  margin-left: 6vw;
+}
+
+header .btnbox .btnbar ul .bt {
+  display: inline-block;
+  width: 10vw;
+  padding-left: 1vw;
+}
+
+header .btnbox .btnbar ul .bt img {
+  width: 100%;
+}
+
+header .btnbox .btnbar ul .burger img {
+  display: none;
+}
+
+header .btnbox .btnbar ul .burger img.isclick {
+  display: block;
+}
+
+header .navbox {
+  background: #f07700;
+}
+
+@media screen and (max-width: 768px) {
+  header .navbox .logo1 {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  header .navbox {
+    height: 100vh;
+    display: none;
+    background: #ebebeb;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+/* footer
+--------------------------------------------------------------------------------------*/
+footer {
+  width: 100%;
+  background: #f07700;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  z-index: 99;
+  display: none;
+  padding: 2% 0;
+}
+
+@media screen and (max-width: 768px) {
+  footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: auto;
+  }
+}
+
+footer a {
+  width: 20%;
+}
+
+footer a img {
+  height: 6vw;
+}
+
+footer a p {
+  color: #fff;
+  font-weight: bold;
+  font-size: 2.93333vw;
+  text-align: center;
+  margin-top: 2vw;
+}
+
+footer a > * {
+  opacity: 0.5;
+}
+
+footer a.select > * {
+  opacity: 1;
+}
+
+.foot {
+  border-top: 2px solid #2d353e;
+  padding-top: 10px;
+}
+
+@media screen and (max-width: 1366px) {
+  .foot {
+    padding-top: 0.73206vw;
+    border-top: 0.14641vw solid #2d353e;
+  }
+}
+
+.foot a {
+  font-size: 0.76rem;
+  color: #abaeb2;
+  display: inline-block;
+  padding-right: 15px;
+  line-height: 1.2;
+}
+
+@media screen and (max-width: 1366px) {
+  .foot a {
+    font-size: 0.95168vw;
+    padding-right: 1.0981vw;
+  }
+}
+
+.foot a:hover {
+  text-decoration: underline;
+}
+
+/* Chart
+--------------------------------------------------------------------------------------*/
+.political .mayorChart,
+.political .politicalChart,
+.political .profileChart {
+  margin-top: 2%;
+  position: relative;
+}
+
+.political .mayorChart .choose,
+.political .politicalChart .choose,
+.political .profileChart .choose {
+  position: relative;
+}
+
+.political .mayorChart .choose select,
+.political .politicalChart .choose select,
+.political .profileChart .choose select {
+  color: #39393a;
+  padding: 10px 50px 10px 10px;
+  border-radius: 10px;
+  font-size: 1.06rem;
+  border: 1px solid #c2c2c2;
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  margin-right: 10px;
+  background: url("../images/slide.png") no-repeat transparent;
+  background-position: right 15px center;
+}
+
+@media screen and (max-width: 768px) {
+  .political .mayorChart .choose select,
+  .political .politicalChart .choose select,
+  .political .profileChart .choose select {
+    padding: 2.5vw 15.2vw 2.2vw 3vw;
+    border-radius: 5px;
+    font-size: 0.95rem;
+    margin-top: 3vw;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .political .mayorChart .choose select:nth-child(2),
+  .political .politicalChart .choose select:nth-child(2),
+  .political .profileChart .choose select:nth-child(2) {
+    margin-right: 0;
+  }
+}
+
+.political .mayorChart .choose .share,
+.political .politicalChart .choose .share,
+.political .profileChart .choose .share {
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin-top: 0;
+}
+
+@media screen and (max-width: 768px) {
+  .political .mayorChart .choose .share,
+  .political .politicalChart .choose .share,
+  .political .profileChart .choose .share {
+    bottom: -96.5vw;
+    top: auto;
+  }
+}
+
+.political .mayorChart .choose.stop,
+.political .politicalChart .choose.stop,
+.political .profileChart .choose.stop {
+  z-index: 11;
+}
+
+.political .mayorChart .choose.stop select,
+.political .politicalChart .choose.stop select,
+.political .profileChart .choose.stop select {
+  z-index: 11;
+  background-color: #fff;
+}
+
+.political .mayorChart .choose.stop .share,
+.political .politicalChart .choose.stop .share,
+.political .profileChart .choose.stop .share {
+  opacity: 0.1;
+}
+
+.political .mayorChart .choose.stop .step,
+.political .politicalChart .choose.stop .step,
+.political .profileChart .choose.stop .step {
+  bottom: 170%;
+  left: 0%;
+}
+
+@media screen and (max-width: 768px) {
+  .political .mayorChart .choose.stop .step,
+  .political .politicalChart .choose.stop .step,
+  .political .profileChart .choose.stop .step {
+    bottom: 17vw;
+  }
+}
+
+.political .mayorChart .Chart,
+.political .politicalChart .Chart,
+.political .profileChart .Chart {
+  position: relative;
+  width: 100%;
+}
+
+.political .mayorChart .Chart::before,
+.political .politicalChart .Chart::before,
+.political .profileChart .Chart::before {
+  content: '';
+  background-image: url("../images/Chart_logo.png");
+  background-image: url("../images/Chart_logo.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+  width: 160px;
+  height: 33px;
+  position: absolute;
+  right: 2%;
+  top: 8%;
+}
+
+@media screen and (max-width: 1280px) {
+  .political .mayorChart .Chart,
+  .political .politicalChart .Chart,
+  .political .profileChart .Chart {
+    padding-top: 1.83016vw;
+  }
+  .political .mayorChart .Chart::before,
+  .political .politicalChart .Chart::before,
+  .political .profileChart .Chart::before {
+    width: 11.71303vw;
+    height: 2.41581vw;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .political .mayorChart .Chart,
+  .political .politicalChart .Chart,
+  .political .profileChart .Chart {
+    margin-top: 6vw;
+  }
+  .political .mayorChart .Chart::before,
+  .political .politicalChart .Chart::before,
+  .political .profileChart .Chart::before {
+    width: 25vw;
+    height: 6vw;
+    right: 4vw;
+    top: 6vw;
+  }
+}
+
+.political .mayorChart .Chart .allimg,
+.political .politicalChart .Chart .allimg,
+.political .profileChart .Chart .allimg {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  right: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 115px;
+  opacity: 0;
+}
+
+@media screen and (max-width: 1366px) {
+  .political .mayorChart .Chart .allimg,
+  .political .politicalChart .Chart .allimg,
+  .political .profileChart .Chart .allimg {
+    width: 8.41874vw;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .political .mayorChart .Chart .allimg,
+  .political .politicalChart .Chart .allimg,
+  .political .profileChart .Chart .allimg {
+    width: 14vw;
+    right: -3%;
+  }
+}
+
+.political .mayorChart .Chart .allimg .box,
+.political .politicalChart .Chart .allimg .box,
+.political .profileChart .Chart .allimg .box {
+  width: 100%;
+  margin-bottom: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.political .mayorChart .Chart .allimg .box .pic,
+.political .politicalChart .Chart .allimg .box .pic,
+.political .profileChart .Chart .allimg .box .pic {
+  overflow: hidden;
+  width: 30px;
+  height: 30px;
+  border-radius: 30px;
+  display: inline-block;
+  vertical-align: middle;
+  border: 3px solid;
+}
+
+@media screen and (max-width: 1366px) {
+  .political .mayorChart .Chart .allimg .box .pic,
+  .political .politicalChart .Chart .allimg .box .pic,
+  .political .profileChart .Chart .allimg .box .pic {
+    width: 2.19619vw;
+    height: 2.19619vw;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .political .mayorChart .Chart .allimg .box .pic,
+  .political .politicalChart .Chart .allimg .box .pic,
+  .political .profileChart .Chart .allimg .box .pic {
+    width: 3.33333vw;
+    height: 3.33333vw;
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+}
+
+.political .mayorChart .Chart .allimg .box span,
+.political .politicalChart .Chart .allimg .box span,
+.political .profileChart .Chart .allimg .box span {
+  margin: auto;
+  margin-left: 5px;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+@media screen and (max-width: 1160px) {
+  .political .mayorChart .Chart .allimg .box span,
+  .political .politicalChart .Chart .allimg .box span,
+  .political .profileChart .Chart .allimg .box span {
+    font-size: 0.9rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .political .mayorChart .Chart .allimg .box span,
+  .political .politicalChart .Chart .allimg .box span,
+  .political .profileChart .Chart .allimg .box span {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+    font-size: 0.5rem;
+    margin-left: 0;
+  }
+}
+
+.political .mayorChart .Chart .contentbox,
+.political .politicalChart .Chart .contentbox,
+.political .profileChart .Chart .contentbox {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  min-width: 100px;
+  max-width: 200px;
+  background-color: #fff;
+  -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
+          box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
+  border-radius: 10px;
+  position: absolute;
+  padding: 10px;
+  opacity: 0;
+  display: none;
+  z-index: 2;
+}
+
+@media screen and (max-width: 768px) {
+  .political .mayorChart .Chart .contentbox,
+  .political .politicalChart .Chart .contentbox,
+  .political .profileChart .Chart .contentbox {
+    max-width: 10vw;
+    padding: 2vw;
+  }
+}
+
+.political .mayorChart .Chart .contentbox span,
+.political .politicalChart .Chart .contentbox span,
+.political .profileChart .Chart .contentbox span {
+  font-size: 0.941rem;
+  display: block;
+  line-height: 1.3;
+}
+
+@media screen and (max-width: 768px) {
+  .political .mayorChart .Chart .contentbox span,
+  .political .politicalChart .Chart .contentbox span,
+  .political .profileChart .Chart .contentbox span {
+    font-size: 0.8rem;
+  }
+}
+
+.political .mayorChart .Chart .contentbox a,
+.political .politicalChart .Chart .contentbox a,
+.political .profileChart .Chart .contentbox a {
+  padding-top: 10px;
+  color: #7e1fff;
+  border-bottom: 1px solid #7e1fff;
+  font-size: 0.882rem;
+  display: inline-block;
+  float: right;
+}
+
+@media screen and (max-width: 768px) {
+  .political .mayorChart .Chart .contentbox a,
+  .political .politicalChart .Chart .contentbox a,
+  .political .profileChart .Chart .contentbox a {
+    font-size: 0.7rem;
+  }
+}
+
+.political .mayorChart .Chart .contentbox::before,
+.political .politicalChart .Chart .contentbox::before,
+.political .profileChart .Chart .contentbox::before {
+  content: "";
+  background-image: url("../images/Chart_tri.png");
+  width: 41px;
+  height: 21px;
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.political .mayorChart .Chart .databox,
+.political .politicalChart .Chart .databox,
+.political .profileChart .Chart .databox {
+  position: absolute;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  min-width: 100px;
+  max-width: 200px;
+  background-color: #fff;
+  -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
+          box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
+  border-radius: 10px;
+  position: absolute;
+  padding: 10px;
+  opacity: 0;
+  display: none;
+  z-index: 2;
+  font-size: 14px;
+  line-height: 1.2;
+}
+
+.political .mayorChart .Chart .databox span,
+.political .politicalChart .Chart .databox span,
+.political .profileChart .Chart .databox span {
+  float: right;
+  font-weight: bold;
+  font-family: YahooSans;
+  text-shadow: 0 0 2px white, 0 0 2px white, 0 0 2px white;
+}
+
+@media screen and (max-width: 768px) {
+  .political .mayorChart .Chart .databox,
+  .political .politicalChart .Chart .databox,
+  .political .profileChart .Chart .databox {
+    padding: 2vw;
+  }
+}
+
+.political .mayorChart .Chart .profile,
+.political .politicalChart .Chart .profile,
+.political .profileChart .Chart .profile {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+}
+
+.political .mayorChart .Chart .btn,
+.political .politicalChart .Chart .btn,
+.political .profileChart .Chart .btn {
+  width: 32px;
+  height: 32px;
+  background-color: #d8bbff;
+  border-radius: 8px;
+  position: absolute;
+  bottom: 1%;
+  cursor: pointer;
+  opacity: 0.5;
+}
+
+@media screen and (max-width: 768px) {
+  .political .mayorChart .Chart .btn,
+  .political .politicalChart .Chart .btn,
+  .political .profileChart .Chart .btn {
+    width: 6vw;
+    height: 6vw;
+    bottom: 0%;
+    border-radius: 3px;
+  }
+}
+
+.political .mayorChart .Chart .btn._prev,
+.political .politicalChart .Chart .btn._prev,
+.political .profileChart .Chart .btn._prev {
+  left: 7.5%;
+}
+
+.political .mayorChart .Chart .btn._prev::before,
+.political .politicalChart .Chart .btn._prev::before,
+.political .profileChart .Chart .btn._prev::before {
+  content: '';
+  width: 10px;
+  height: 18px;
+  background: url("../images/prev.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  position: absolute;
+  display: block;
+  left: 32.5%;
+  top: 22.5%;
+}
+
+@media screen and (max-width: 768px) {
+  .political .mayorChart .Chart .btn._prev::before,
+  .political .politicalChart .Chart .btn._prev::before,
+  .political .profileChart .Chart .btn._prev::before {
+    width: 2.13333vw;
+    height: 4vw;
+    left: 1.8vw;
+    top: 1vw;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .political .mayorChart .Chart .btn._prev,
+  .political .politicalChart .Chart .btn._prev,
+  .political .profileChart .Chart .btn._prev {
+    left: 2%;
+  }
+}
+
+.political .mayorChart .Chart .btn._next,
+.political .politicalChart .Chart .btn._next,
+.political .profileChart .Chart .btn._next {
+  right: 1.5%;
+}
+
+.political .mayorChart .Chart .btn._next::before,
+.political .politicalChart .Chart .btn._next::before,
+.political .profileChart .Chart .btn._next::before {
+  content: '';
+  width: 10px;
+  height: 18px;
+  background: url("../images/next.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  position: absolute;
+  display: block;
+  right: 30%;
+  top: 22.5%;
+}
+
+@media screen and (max-width: 768px) {
+  .political .mayorChart .Chart .btn._next::before,
+  .political .politicalChart .Chart .btn._next::before,
+  .political .profileChart .Chart .btn._next::before {
+    width: 2.13333vw;
+    height: 4vw;
+    right: 1.8;
+    top: 1vw;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .political .mayorChart .Chart .btn._next,
+  .political .politicalChart .Chart .btn._next,
+  .political .profileChart .Chart .btn._next {
+    right: 2%;
+  }
+}
+
+.political .mayorChart .Chart .btn:hover,
+.political .politicalChart .Chart .btn:hover,
+.political .profileChart .Chart .btn:hover {
+  opacity: 0.8;
+}
+
+.political .mayorChart .source,
+.political .politicalChart .source,
+.political .profileChart .source {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 20px;
+}
+
+@media screen and (max-width: 768px) {
+  .political .mayorChart .source,
+  .political .politicalChart .source,
+  .political .profileChart .source {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
+.political .mayorChart .source .txt,
+.political .politicalChart .source .txt,
+.political .profileChart .source .txt {
+  position: relative;
+  margin-left: 7.5%;
+  font-size: 0.823rem;
+  font-weight: bold;
+  color: #aeaeae;
+  margin: auto;
+  margin-left: 7.5%;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+  .political .mayorChart .source .txt,
+  .political .politicalChart .source .txt,
+  .political .profileChart .source .txt {
+    line-height: 1.5;
+    font-size: 0.7rem;
+    width: 100%;
+  }
+}
+
+.political .mayorChart .source .txt img,
+.political .politicalChart .source .txt img,
+.political .profileChart .source .txt img {
+  display: inline-block;
+  vertical-align: sub;
+}
+
+@media screen and (max-width: 768px) {
+  .political .mayorChart .source .txt img,
+  .political .politicalChart .source .txt img,
+  .political .profileChart .source .txt img {
+    position: absolute;
+    left: -5vw;
+    top: 30%;
+  }
+}
+
+.political .mayorChart .source .txt .time,
+.political .politicalChart .source .txt .time,
+.political .profileChart .source .txt .time {
+  display: inline-block;
+}
+
+.political .mayorChart .source .morcity,
+.political .politicalChart .source .morcity,
+.political .profileChart .source .morcity {
+  border: 1px solid #7e1fff;
+  color: #7e1fff;
+  border-radius: 30px;
+  font-size: 1.06rem;
+  padding: 10px 20px;
+  margin-right: 1.5%;
+}
+
+@media screen and (max-width: 768px) {
+  .political .mayorChart .source .morcity,
+  .political .politicalChart .source .morcity,
+  .political .profileChart .source .morcity {
+    margin: 0 auto;
+    margin-top: 2vw;
+  }
+}
+
+.political .mayorChart .title,
+.political .politicalChart .title,
+.political .profileChart .title {
+  width: 10px;
+  font-size: 1.06rem;
+  position: absolute;
+  font-weight: bold;
+  top: 42%;
+}
+
+@media screen and (max-width: 768px) {
+  .political .mayorChart .title,
+  .political .politicalChart .title,
+  .political .profileChart .title {
+    width: 100px;
+    top: 16vw;
+    font-size: 0.8rem;
+  }
+}
+
+/* lightbox
+--------------------------------------------------------------------------------------*/
+.lb {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0%;
+  z-index: -1;
+  opacity: 0;
+  visibility: hidden;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.lbbox {
+  position: relative;
+  width: 100%;
+  max-width: 1220px;
+  margin: 4% auto 0 auto;
+}
+
+@media screen and (max-width: 1366px) {
+  .lbbox {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 1160px) {
+  .lbbox {
+    margin-top: 10vh;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .lbbox {
+    width: 100%;
+    margin-top: 8vh;
+  }
+}
+
+.lbbox .btn_x {
+  width: 30px;
+  position: absolute;
+  top: -40px;
+  right: 0%;
+  cursor: pointer;
+  -webkit-transition: all .5s ease;
+  transition: all .5s ease;
+}
+
+@media screen and (max-width: 768px) {
+  .lbbox .btn_x {
+    width: 8vw;
+    top: -10vw;
+  }
+}
+
+.lbbox .btn_x:hover {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  -webkit-transition: all .5s ease;
+  transition: all .5s ease;
+}
+
+.lbbox.explain {
+  max-width: 1000px;
+  margin-top: 10%;
+}
+
+@media screen and (max-width: 768px) {
+  .lbbox.explain {
+    margin-top: 8vh;
+    width: 95%;
+  }
+}
+
+.lbbox.explain .illustrate {
+  background-color: #fff;
+  padding: 6%;
+  border-radius: 10px;
+  width: auto;
+}
+
+@media screen and (max-width: 768px) {
+  .lbbox.explain .illustrate {
+    padding: 3vw;
+  }
+}
+
+.lbbox.explain .illustrate > ul {
+  font-size: 1.176rem;
+  padding-left: 3%;
+}
+
+@media screen and (max-width: 768px) {
+  .lbbox.explain .illustrate > ul {
+    font-size: 0.85rem;
+    padding-left: 5%;
+  }
+}
+
+.lbbox.explain .illustrate > ul > li {
+  padding-bottom: 5%;
+  list-style: disc;
+  line-height: 1.5;
+}
+
+@media screen and (max-width: 768px) {
+  .lbbox.explain .illustrate > ul > li {
+    padding-bottom: 2vw;
+  }
+}
+
+.lbbox.explain .illustrate > ul > li > ul {
+  padding-left: 3%;
+}
+
+.lbbox.explain .illustrate > ul > li > ul li {
+  list-style: decimal;
+  text-align: justify;
+}
+
+.lbbox.explain .illustrate > ul > li:last-child {
+  padding-bottom: 0;
+}
+
+.lbbox.explain .illustrate span {
+  font-weight: bold;
+}
+
+/* loading -----------------------------------------------------------*/
+.loading {
+  background: #000;
+}
+/*# sourceMappingURL=css.css.map */
