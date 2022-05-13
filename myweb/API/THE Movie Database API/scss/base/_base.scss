@@ -1,0 +1,17 @@
+// RWD VW換算
+$baseWinW: 1366;
+$baseMobileW: 750;
+$mapW: 881;
+
+
+@function win($num:1){
+    @return $num * 100 / $baseWinW+vw;
+}
+
+@function mob ($num: 1) {
+    @return $num * 100 / $baseMobileW+vw;
+}
+
+@function map ($num: 1) {
+    @return $num / $mapW*100%;
+}
