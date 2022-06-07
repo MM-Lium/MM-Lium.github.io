@@ -39,10 +39,6 @@ var myscript = function () {
         console.log(apidata);
     })
 
-
-
-
-
     /* 折線圖上的圓點顏色-------------------------------------*/
     var blue = ["#264ec2", "rgba(38,78,194,0.5)"];
     var green = ["#1ea027", "rgba(30,160,39,0.5)"];

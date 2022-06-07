@@ -1,0 +1,6 @@
+@mixin media($point) {
+    
+    @media screen and(max-width: ($point + "px")) {
+        @content;
+    }
+}

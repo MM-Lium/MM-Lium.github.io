@@ -1,0 +1,234 @@
+/*-----------文件共用css --------*/
+
+body,
+html {
+    background-color: #F2F2F2;
+    font-size: 12px;
+    font-family: "微軟正黑體";
+    font-weight: bold;
+}
+
+header {
+    padding: 10px 0;
+    background-color: #7828B4;
+    color: #fff;
+}
+
+nav {
+    margin: 0 auto;
+
+    ul {
+        display: flex;
+
+        li {
+            margin: auto;
+        }
+    }
+}
+
+section {
+    margin: 15px auto;
+}
+
+img {
+    max-width: 100%;
+}
+
+
+.con {}
+
+/*----------- 區塊 --------*/
+
+header {
+    .con {
+        padding: 2rem 0 2rem 0.5rem;
+        display: flex;
+
+        .logo {
+            margin: 0 3.17rem;
+            width: 25rem;
+            padding: 0 3.33rem;
+
+            font-size: 3rem;
+            color: #FFFFFF;
+        }
+
+        .search {
+            input {
+
+                background: transparent;
+
+                font-size: 1.67rem;
+                color: rgba(255, 255, 255, 0.50);
+                box-shadow: none;
+                border: none;
+                border-bottom: 1px solid #FFFFFF;
+            }
+        }
+    }
+}
+
+.main {
+    display: flex;
+}
+
+aside {
+
+    background: #EBEBEB;
+    margin: 0 3.17rem;
+
+    height: 100%;
+    padding: 2rem 0;
+
+    .setbox {
+        width: 25rem;
+        padding: 0 3.33rem;
+        padding-bottom: 2.08rem;
+        border-bottom: 1px solid #D7D7D7;
+        margin-bottom: 2.09rem;
+
+        .tit {
+
+            font-size: 20px;
+            color: #000000;
+            margin-bottom: 1.25rem;
+        }
+
+        select,
+        option {
+
+            font-size: 16px;
+            color: #000000;
+            padding: 0.83rem 0;
+            width: 100%;
+            background: #FFFFFF;
+            border-radius: 2px;
+            border: none;
+        }
+
+        &:last-child {
+            padding-bottom: 0;
+            border-bottom: none;
+            margin-bottom: 0;
+        }
+    }
+}
+
+article {
+    padding-right: 40px;
+    position: relative;
+
+    .information {
+        .toptxt {
+            font-size: 24px;
+            color: #000000;
+            line-height: 2.33rem;
+
+            span {
+                font-size: 24px;
+                color: #9013FE;
+                line-height: 28px;
+            }
+        }
+
+        .where {
+
+            font-size: 16px;
+            color: #9013FE;
+            margin-top: 0.67rem;
+
+            .box {
+                border: 1px solid #9013FE;
+                border-radius: 100px;
+                display: inline-block;
+                padding: 0.67rem 1.33rem;
+                margin-right: 0.67rem;
+                margin-bottom: 5px;
+            }
+        }
+    }
+
+    .myplace {
+
+        display: none;
+
+        &.on{
+            display: block;
+        }
+
+        .place {
+            background-color: #fff;
+            display: flex;
+            margin-bottom: 24px;
+
+            .pic {
+
+                width: 100%;
+                max-width: 220px;
+                height: 18.33rem;
+                overflow: hidden;
+
+            }
+
+            .info {
+                padding: 24px 20px;
+                width: fit-content;
+
+                // background-color: #fff;
+
+                .tit {
+
+                    font-size: 24px;
+                    color: #9013FE;
+                    line-height: 36px;
+                }
+
+                .txt {
+
+
+                    font-size: 16px;
+                    color: #000000;
+                    line-height: 24px;
+                }
+            }
+        }
+    }
+
+    .allpage {
+        position: fixed;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: #7828B4;
+        padding: 10px;
+        right: -30px;
+        transition: all .2s linear;
+        border-radius: 5px 0 0 5px;
+
+        &:hover{
+            right: 0;
+            background-color: rgba($color: #fff, $alpha: 1);
+            border: 2px solid #7828B4;
+            border-right: none;
+            box-sizing: border-box;
+            box-shadow: -5px 5px 0 #7828B4,0px 5px 0 #7828B4;
+        }
+
+
+        .page {
+            font-size: 20px;
+            text-align: center;
+            color: #7828B4;
+            padding: 10px 0;
+            cursor: pointer;
+
+            &.on {
+                font-size: 40px;
+                color: #7828B4;
+           
+            }
+
+        }
+
+
+    }
+}
