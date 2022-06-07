@@ -101,6 +101,8 @@
 
         $pageNo = Math.round(nowViewData.length / $locationNo);
 
+        console.log(nowViewData);
+
         for (i = 0; i < nowViewData.length; i++) {
             let $mytit = nowViewData[i].dataName ? nowViewData[i].dataName : "";
             let $mytown = nowViewData[i].dataState ? nowViewData[i].dataState : "其他";
@@ -116,7 +118,7 @@
                 '<div class="txt">' + $mytxt + '' + '</div>' +
                 '</div></div>';
 
-            if (i >= 15 && i % $locationNo == 0) {
+            if (nowViewData.length >= 15 && i >= 15 && i % $locationNo == 0) {
                 if (Math.ceil(i / $locationNo) == 1) {
                     viewPage += '<section class="myplace on" data-page="' + parseInt(i / $locationNo) + '">' + viewBox + '</section>';
                     allpage += '<div class="page on">' + parseInt(i / $locationNo) + '</div>'
@@ -128,10 +130,19 @@
                 }
 
             } else if (i == nowViewData.length - 1) {
-                viewPage += '<section class="myplace" data-page="' + Math.ceil(i / $locationNo) + '">' + viewBox + '</section>';
-                allpage += '<div class="page">' + Math.ceil(i / $locationNo) + '</div>'
-                viewBox = '';
+                if (nowViewData.length <= 15) {
+                    viewPage += '<section class="myplace on" data-page="' + Math.ceil(i / $locationNo) + '">' + viewBox + '</section>';
+                    allpage += '<div class="page on">' + Math.ceil(i / $locationNo) + '</div>'
+                    viewBox = '';
+
+                } else {
+                    viewPage += '<section class="myplace" data-page="' + Math.ceil(i / $locationNo) + '">' + viewBox + '</section>';
+                    allpage += '<div class="page">' + Math.ceil(i / $locationNo) + '</div>'
+                    viewBox = '';
+                }
+
             }
+
             allviewTown.push($mytown);
         }
 
@@ -148,48 +159,66 @@
         document.querySelector('.information .where').innerHTML = viewTown;
         document.querySelector('.information .toptxt span').innerHTML = nowViewData.length;
 
-
-
+        changePage();
+        deletecounty();
     }
-
-
-    let $myPage;
-    let $pageBtn = document.querySelectorAll('.allpage .page')
-    let $placePage = document.querySelectorAll('.allmyplace .myplace');
-
-
-    $pageBtn.onclick  = changePage;
-
-
 
     function changePage() {
+        let $myPage;
+        let $pageBtn = document.querySelectorAll('.allpage .page')
+        let $placePage = document.querySelectorAll('.allmyplace .myplace');
+        for (var i = 0; i < $pageBtn.length; i++) {
+            $pageBtn[i].addEventListener('click', function () {
 
-       
+                $pageBtn.forEach((page) => {
+                    page.classList.remove("on");
+                })
+                this.classList.add("on");
 
-        for (var i = 0; i <= $pageBtn.length; i++) {
+                $myPage = this.innerText;
 
-            if ($pageBtn) {
-
-                $pageBtn[i].addEventListener('click', function () {
-
-                    $pageBtn.forEach((page) => {
-                        page.classList.remove("on");
-                    })
-                    this.classList.add("on");
-
-                    $myPage = this.innerText;
-
-                    $placePage.forEach((place) => {
-                        place.classList.remove("on");
-                    })
-
-                    $placePage[$myPage - 1].classList.add("on");
-
-                }, false);
-
-            }
+                $placePage.forEach((place) => {
+                    place.classList.remove("on");
+                })
+                $placePage[$myPage - 1].classList.add("on");
+            }, false);
         }
-
     }
-})()
 
+    function deletecounty() {
+
+        let $allcounty = document.querySelectorAll('.information .where .box')
+
+        for (var i = 0; i < $allcounty.length; i++) {
+
+            $allcounty[i].addEventListener('click', function () {
+
+                nowViewData.forEach((county, index) => {
+
+                    if (this.innerText == "其他") {
+                        if (county.dataState == null) {
+                            nowViewData.splice(index, 1, "");
+                        }
+                    } else {
+                        if (this.innerText == county.dataState) {
+                            nowViewData.splice(index, 1, "");
+                        }
+                    }
+
+                    if (index == nowViewData.length - 1) {
+                        nowViewData = nowViewData.filter(function (item) {
+                            return item !== "";
+                        })
+                    }
+                })
+
+                this.remove();
+                createView();
+                // createView();
+            }, false);
+        }
+    }
+
+
+
+})()

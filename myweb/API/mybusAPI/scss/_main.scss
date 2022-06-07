@@ -144,6 +144,23 @@ article {
                 padding: 0.67rem 1.33rem;
                 margin-right: 0.67rem;
                 margin-bottom: 5px;
+                cursor: pointer;
+
+                &::after {
+                    content: 'x';
+                    border: 1px solid #9013FE;
+                    border-radius: 50px;
+                    line-height: 1;
+                    margin: auto;
+                    width: 15px;
+                    height: 15px;
+                    position: relative;
+                    display: inline-block;
+                    text-align: center;
+                    vertical-align: top;
+                    font-size: 10px;
+                    margin-left: 5px;
+                }
             }
         }
     }
@@ -152,7 +169,7 @@ article {
 
         display: none;
 
-        &.on{
+        &.on {
             display: block;
         }
 
@@ -204,13 +221,13 @@ article {
         transition: all .2s linear;
         border-radius: 5px 0 0 5px;
 
-        &:hover{
+        &:hover {
             right: 0;
             background-color: rgba($color: #fff, $alpha: 1);
             border: 2px solid #7828B4;
             border-right: none;
             box-sizing: border-box;
-            box-shadow: -5px 5px 0 #7828B4,0px 5px 0 #7828B4;
+            box-shadow: -5px 5px 0 #7828B4, 0px 5px 0 #7828B4;
         }
 
 
@@ -224,7 +241,7 @@ article {
             &.on {
                 font-size: 40px;
                 color: #7828B4;
-           
+
             }
 
         }
