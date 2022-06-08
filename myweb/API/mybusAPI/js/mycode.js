@@ -162,7 +162,7 @@
         changePage();
         deletecounty();
     }
-
+    /** 換頁  */
     function changePage() {
         let $myPage;
         let $pageBtn = document.querySelectorAll('.allpage .page')
@@ -184,7 +184,7 @@
             }, false);
         }
     }
-
+    /** 刪除不要的區域  */
     function deletecounty() {
 
         let $allcounty = document.querySelectorAll('.information .where .box')
