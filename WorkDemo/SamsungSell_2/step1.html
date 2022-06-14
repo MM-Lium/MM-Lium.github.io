@@ -1,0 +1,403 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Cache-Control" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1" /> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <meta name="format-detection" content="telephone=no">
+    <!--[if IE]>
+    <script type="text/javascript" src="cdn/js.lib/html5shiv.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" href="cdn/css/bootstrap.css">
+    <link rel="stylesheet" href="cdn/css/slick.css" />
+    <link rel="stylesheet" href="cdn/css/slick-theme.css" />
+    <link rel="stylesheet" href="cdn/css/css_min.css" />
+</head>
+
+<body data-p="preorder">
+
+    <!-- loading -->
+    <div class="loading"></div>
+    <div id="static_header_gnb"></div>
+
+    <!-- 內容 -->
+    <div class="wrapper">
+        
+        <!-- header -->
+        <div id="myheader" class="clearfix"></div>
+        
+        <section class="preorder">
+            <ul class="stepbox">
+                <li class="select">
+                    <div class="icon"><img src="cdn/images/icon/step_icon1.png" alt=""></div>
+                    <div class="txt">
+                        <p>Step <font>1</font></p>
+                        <span>選擇產品</span>
+                    </div>
+                </li>
+                <li>
+                    <div class="icon"><img src="cdn/images/icon/step_icon2.png" alt=""></div>
+                    <div class="txt">
+                        <p>Step <font>2</font></p>
+                        <span>填寫個人資料</span>
+                    </div>
+                </li>
+                <li>
+                    <div class="icon"><img src="cdn/images/icon/step_icon3.png" alt=""></div>
+                    <div class="txt">
+                        <p>Step <font>3</font></p>
+                        <span>確認填寫</span>
+                    </div>
+                </li>
+                <li>
+                    <div class="icon">
+                        <picture>
+                            <source srcset="cdn/images/icon/step_icon4.png" media="(min-width: 1025px)">
+                            <source srcset="cdn/images/icon/m_step_icon4.png">
+                            <img src="cdn/images/icon/step_icon4.png" alt="">
+                        </picture>
+                    </div>
+                    <div class="txt">
+                        <p>Step <font>4</font></p>
+                        <span>信用卡付款</span>
+                    </div>
+                </li>
+                <li>
+                    <div class="icon"><img src="cdn/images/icon/step_icon5.png" alt=""></div>
+                    <div class="txt">
+                        <p>Step <font>5</font></p>
+                        <span>完成預購</span>
+                    </div>
+                </li>
+            </ul>
+            <div class="container">
+                <div class="remind">
+                    <font>本網站僅限三星智慧館預購</font>；電信通路商、指定網路商城請依各通路辦法完成預購
+                </div>
+                <!-- step 1 -->
+                <div class="inner step1" data-step="1">
+                    <div class="flex">
+                        <div class="leftbox">
+                            <div class="main_phone">
+                                <img class="phoneimg"  src="cdn/images/preorder_phone.png" alt="">
+                            </div>
+                        </div>
+                        <div class="rightbox">
+                           
+                            <div class="subtitle">
+                                <p>step<font>1</font>
+                                </p><span>請選擇產品</span>
+                            </div>
+                            <div class="form">
+                                <div class="item">
+                                    <p>產品類型</p>
+                                    <dl class="choose">
+                                        <dt id="phone" class="product select" data-img="galaxyS22_1" data-page="phonetype" >
+                                            <input class="hide" name="product_type" type="radio" id="" value="手機">
+                                            <label data-omni-type="microsite" data-omni="" for="">
+                                                手機
+                                            </label>
+                                        </dt>
+                                        <dt id="tab" class="product" data-img="Tab_S8" data-page="tabtype" >
+                                            <input class="hide" name="product_type" type="radio" id="" value="">
+                                            <label data-omni-type="microsite" data-omni="" for="">
+                                                平板
+                                            </label>
+                                        </dt>
+                                    </dl>
+                                </div>
+                                <div class="item">
+                                    <p>產品型號</p>
+                                    <dl class="choose">
+                                        <dt id="s22ultra" class="phonetype select" data-img="s22ultra_1" data-pdname="s22ultra" data-pt="1">
+                                            <input class="hide" name="Product_Model" type="radio" id="" value=" S22 Ultra">
+                                            <label data-omni-type="microsite" data-omni="" for="">
+                                                Galaxy S22 Ultra
+                                            </label>
+                                        </dt>
+                                        <dt id="s22plus" class="phonetype" data-img="s22plus_1" data-pdname="s22plus" data-pt="2">
+                                            <input class="hide" name="Product_Model" type="radio" id="" value="S22+">
+                                            <label data-omni-type="microsite" data-omni="" for="">
+                                                Galaxy S22+
+                                            </label>
+                                        </dt>
+                                        <dt id="s22" class="phonetype" data-img="s22_1" data-pdname="s22" data-pt="3">
+                                            <input class="hide" name="Product_Model" type="radio" id="" value="S22">
+                                            <label data-omni-type="microsite" data-omni="" for="">
+                                                Galaxy S22
+                                            </label>
+                                        </dt>
+                                        <dt id="tab_s8" class="tabtype" data-img="Tab_S8_Ultra_1" data-pdname="tab_s8Ultra" data-pt="4">
+                                            <input class="hide" name="Product_Model" type="radio" id="" value="Tab S8 Ultra Wi-Fi 鍵盤套裝組">
+                                            <label data-omni-type="microsite" data-omni="" for="">
+                                                Tab S8 Ultra Wi-Fi 鍵盤套裝組
+                                            </label>
+                                        </dt>
+                                        <dt id="tab_s8plus" class="tabtype" data-img="Tab_S8_plus_1" data-pdname="tab_s8plus" data-pt="5">
+                                            <input class="hide" name="Product_Model" type="radio" id="" value="Tab S8+  Wi-Fi 鍵盤套裝組">
+                                            <label data-omni-type="microsite" data-omni="" for="">
+                                                Tab S8+  Wi-Fi 鍵盤套裝組
+                                            </label>
+                                        </dt>
+                                    </dl>
+                                </div>
+                                <div class="item">
+                                    <p>產品容量</p>
+                                    <dl class="choose">
+                                        <dt class="pcapa capa-s22ultra s22ultra_512g select" data-capa="s22ultra_512g" data-img="s22ultra_1" data-pt="1">
+                                            <input class="hide" name="Product_Model" type="radio" id="" value="">
+                                            <label data-omni-type="microsite" data-omni="" for="">
+                                                512GB
+                                            </label>
+                                        </dt>
+                                        <dt class="pcapa capa-s22ultra s22ultra_256g" data-capa="s22ultra_256g" data-img="s22ultra_1" data-pt="1">
+                                            <input class="hide" name="Product_Model" type="radio" id="" value="">
+                                            <label data-omni-type="microsite" data-omni="" for="">
+                                                256GB
+                                            </label>
+                                        </dt>
+                                        <dt class="pcapa capa-s22plus s22plus_256g hide" data-capa="s22plus_256g" data-img="s22plus_1" data-pt="2">
+                                            <input class="hide" name="Product_Model" type="radio" id="" value="">
+                                            <label data-omni-type="microsite" data-omni="" for="">
+                                                256GB
+                                            </label>
+                                        </dt>
+                                        <dt class="pcapa capa-s22plus s22plus_128g hide" data-capa="s22plus_128g" data-img="s22plus_1" data-pt="2">
+                                            <input class="hide" name="Product_Model" type="radio" id="" value="">
+                                            <label data-omni-type="microsite" data-omni="" for="">
+                                                128GB
+                                            </label>
+                                        </dt>
+                                        <dt class="pcapa capa-s22 s22_256g hide" data-capa="s22_256g" data-img="s22_1" data-pt="3">
+                                            <input class="hide" name="Product_Model" type="radio" id="" value="">
+                                            <label data-omni-type="microsite" data-omni="" for="">
+                                                256GB
+                                            </label>
+                                        </dt>
+                                        <dt class="pcapa capa-s22 s22_128g hide" data-capa="s22_128g" data-img="s22_2" data-pt="3">
+                                            <input class="hide" name="Product_Model" type="radio" id="" value="">
+                                            <label data-omni-type="microsite" data-omni="" for="">
+                                                128GB
+                                            </label>
+                                        </dt>
+
+                                        <dt class="pcapa capa-tab_s8Ultra tab_s8Ultra_512g hide" data-capa="tab_s8ultra_512g" data-img="Tab_S8_Ultra_1" data-pt="4">
+                                            <input class="hide" name="Product_Model" type="radio" id="" value="">
+                                            <label data-omni-type="microsite" data-omni="" for="">
+                                                512GB
+                                            </label>
+                                        </dt>
+                                        <dt class="pcapa capa-tab_s8Ultra tab_s8Ultra_256g hide" data-capa="tab_s8ultra_512g" data-img="Tab_S8_Ultra_1" data-pt="4">
+                                            <input class="hide" name="Product_Model" type="radio" id="" value="">
+                                            <label data-omni-type="microsite" data-omni="" for="">
+                                                256GB
+                                            </label>
+                                        </dt>
+
+                                        <dt class="pcapa capa-tab_s8plus tab_s8plus_512g hide" data-capa="tab_s8plus_512g" data-img="Tab_S8_plus_1" data-pt="5">
+                                            <input class="hide" name="Product_Model" type="radio" id="" value="">
+                                            <label data-omni-type="microsite" data-omni="" for="">
+                                                512GB
+                                            </label>
+                                        </dt>
+                                        <dt class="pcapa capa-tab_s8plus tab_s8plus_256g hide" data-capa="tab_s8plus_256g" data-img="Tab_S8_plus_1" data-pt="5">
+                                            <input class="hide" name="Product_Model" type="radio" id="" value="">
+                                            <label data-omni-type="microsite" data-omni="" for="">
+                                                256GB
+                                            </label>
+                                        </dt>
+                                    </dl>
+                                </div>
+                                <div class="item">
+                                    <p>顏<font>色</font></p>
+                                    <dl class="choose phonecolor">
+                                        <!-- s22ultra_black -->
+                                        <dd class="pcolor black select" data-color="black" data-pt1img="s22ultra_1" data-img="">
+                                            <input class="hide" name="Product_Color" type="radio" id="color1" value="">
+                                            <label data-omni-type="microsite" data-omni="color1" for="color1">
+                                                <img src="cdn/images/color/black.png">
+                                                <span class="SamsungSharpSans"></span>星際黑
+                                            </label>
+                                        </dd>
+                                        <!-- s22ultra_white -->
+                                        <dd class="pcolor white" data-color="white" data-pt1img="s22ultra_2" data-img="">
+                                            <input class="hide" name="Product_Color" type="radio" id="color2" value="">
+                                            <label data-omni-type="microsite" data-omni="color2" for="color2">
+                                                <img src="cdn/images/color/white.png">
+                                                <span class="SamsungSharpSans"></span>皎月白
+                                            </label>
+                                        </dd>
+                                        <!-- s22ultra_red -->
+                                        <dd class="pcolor red" data-color="red" data-pt1img="s22ultra_3" data-img="">
+                                            <input class="hide" name="Product_Color" type="radio" id="color3" value="">
+                                            <label data-omni-type="microsite" data-omni="color3" for="color3">
+                                                <img src="cdn/images/color/red.png">
+                                                <span class="SamsungSharpSans"></span>夜暮紅
+                                            </label>
+                                        </dd>
+                                        <!-- s22ultra_green -->
+                                        <dd class="pcolor green" data-color="green" data-pt1img="s22ultra_4" data-img="">
+                                            <input class="hide" name="Product_Color" type="radio" id="color4" value="">
+                                            <label data-omni-type="microsite" data-omni="color4" for="color4">
+                                                <img src="cdn/images/color/green.png">
+                                                <span class="SamsungSharpSans"></span>極光綠
+                                            </label>
+                                        </dd>
+
+                                    
+                                        <!-- s22plus_black  256G -->
+                                        <dd class="pcolor black2 hide" data-color="black2" data-pt2img="s22plus_1" data-img="">
+                                            <input class="hide" name="Product_Color" type="radio" id="color5" value="">
+                                            <label data-omni-type="microsite" data-omni="color5" for="color5">
+                                                <img src="cdn/images/color/black.png">
+                                                <span class="SamsungSharpSans"></span>星際黑
+                                            </label>
+                                        </dd>
+                                        <!-- s22plus_white-->
+                                        <dd class="pcolor white2 hide" data-color="white2" data-pt2img="s22plus_2" data-img="">
+                                            <input class="hide" name="Product_Color" type="radio" id="color6" value="">
+                                            <label data-omni-type="microsite" data-omni="color6" for="color6">
+                                                <img src="cdn/images/color/white.png">
+                                                <span class="SamsungSharpSans"></span>皎月白
+                                            </label>
+                                        </dd>
+                                        <!-- s22plus_pink-->
+                                        <dd class="pcolor pink2 hide" data-color="pink2" data-pt2img="s22plus_3" data-img="">
+                                            <input class="hide" name="Product_Color" type="radio" id="color7" value="">
+                                            <label data-omni-type="microsite" data-omni="color7" for="color7">
+                                                <img src="cdn/images/color/pink.png">
+                                                <span class="SamsungSharpSans"></span>雪霧粉
+                                            </label>
+                                        </dd>
+                                        <!-- s22plus_green-->
+                                        <dd class="pcolor green2 hide" data-color="green2" data-pt2img="s22plus_4" data-img="">
+                                            <input class="hide" name="Product_Color" type="radio" id="color8" value="">
+                                            <label data-omni-type="microsite" data-omni="color8" for="color8">
+                                                <img src="cdn/images/color/green.png">
+                                                <span class="SamsungSharpSans"></span>極光綠
+                                            </label>
+                                        </dd>
+                                         
+                                       
+                                        <!-- s22_black -->
+                                        <dd class="pcolor black3 hide" data-color="black3" data-pt3img="s22_1" data-img="">
+                                            <input class="hide" name="Product_Color" type="radio" id="color9" value="">
+                                            <label data-omni-type="microsite" data-omni="color9" for="color9">
+                                                <img src="cdn/images/color/black.png">
+                                                <span class="SamsungSharpSans"></span>星際黑
+                                            </label>
+                                        </dd>
+                                        <!-- s22_white -->
+                                        <dd class="pcolor white3 hide" data-color="white3" data-pt3img="s22_2" data-img="">
+                                            <input class="hide" name="Product_Color" type="radio" id="color10" value="">
+                                            <label data-omni-type="microsite" data-omni="color10" for="color10">
+                                                <img src="cdn/images/color/white.png">
+                                                <span class="SamsungSharpSans"></span>皎月白
+                                            </label>
+                                        </dd>
+                                        <!-- s22_pink -->
+                                        <dd class="pcolor pink3 hide" data-color="pink3" data-pt3img="s22_3" data-img="">
+                                            <input class="hide" name="Product_Color" type="radio" id="color11" value="">
+                                            <label data-omni-type="microsite" data-omni="color11" for="color11">
+                                                <img src="cdn/images/color/pink.png">
+                                                <span class="SamsungSharpSans"></span>雪霧粉
+                                            </label>
+                                        </dd>
+                                        <!-- s22_green -->
+                                        <dd class="pcolor green3 hide" data-color="green3" data-pt3img="s22_4" data-img="">
+                                            <input class="hide" name="Product_Color" type="radio" id="color12" value="">
+                                            <label data-omni-type="microsite" data-omni="color12" for="color12">
+                                                <img src="cdn/images/color/green.png">
+                                                <span class="SamsungSharpSans"></span>極光綠
+                                            </label>
+                                        </dd>
+
+
+                                        <!-- tab_s8Ultra_black -->
+                                        <dd class="pcolor black4 hide" data-color="black4" data-pt4img="Tab_S8_Ultra_1" data-img="">
+                                            <input class="hide" name="Product_Color" type="radio" id="color12" value="">
+                                            <label data-omni-type="microsite" data-omni="color12" for="color12">
+                                                <img src="cdn/images/color/black.png">
+                                                <span class="SamsungSharpSans"></span>星魅黑
+                                            </label>
+                                        </dd>
+                                       
+                                        <!-- tab_s8Ultra_silver -->
+                                        <dd class="pcolor silver3 hide" data-color="purple2" data-pt4img="Tab_S8_Ultra_2" data-img="">
+                                            <input class="hide" name="Product_Color" type="radio" id="color13" value="">
+                                            <label data-omni-type="microsite" data-omni="color13" for="color13">
+                                                <img src="cdn/images/color/silver.png">
+                                                <span class="SamsungSharpSans"></span>星魅銀
+                                            </label>
+                                        </dd>
+                                        <!-- tab_s8plus_black -->
+                                        <dd class="pcolor black4 hide" data-color="pink" data-pt5img="Tab_S8_plus_1" data-img="">
+                                            <input class="hide" name="Product_Color" type="radio" id="color9" value="">
+                                            <label data-omni-type="microsite" data-omni="color9" for="color9">
+                                                <img src="cdn/images/color/black.png">
+                                                <span class="SamsungSharpSans"></span>星魅黑
+                                            </label>
+                                        </dd>
+                                       
+                                        <!-- tab_s8plus_silver -->
+                                        <dd class="pcolor silver4 hide" data-color="purple2" data-pt5img="Tab_S8_plus_2" data-img="">
+                                            <input class="hide" name="Product_Color" type="radio" id="color10" value="">
+                                            <label data-omni-type="microsite" data-omni="color10" for="color10">
+                                                <img src="cdn/images/color/silver.png">
+                                                <span class="SamsungSharpSans"></span>星魅銀
+                                            </label>
+                                        </dd>
+                                       
+                                    </dl>
+                                </div>
+                            </div>
+                            <div class="btnbox clearfix">
+                                <a href="step2.html" class="btn btnstyle bg1 stepbtn">下一步</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- footer -->
+        <div id="myfooter"></div>
+        <!-- lightbox -->
+        <div class="lb" data-lb="remind">
+            <div class="lbbox lb-remind">
+                <div class="icon"><img src="cdn/images/lb_icon.png" alt=""></div>
+                <div class="txt">
+                    提醒您，<br class="_m">預購訂單成立後無法修改。<br>
+                    如需修改其他資訊，<br class="_m">需刪除此訂單後重新預購。
+                </div>
+                <div class="btnbox clearfix">
+                    <a href="#" class="btn btnstyle bg2  stepbtn" data-tostep="4">上一步</a>
+                    <a href="#" class="btn btnstyle bg1  stepbtn" data-tostep="5">確認填寫資料 立即線上刷卡付款</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="static_footer"></div>
+    <!-- JS -->
+    <script src="cdn/js.lib/jquery-3.3.1.min.js"></script>
+    <script src="cdn/js.lib/TweenMax.min.js"></script>
+    <script src="cdn/js.lib/detectivemobile.js"></script>
+    <script src="cdn/js.lib/jquery.touchwipe.1.1.1.js"></script>
+    <script src="cdn/js.lib/picturefill.min.js"></script>
+    <script src="cdn/js.lib/imagesloaded.js"></script>
+    <script src="cdn/js.lib/jquery.mCustomScrollbar.concat.min.js"></script>
+    <link rel="stylesheet" href="cdn/js.lib/jquery.mCustomScrollbar.css" />
+    <script src="cdn/js.lib/jquery.animateImages.js"></script>
+    <script src="cdn/js.lib/slick.min.js"></script>
+    <script src="https://twsamsungcampaign.azureedge.net/common_api/js/event-common-api.js"></script>
+    <script src="cdn/js/template.js"></script>
+    <script src="cdn/js/script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,67 @@
+/*==================================================*\
+        Page Footer
+\*==================================================*/
+
+.page-footer {
+  width: 100%;
+  position: fixed;
+  bottom: 0; left: 0;
+  background-color: rgba(0,0,0,0.3);
+  z-index: 100;
+
+  .container{
+    margin: auto;
+    padding: 15px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @include mq(tablet, max) {
+      padding: 2vw 4vw;
+    }
+
+    >img{
+      max-width: 90px;
+    }
+    >a{
+      max-width: 157px;
+      // background-color: rgba(0,0,0,0.5);
+    }
+
+    @include mq(phone-wide, max) {
+      >img{
+        max-width: 50px;
+      }
+      >a{
+        max-width: 100px;
+      }
+    }
+  }
+  
+  p {
+    width: 100%;
+    display: inline-block;
+    color: #fff;
+    font-size: 13px;
+    line-height: 1.5;
+    text-align: center;
+    font-weight: 200;
+    white-space: normal;
+    word-break: break-word;
+    margin-bottom: 10px;
+    @include mq(tablet, max) {
+      font-size: 2vw;
+    }
+  }
+  span{
+    font-family: Arial, Helvetica, sans-serif;
+    width: 100%;
+    color: #fff;
+    font-size: 16px;
+    text-transform:uppercase;
+    display: inline-block;
+    text-align: center;
+    @include mq(tablet, max) {
+      font-size: 3vw;
+    }
+  }
+}

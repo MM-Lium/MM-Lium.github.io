@@ -1,0 +1,68 @@
+/* ani -----------------------------------------------------------*/
+
+/*排隊數字切換動態 ---------------------------------------------------*/
+@keyframes animate-top {
+    0% {
+        background: #efd1c2;
+        background: -moz-linear-gradient(top, #f5e1d7 0%, #efd1c2 100%);
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f5e1d7), color-stop(100%, #efd1c2));
+        background: -webkit-linear-gradient(top, #f5e1d7 0%, #efd1c2 100%);
+        background: -o-linear-gradient(top, #f5e1d7 0%, #efd1c2 100%);
+        background: -ms-linear-gradient(top, #f5e1d7 0%, #efd1c2 100%);
+        background: linear-gradient(to bottom, #f5e1d7 0%, #efd1c2 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f5e1d7', endColorstr='#efd1c2', GradientType=0);
+    }
+
+    100% {
+        color: #09070d;
+        transform:
+            translateX(0px) translateY(0.35em) translateZ(5px) rotateX(-90deg) rotateY(0deg) rotateZ(0deg);
+    }
+}
+
+@keyframes animate-bottom {
+    0% {
+        color: #09070d;
+        opacity: 1;
+    }
+
+    100% {
+        transform:
+            translateX(0) translateY(0) translateZ(0) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes animate-top {
+    0% {
+        background: #f5e1d7;
+        background: -moz-linear-gradient(top, #f5e1d7 0%, #efd1c2 100%);
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f5e1d7), color-stop(100%, #efd1c2));
+        background: -webkit-linear-gradient(top, #f5e1d7 0%, #efd1c2 100%);
+        background: -o-linear-gradient(top, #f5e1d7 0%, #efd1c2 100%);
+        background: -ms-linear-gradient(top, #f5e1d7 0%, #efd1c2 100%);
+        background: linear-gradient(to bottom, #f5e1d7 0%, #efd1c2 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f5e1d7', endColorstr='#efd1c2', GradientType=0);
+    }
+
+    100% {
+        color: #09070d;
+        -webkit-transform:
+            translateX(0px) translateY(0.35em) translateZ(5px) rotateX(-90deg) rotateY(0deg) rotateZ(0deg);
+    }
+}
+
+@-webkit-keyframes animate-bottom {
+    0% {
+        color: #09070d;
+        opacity: 1;
+    }
+
+    100% {
+        -webkit-transform:
+            translateX(0) translateY(0) translateZ(0) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+
+        opacity: 1;
+    }
+}

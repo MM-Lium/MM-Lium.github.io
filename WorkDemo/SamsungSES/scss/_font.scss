@@ -1,0 +1,57 @@
+@font-face {
+    font-family: 'DFHsiuW3-B5';
+    src: url('../font/DFHsiu-W3-WIN-BF.woff2') format('woff2'),
+        url('../font/DFHsiu-W3-WIN-BF.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'SamsungSharpSansb';
+    src: url('../font/SamsungSharpSans-Bold.eot'),
+    url('../font/SamsungSharpSans-Bold.ttf'),
+        url('../font/SamsungSharpSans-Bold.woff') format('woff'),
+        url('../font/SamsungSharpSans-Bold.woff2') format('woff2');
+    font-weight: bold;
+    font-style: bold;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'SamsungSharpSansn';
+    src: url('../font/SamsungSharpSans-Medium.eot'),
+        url('../font/SamsungSharpSans-Medium.woff') format('woff'),
+        url('../font/SamsungSharpSans-Medium.woff2') format('woff2');
+    font-weight: Medium;
+    font-style: Medium;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'SamsungSharpSansr';
+    src: url('../font/SamsungSharpSans-Regular.eot'),
+        url('../font/SamsungSharpSans-Regular.woff') format('woff'),
+        url('../font/SamsungSharpSans-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+
+@font-face {
+    font-family: 'SamsungOnen';
+    src: url('../font/SamsungOneSCN-450.ttf');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'SamsungOneb';
+    src: url('../font/SamsungOneTCN-600.ttf'),
+    url('../font/SamsungOneTCN-600.woff') format('woff');
+    font-weight: bold;
+    font-style: bold;
+    font-display: swap;
+}

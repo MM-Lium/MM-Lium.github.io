@@ -1,0 +1,1618 @@
+
+/* 首頁
+--------------------------------------------------------------------------------------*/
+
+[role=rule]{
+    .col, .col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12, .col-auto, .col-lg, .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-auto, .col-md, .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12, .col-md-auto, .col-sm, .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-auto, .col-xl, .col-xl-1, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-10, .col-xl-11, .col-xl-12, .col-xl-auto {
+        position: relative;
+        width: 100%;
+        min-height: 1px;
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+    @media (min-width: 1000px){
+        .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12 {
+            float: left;
+        }
+    }
+    .col-12 {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 100%;
+        flex: 0 0 100%;
+        max-width: 100%;
+        @include media(w1024){
+            margin: 0 auto;
+        }
+    }
+    @media (min-width:576px) { 
+        .col-sm-6 {
+            -webkit-box-flex: 0;
+            -ms-flex: 0 0 50%;
+            flex: 0 0 50%;
+            max-width: 50%;
+        }
+    }
+    .SamsungSharpSans {
+        font-family: SamsungSharpSans,Noto Sans TC,microsoft jhenghei,微軟正黑體,Helvetica Neue,Helvetica,Arial,sans-serif;
+    }
+    img {
+        width: auto;
+        vertical-align: middle;
+        border-style: none;
+        border: 0;
+    }
+    .visible-lg, .visible-lg-block, .visible-lg-inline, .visible-lg-inline-block, .visible-md, .visible-md-block, .visible-md-inline, .visible-md-inline-block, .visible-sm, .visible-sm-block, .visible-sm-inline, .visible-sm-inline-block, .visible-xs, .visible-xs-block, .visible-xs-inline, .visible-xs-inline-block {
+        display: none !important;
+    }
+    @include media(w1024){
+        .visible-xs {
+            display: block !important;
+        }
+    }
+    b, strong {
+        font-weight: bolder;
+    }
+    hr {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        border: 0;
+        border-top: 1px solid rgba(0,0,0,.1);
+    }
+    .table {
+        width: 100%;
+        margin-bottom: 1rem;
+        background-color: transparent;
+        font-size: 17px;
+    }
+    a{
+        &.link {
+            color: #c25151;
+            text-decoration: underline;
+            i {
+                margin: 0;
+            }
+        }
+    }
+    p {
+        margin-top: 0;
+        margin-bottom: 1rem;
+        font-size: 16px;
+        color: #3a3a3a;
+        
+        @include media(w1024){
+            font-size: 4vw;
+            margin-bottom: 1rem;
+        }
+    }
+    
+    .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+        margin-bottom: .5rem;
+        font-family: inherit;
+        font-weight: 500;
+        line-height: 1.1;
+        color: inherit;
+    }
+    h6 {
+        font-size: 16px;
+        line-height: 1.4;
+    }
+    dl, ol, ul {
+        margin-top: 0;
+        margin-bottom: 1rem;
+    }
+    ol.alpha {
+        counter-reset: a;
+        line-height: 1.8em;
+        margin-top: .5em;
+    }
+    figure {
+        margin: 0 0 1rem;
+    }
+    input[type=checkbox], input[type=radio] {
+        margin: 4px 0 0;
+        margin-top: 1px\9;
+        line-height: normal;
+    }
+    small {
+        font-size: 80%;
+        font-weight: 400;
+    }
+    label {
+        max-width: 100%;
+        margin-bottom: 5px;
+        font-weight: 700;
+        display: inline-block;
+        margin-bottom: .5rem;
+    }
+    .text-left {
+        text-align: left !important;
+    }
+    .text-center {
+        text-align: center !important;
+    }
+    .vertical-middle > * {
+        display: inline-block;
+        vertical-align: middle;
+        letter-spacing: 1px;
+        white-space: normal;
+    }
+    .container{
+        // max-width: 1360px;
+        max-width: 1200px;
+        width: 91.25%;
+        margin: auto;
+        // padding-right: 15px;
+        // padding-left: 15px;
+        // @include media(w1024){
+        //     width: 100%;
+        // }
+    }
+    .row {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        margin-right: -15px;
+        margin-left: -15px;
+        &:after {
+            clear: both;
+        }
+    }
+    .hint {
+        display: block;
+        clear: both;
+        text-align: center;
+        font-size: 1rem;
+        margin-top: 20px;
+        color: #464646;
+    }
+    .notice {
+        background: #f1f1f1;
+        padding: 0 0 3em;
+    }
+    .gift {
+        text-align: center;
+        // white-space: nowrap;
+        white-space: normal;
+        >p{
+            line-height: 1.75;
+            margin-left: 70px;
+        }
+        @include media(w1024){
+            white-space: normal;
+            >p{
+                margin-left: 0;
+            }
+        }
+        .t{
+            font-size: 16px;
+            line-height: 1.7;
+            color: #000;
+            text-align: center;
+            padding-top: 30px;
+            @include media(w1024){
+                font-size: 4vw;
+                padding-top: 5vw;
+            }
+            // a{
+            //     display: inline-block;
+            //     color: #008fd3;
+            //     text-decoration: underline;
+            // }
+            font{
+                font-weight: bold;
+                color: red;
+            }
+            .bt{
+                text-align: center;
+                margin-bottom: 10px;
+                @include media(w1366){
+                    padding-top: 20px;
+                }
+                &:hover{
+                    a{ border-bottom: 1px solid transparent; }
+                }
+                // @include media(w1024){
+                //     order: 4;
+                // }
+                a{
+                    display: inline-block;
+                    // font-size: 1.15vw;
+                    font-size: 20px;
+                    color: #00b3e3;
+                    border-bottom: 1px solid #00b3e3;
+                    margin: 0 0.5vw;
+                    font-weight: bold;
+                    line-height: 1.5;
+                    @include media(w1366){
+                        font-size: 1.6vw;
+                    }
+                    @include media(w1024){
+                        font-size: 4.5vw;
+                        margin: 0 1.2vw;
+                        display: inline;
+                    }
+                }
+                &:after , &:before{
+                    content: "";
+                    display: inline-block;
+                    width: 0.8vw;
+                    height: 1.1vw;
+                    vertical-align: middle;
+                    background-repeat: no-repeat;
+                    background-position: center top;
+                    background-size: 100% auto;
+                    @include media(w1024){
+                        width: 3.2vw;
+                        height: 4vw;
+                    }
+
+                }
+                &:before{ background-image: url('../images/btn_icon_1.png'); }
+                &:after{ background-image: url('../images/btn_icon_2.png'); }
+            }
+            
+        }
+        .btns-box{
+            width: 87%;
+            margin: auto;
+            font-size: 0;
+            @include media(w1024){
+                width: 100%;
+            }
+            .bdblue{ 
+                color: #000;
+                display: inline-block;
+                line-height: 3.5;
+                background: linear-gradient(to right, #0077c8 0%, #00b3e3 100%);
+                filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0077c8', endColorstr='#00b3e3',GradientType=1 );
+                text-decoration: none;
+                padding: 2px;
+                font-size: 16px;
+                font-weight: 600;
+                margin-bottom: 20px;
+                text-align: center;
+                margin-right: 15px;
+                &:last-child{
+                    font-size: 22px;
+                    line-height: 3;
+                    @include media(w1024){
+                        width: 100%;
+                        font-size: 3.75vw;
+                    }
+                    span{
+                        padding: 0 210px;
+                        @include media(w1024){
+                            
+                            padding: 0 0;
+                        }
+                    }
+                }
+                .pay{
+                    display: inline;
+                    width: 213px;
+                    margin-right: 5px;
+                    @include media(w1024){
+                        width: 30vw;
+                    }
+                }
+                span{
+                    background-color: #fff;
+                    display: block;
+                    padding: 0 56px;
+                    @include media(w1024){
+                        padding: 0 0vw;
+                    }
+                }
+                // +.bdblue{
+                //     margin-left: 15px;
+                //     @include media(w1024){
+                //         margin-left: 0;
+                //     }
+                // }
+                @include media(w1024){
+                    width: 48%;
+                    margin: auto;
+                    margin-top: 2vw;
+                    padding: 2px;
+                    font-size: 3.3vw;
+                    letter-spacing: .5vw;
+                    &:nth-child(2){
+                        margin-left: 4%;
+                    }
+                    &:nth-child(3){
+                        width: 100%;
+                    }
+                }
+            }
+            // img{
+            //     max-width: 970px;
+            //     width: 81%;
+            //     @include media(w1024){
+            //         width: 100%;
+            //         margin-top: 3vw;
+            //     }
+            // }
+        }
+        .dotlist{
+            line-height: 1.75;
+            margin-left: 70px;
+            padding-left: 20px;
+            li{
+                list-style: disc;
+            }
+        }
+    }
+    .icon-right-open-big:before {
+        content: "\e800";
+    }
+    [class*=" icon-"]:before, [class^=icon-]:before {
+        font-family: word;
+        font-style: normal;
+        font-weight: 400;
+        speak: none;
+        display: inline-block;
+        text-decoration: inherit;
+        width: 1em;
+        margin-right: .2em;
+        text-align: center;
+        font-variant: normal;
+        text-transform: none;
+        line-height: 1em;
+        margin-left: .2em;
+    }
+}
+.rule-how{
+    padding-bottom: 0;
+    &.pl{
+        padding-left: 4rem;
+        @include media(w1024){
+            padding-left: 0;
+        }
+    }
+    nav {
+        margin-top: 75px;
+        a{
+            display: inline-block;
+            vertical-align: middle;
+            +a{
+                margin-left: 20px;
+            }
+        }
+        p{
+            padding: 12px 30px;
+            margin: 0;
+        }
+        
+        @include media(w1024){
+            margin-top: 8vw;
+            a{
+                width: 60%;
+                display: block;
+                margin: auto;
+                +a{
+                    margin: 5vw auto 0;
+                }
+            }
+            p{
+                padding: 12px 30px;
+                margin: 0;
+            }
+        }
+    }
+    h4 {
+        &.duration-text{
+            text-align: center;
+            margin-top: 50px;
+            color: #3a3a3a;
+            line-height: 1.75;
+            vertical-align: text-top;
+            font-weight: 700;
+            @include media(w1024){
+                text-align: left;
+            }
+        }
+    }
+    h5 {
+        color: #141414;
+        line-height: 1.5;
+        font-size: 20px;
+        font-weight: 700;
+        margin-top: 60px;
+        &.pl{
+            padding-left: 4rem;
+            @include media(w1024){
+                padding-left: 0;
+            }
+        }
+        img {
+            display: inline-block;
+            width: 60px;
+            + span {
+                margin-left: 0.5em;
+            }
+        }
+        + p {
+            line-height: 1.75;
+            margin-left: 78px;
+        }
+        @include media(w1024){
+            font-size: 6vw;
+            margin-top: 8vw;
+            img {
+                display: inline-block;
+                width: 13vw;
+                max-width: 60px;
+                + span {
+                    margin-left: 3vw;
+                }
+            }
+            + p {
+                margin-left: 0;
+            }
+        }
+    }
+    [role=storeset] {
+        .options {
+            margin-top: 72px;
+            width: 350px;
+            // float: left;
+            vertical-align: top;
+            display: inline-block;
+            @include media(w1024){
+                margin-top: 5vw;
+                width: 100%;
+            }
+            >img{
+                max-width: 301px;
+                width: 228px;
+                margin-bottom: 5px;
+                
+                @include media(w1024){
+                    width: 55vw;
+                }
+            }
+            p {
+                color: #565656;
+                margin-top: 15px;
+            }
+            figcaption {
+                font-weight: 700;
+                margin-top: 1em;
+                font-size: 1.3em;
+            }
+            .capacities {
+                label {
+                    width: 76px;
+                    height: 26px;
+                    opacity: .4;
+                    line-height: 26px;
+                    border-radius: 15px;
+                    box-shadow: 0 0 0 1px currentColor;
+                    cursor: pointer;
+                    + label {
+                        margin-left: 3px;
+                    }
+                }
+            }
+            .price {
+                display: none;
+                margin-top: 15px;
+            }
+            .colors {
+                label {
+                    border-radius: 50%;
+                    display: inline-block;
+                    width: 20px;
+                    height: 20px;
+                    // border: 2px solid currentColor;
+                    // background: currentColor;
+                    transition-duration: .2s;
+                    + label {
+                        margin-left: 1em;
+                    }
+                    img{
+                        width: 100%;
+                        pointer-events: none;
+                    }
+                }
+                label[data-capacity] {
+                    display: none;
+                }
+            }
+        }
+        .colors {
+            margin-top: 15px;
+        }
+        .stores {
+            display: none;
+            text-align: center;
+            margin-top: 72px;
+            width: 64%;
+            font-size: 16px;
+            // float: left;
+            vertical-align: top;
+            padding: 25px 0 17px;
+            border-radius: 1.5em;
+            box-shadow: 1px 1px 10px rgba(0,0,0,.12);
+            @include media(w1024){
+                margin-top: 0;
+                width: 100%;
+                padding: 7vw 0 4vw;
+            }
+            [class^=col] + [class^=col] {
+                border-left: 1px solid #ddd;
+                min-height: 350px;
+                
+                @include media(w1024){
+                    min-height: auto;
+                }
+            }
+            h6 {
+                img{
+                    margin: 10px auto 0;
+                }
+                @include media(w1024){
+                    img{
+                        width: 80%;
+                        max-width: 174px;
+                    }
+                }
+            }
+            ul {
+                margin-top: 30px;
+                list-style: none;
+            }
+            li{
+                list-style: none;
+                @include media(w1024){
+                    font-size: 4vw;
+                }
+                + li {
+                    margin-top: 20px;
+                }
+            }
+        }
+    }
+    // 手機圖
+    [role=storeset] .options img[for],
+    [role=storeset] .options img[for][data-capacity] {
+        display: none;
+    }
+    [role=storeset] #note20ultracolor1:checked ~ #note20ultracapacity1:checked ~ figure.options img[for=note20ultracolor1][data-capacity*=note20ultracapacity1],
+    [role=storeset] #note20ultracolor2:checked ~ #note20ultracapacity1:checked ~ figure.options img[for=note20ultracolor2][data-capacity*=note20ultracapacity1],
+    [role=storeset] #note20ultracolor3:checked ~ #note20ultracapacity1:checked ~ figure.options img[for=note20ultracolor3][data-capacity*=note20ultracapacity1],
+    [role=storeset] #note20ultracolor4:checked ~ #note20ultracapacity1:checked ~ figure.options img[for=note20ultracolor4][data-capacity*=note20ultracapacity1],
+    [role=storeset] #note20ultracolor1:checked ~ #note20ultracapacity2:checked ~ figure.options img[for=note20ultracolor1][data-capacity*=note20ultracapacity2],
+    [role=storeset] #note20ultracolor2:checked ~ #note20ultracapacity2:checked ~ figure.options img[for=note20ultracolor2][data-capacity*=note20ultracapacity2],
+    [role=storeset] #note20ultracolor3:checked ~ #note20ultracapacity2:checked ~ figure.options img[for=note20ultracolor3][data-capacity*=note20ultracapacity2],
+    [role=storeset] #note20ultracolor4:checked ~ #note20ultracapacity2:checked ~ figure.options img[for=note20ultracolor4][data-capacity*=note20ultracapacity2],
+
+    [role=storeset] #galaxyS21color1:checked ~ #galaxyS21capacity1:checked ~ figure.options img[for=galaxyS21color1][data-capacity*=galaxyS21capacity1],
+    [role=storeset] #galaxyS21color2:checked ~ #galaxyS21capacity1:checked ~ figure.options img[for=galaxyS21color2][data-capacity*=galaxyS21capacity1],
+    [role=storeset] #galaxyS21color3:checked ~ #galaxyS21capacity1:checked ~ figure.options img[for=galaxyS21color3][data-capacity*=galaxyS21capacity1],
+    [role=storeset] #galaxyS21color4:checked ~ #galaxyS21capacity1:checked ~ figure.options img[for=galaxyS21color4][data-capacity*=galaxyS21capacity1],
+    [role=storeset] #galaxyS21color1:checked ~ #galaxyS21capacity2:checked ~ figure.options img[for=galaxyS21color1][data-capacity*=galaxyS21capacity2],
+    [role=storeset] #galaxyS21color2:checked ~ #galaxyS21capacity2:checked ~ figure.options img[for=galaxyS21color2][data-capacity*=galaxyS21capacity2],
+    [role=storeset] #galaxyS21color3:checked ~ #galaxyS21capacity2:checked ~ figure.options img[for=galaxyS21color3][data-capacity*=galaxyS21capacity2],
+    [role=storeset] #galaxyS21color4:checked ~ #galaxyS21capacity2:checked ~ figure.options img[for=galaxyS21color4][data-capacity*=galaxyS21capacity2],
+
+    [role=storeset] #note20color1:checked ~ #note20capacity1:checked ~ figure.options img[for=note20color1][data-capacity*=note20capacity1],
+    [role=storeset] #note20color2:checked ~ #note20capacity1:checked ~ figure.options img[for=note20color2][data-capacity*=note20capacity1], 
+    [role=storeset] #note20color3:checked ~ #note20capacity1:checked ~ figure.options img[for=note20color3][data-capacity*=note20capacity1],
+    [role=storeset] #note20color1:checked ~ #note20capacity2:checked ~ figure.options img[for=note20color1][data-capacity*=note20capacity2],
+    [role=storeset] #note20color2:checked ~ #note20capacity2:checked ~ figure.options img[for=note20color2][data-capacity*=note20capacity2],
+    [role=storeset] #note20color3:checked ~ #note20capacity2:checked ~ figure.options img[for=note20color3][data-capacity*=note20capacity2] {
+        display: inline-block;
+    }
+
+    // 容量選擇
+    [role=storeset] #note20capacity1:checked ~ .options .capacities [for=note20capacity1],
+    [role=storeset] #note20ultracapacity1:checked ~ .options .capacities [for=note20ultracapacity1],
+    [role=storeset] #galaxyS21capacity1:checked ~ .options .capacities [for=galaxyS21capacity1],
+
+    [role=storeset] #note20capacity2:checked ~ .options .capacities [for=note20capacity2],
+    [role=storeset] #note20ultracapacity2:checked ~ .options .capacities [for=note20ultracapacity2],
+    [role=storeset] #galaxyS21capacity2:checked ~ .options .capacities [for=galaxyS21capacity2] {
+        opacity: 1;
+    }
+    // 價格顯示
+    [role=storeset] #note20color1:checked ~ #note20capacity1:checked ~ .options .price[data-capacity=note20capacity1][data-color=note20color1],
+    [role=storeset] #note20color1:checked ~ #note20capacity1:checked ~ .stores[data-capacity=note20capacity1][data-color=note20color1],
+    [role=storeset] #note20ultracolor1:checked ~ #note20ultracapacity1:checked ~ .options .price[data-capacity=note20ultracapacity1][data-color=note20ultracolor1],
+    [role=storeset] #note20ultracolor1:checked ~ #note20ultracapacity1:checked ~ .stores[data-capacity=note20ultracapacity1][data-color=note20ultracolor1],
+    [role=storeset] #galaxyS21color1:checked ~ #galaxyS21capacity1:checked ~ .options .price[data-capacity=galaxyS21capacity1][data-color=galaxyS21color1],
+    [role=storeset] #galaxyS21color1:checked ~ #galaxyS21capacity1:checked ~ .stores[data-capacity=galaxyS21capacity1][data-color=galaxyS21color1],
+
+    [role=storeset] #note20color2:checked ~ #note20capacity1:checked ~ .options .price[data-capacity=note20capacity1][data-color=note20color2],
+    [role=storeset] #note20color2:checked ~ #note20capacity1:checked ~ .stores[data-capacity=note20capacity1][data-color=note20color2],
+    [role=storeset] #note20ultracolor2:checked ~ #note20ultracapacity1:checked ~ .options .price[data-capacity=note20ultracapacity1][data-color=note20ultracolor2],
+    [role=storeset] #note20ultracolor2:checked ~ #note20ultracapacity1:checked ~ .stores[data-capacity=note20ultracapacity1][data-color=note20ultracolor2],
+    [role=storeset] #galaxyS21color2:checked ~ #galaxyS21capacity1:checked ~ .options .price[data-capacity=galaxyS21capacity1][data-color=galaxyS21color2],
+    [role=storeset] #galaxyS21color2:checked ~ #galaxyS21capacity1:checked ~ .stores[data-capacity=galaxyS21capacity1][data-color=galaxyS21color2],
+    
+    [role=storeset] #note20color3:checked ~ #note20capacity1:checked ~ .options .price[data-capacity=note20capacity1][data-color=note20color3],
+    [role=storeset] #note20color3:checked ~ #note20capacity1:checked ~ .stores[data-capacity=note20capacity1][data-color=note20color3],
+    [role=storeset] #note20ultracolor3:checked ~ #note20ultracapacity1:checked ~ .options .price[data-capacity=note20ultracapacity1][data-color=note20ultracolor3],
+    [role=storeset] #note20ultracolor3:checked ~ #note20ultracapacity1:checked ~ .stores[data-capacity=note20ultracapacity1][data-color=note20ultracolor3],
+    [role=storeset] #galaxyS21color3:checked ~ #galaxyS21capacity1:checked ~ .options .price[data-capacity=galaxyS21capacity1][data-color=galaxyS21color3],
+    [role=storeset] #galaxyS21color3:checked ~ #galaxyS21capacity1:checked ~ .stores[data-capacity=galaxyS21capacity1][data-color=galaxyS21color3],
+
+    [role=storeset] #note20ultracolor4:checked ~ #note20ultracapacity1:checked ~ .options .price[data-capacity=note20ultracapacity1][data-color=note20ultracolor4],
+    [role=storeset] #note20ultracolor4:checked ~ #note20ultracapacity1:checked ~ .stores[data-capacity=note20ultracapacity1][data-color=note20ultracolor4],
+    [role=storeset] #galaxyS21color4:checked ~ #galaxyS21capacity1:checked ~ .options .price[data-capacity=galaxyS21capacity1][data-color=galaxyS21color4],
+    [role=storeset] #galaxyS21color4:checked ~ #galaxyS21capacity1:checked ~ .stores[data-capacity=galaxyS21capacity1][data-color=galaxyS21color4],
+    
+    [role=storeset] #note20color1:checked ~ #note20capacity2:checked ~ .options .price[data-capacity=note20capacity2][data-color=note20color1],
+    [role=storeset] #note20color1:checked ~ #note20capacity2:checked ~ .stores[data-capacity=note20capacity2][data-color=note20color1],
+    [role=storeset] #note20ultracolor1:checked ~ #note20ultracapacity2:checked ~ .options .price[data-capacity=note20ultracapacity2][data-color=note20ultracolor1],
+    [role=storeset] #note20ultracolor1:checked ~ #note20ultracapacity2:checked ~ .stores[data-capacity=note20ultracapacity2][data-color=note20ultracolor1],
+    [role=storeset] #galaxyS21color1:checked ~ #galaxyS21capacity2:checked ~ .options .price[data-capacity=galaxyS21capacity2][data-color=galaxyS21color1],
+    [role=storeset] #galaxyS21color1:checked ~ #galaxyS21capacity2:checked ~ .stores[data-capacity=galaxyS21capacity2][data-color=galaxyS21color1],
+    
+    [role=storeset] #note20color2:checked ~ #note20capacity2:checked ~ .options .price[data-capacity=note20capacity2][data-color=note20color2],
+    [role=storeset] #note20color2:checked ~ #note20capacity2:checked ~ .stores[data-capacity=note20capacity2][data-color=note20color2],
+    [role=storeset] #note20ultracolor2:checked ~ #note20ultracapacity2:checked ~ .options .price[data-capacity=note20ultracapacity2][data-color=note20ultracolor2],
+    [role=storeset] #note20ultracolor2:checked ~ #note20ultracapacity2:checked ~ .stores[data-capacity=note20ultracapacity2][data-color=note20ultracolor2],
+    [role=storeset] #galaxyS21color2:checked ~ #galaxyS21capacity2:checked ~ .options .price[data-capacity=galaxyS21capacity2][data-color=galaxyS21color2],
+    [role=storeset] #galaxyS21color2:checked ~ #galaxyS21capacity2:checked ~ .stores[data-capacity=galaxyS21capacity2][data-color=galaxyS21color2],
+    
+    [role=storeset] #note20color3:checked ~ #note20capacity2:checked ~ .options .price[data-capacity=note20capacity2][data-color=note20color3],
+    [role=storeset] #note20color3:checked ~ #note20capacity2:checked ~ .stores[data-capacity=note20capacity2][data-color=note20color3],
+    [role=storeset] #note20ultracolor3:checked ~ #note20ultracapacity2:checked ~ .options .price[data-capacity=note20ultracapacity2][data-color=note20ultracolor3],
+    [role=storeset] #note20ultracolor3:checked ~ #note20ultracapacity2:checked ~ .stores[data-capacity=note20ultracapacity2][data-color=note20ultracolor3],
+    [role=storeset] #galaxyS21color3:checked ~ #galaxyS21capacity2:checked ~ .options .price[data-capacity=galaxyS21capacity2][data-color=galaxyS21color3],
+    [role=storeset] #galaxyS21color3:checked ~ #galaxyS21capacity2:checked ~ .stores[data-capacity=galaxyS21capacity2][data-color=galaxyS21color3],
+
+    [role=storeset] #note20ultracolor4:checked ~ #note20ultracapacity2:checked ~ .options .price[data-capacity=note20ultracapacity2][data-color=note20ultracolor4],
+    [role=storeset] #note20ultracolor4:checked ~ #note20ultracapacity2:checked ~ .stores[data-capacity=note20ultracapacity2][data-color=note20ultracolor4]
+    [role=storeset] #galaxyS21color4:checked ~ #galaxyS21capacity2:checked ~ .options .price[data-capacity=galaxyS21capacity2][data-color=galaxyS21color4],
+    [role=storeset] #galaxyS21color4:checked ~ #galaxyS21capacity2:checked ~ .stores[data-capacity=galaxyS21capacity2][data-color=galaxyS21color4]
+
+    {
+        display: block;
+    }
+
+    // 顏色選擇
+    [role=storeset] #note20color1:checked ~ .options .colors [for=note20color1],
+    [role=storeset] #note20ultracolor1:checked ~ .options .colors [for=note20ultracolor1],
+    [role=storeset] #galaxyS21color1:checked ~ .options .colors [for=galaxyS21color1],
+
+    [role=storeset] #note20color2:checked ~ .options .colors [for=note20color2],
+    [role=storeset] #note20ultracolor2:checked ~ .options .colors [for=note20ultracolor2],
+    [role=storeset] #galaxyS21color2:checked ~ .options .colors [for=galaxyS21color2],
+
+    [role=storeset] #note20color3:checked ~ .options .colors [for=note20color3],
+    [role=storeset] #note20ultracolor3:checked ~ .options .colors [for=note20ultracolor3],
+    [role=storeset] #galaxyS21color3:checked ~ .options .colors [for=galaxyS21color3],
+
+    [role=storeset] #note20ultracolor4:checked ~ .options .colors [for=note20ultracolor4],
+    [role=storeset] #galaxyS21color4:checked ~ .options .colors [for=galaxyS21color4] {
+        border: 3px solid #fff;
+        box-shadow: 0 0 0 1px #979797;
+        box-sizing: border-box;
+        background-size: cover;
+    }
+
+    [role=storeset] #note20ultracapacity2:checked ~ .options .colors [data-capacity*=note20ultracapacity2] {
+        display: inline-block;
+    }
+
+    [role=storeset] #note20capacity1:checked ~ .options .colors [data-capacity*=note20capacity1],
+    [role=storeset] #note20capacity2:checked ~ .options .colors [data-capacity*=note20capacity2] {
+        display: inline-block;
+    }
+
+    [role=storeset] #galaxyS21capacity1:checked ~ .options .colors [data-capacity*=galaxyS21capacity1],
+    [role=storeset] #galaxyS21capacity2:checked ~ .options .colors [data-capacity*=galaxyS21capacity2] {
+        display: inline-block;
+    }
+
+    // 通路欄
+    [role=storeset] #note20color1:checked ~ #note20capacity1:checked ~ .options .price[data-capacity=note20capacity1][data-color=note20color1],
+    [role=storeset] #note20color1:checked ~ #note20capacity1:checked ~ .stores[data-capacity=note20capacity1][data-color=note20color1],
+
+    [role=storeset] #note20ultracolor1:checked ~ #note20ultracapacity1:checked ~ .options .price[data-capacity=note20ultracapacity1][data-color=note20ultracolor1],
+    [role=storeset] #note20ultracolor1:checked ~ #note20ultracapacity1:checked ~ .stores[data-capacity=note20ultracapacity1][data-color=note20ultracolor1],
+
+    [role=storeset] #galaxyS21color1:checked ~ #galaxyS21capacity1:checked ~ .options .price[data-capacity=galaxyS21capacity1][data-color=galaxyS21color1],
+    [role=storeset] #galaxyS21color1:checked ~ #galaxyS21capacity1:checked ~ .stores[data-capacity=galaxyS21capacity1][data-color=galaxyS21color1],
+
+    [role=storeset] #note20color2:checked ~ #note20capacity1:checked ~ .options .price[data-capacity=note20capacity1][data-color=note20color2],
+    [role=storeset] #note20color2:checked ~ #note20capacity1:checked ~ .stores[data-capacity=note20capacity1][data-color=note20color2],
+
+    [role=storeset] #note20ultracolor2:checked ~ #note20ultracapacity1:checked ~ .options .price[data-capacity=note20ultracapacity1][data-color=note20ultracolor2],
+    [role=storeset] #note20ultracolor2:checked ~ #note20ultracapacity1:checked ~ .stores[data-capacity=note20ultracapacity1][data-color=note20ultracolor2],
+
+    [role=storeset] #galaxyS21color2:checked ~ #galaxyS21capacity1:checked ~ .options .price[data-capacity=galaxyS21capacity1][data-color=galaxyS21color2],
+    [role=storeset] #galaxyS21color2:checked ~ #galaxyS21capacity1:checked ~ .stores[data-capacity=galaxyS21capacity1][data-color=galaxyS21color2],
+
+    [role=storeset] #note20color3:checked ~ #note20capacity1:checked ~ .options .price[data-capacity=note20capacity1][data-color=note20color3],
+    [role=storeset] #note20color3:checked ~ #note20capacity1:checked ~ .stores[data-capacity=note20capacity1][data-color=note20color3],
+    
+    [role=storeset] #note20ultracolor3:checked ~ #note20ultracapacity1:checked ~ .options .price[data-capacity=note20ultracapacity1][data-color=note20ultracolor3],
+    [role=storeset] #note20ultracolor3:checked ~ #note20ultracapacity1:checked ~ .stores[data-capacity=note20ultracapacity1][data-color=note20ultracolor3],
+
+    [role=storeset] #galaxyS21color3:checked ~ #galaxyS21capacity1:checked ~ .options .price[data-capacity=galaxyS21capacity1][data-color=galaxyS21color3],
+    [role=storeset] #galaxyS21color3:checked ~ #galaxyS21capacity1:checked ~ .stores[data-capacity=galaxyS21capacity1][data-color=galaxyS21color3],
+
+    [role=storeset] #note20ultracolor4:checked ~ #note20ultracapacity1:checked ~ .options .price[data-capacity=note20ultracapacity1][data-color=note20ultracolor4],
+    [role=storeset] #note20ultracolor4:checked ~ #note20ultracapacity1:checked ~ .stores[data-capacity=note20ultracapacity1][data-color=note20ultracolor4],
+
+    [role=storeset] #galaxyS21color4:checked ~ #galaxyS21capacity1:checked ~ .options .price[data-capacity=galaxyS21capacity1][data-color=galaxyS21color4],
+    [role=storeset] #galaxyS21color4:checked ~ #galaxyS21capacity1:checked ~ .stores[data-capacity=galaxyS21capacity1][data-color=galaxyS21color4],
+
+    [role=storeset] #note20color1:checked ~ #note20capacity2:checked ~ .options .price[data-capacity=note20capacity2][data-color=note20color1],
+    [role=storeset] #note20color1:checked ~ #note20capacity2:checked ~ .stores[data-capacity=note20capacity2][data-color=note20color1],
+    
+    [role=storeset] #note20ultracolor1:checked ~ #note20ultracapacity2:checked ~ .options .price[data-capacity=note20ultracapacity2][data-color=note20ultracolor1],
+    [role=storeset] #note20ultracolor1:checked ~ #note20ultracapacity2:checked ~ .stores[data-capacity=note20ultracapacity2][data-color=note20ultracolor1],
+
+    [role=storeset] #galaxyS21color1:checked ~ #galaxyS21capacity2:checked ~ .options .price[data-capacity=galaxyS21capacity2][data-color=galaxyS21color1],
+    [role=storeset] #galaxyS21color1:checked ~ #galaxyS21capacity2:checked ~ .stores[data-capacity=galaxyS21capacity2][data-color=galaxyS21color1],
+
+    [role=storeset] #note20color2:checked ~ #note20capacity2:checked ~ .options .price[data-capacity=note20capacity2][data-color=note20color2],
+    [role=storeset] #note20color2:checked ~ #note20capacity2:checked ~ .stores[data-capacity=note20capacity2][data-color=note20color2],
+    
+    [role=storeset] #note20ultracolor2:checked ~ #note20ultracapacity2:checked ~ .options .price[data-capacity=note20ultracapacity2][data-color=note20ultracolor2],
+    [role=storeset] #note20ultracolor2:checked ~ #note20ultracapacity2:checked ~ .stores[data-capacity=note20ultracapacity2][data-color=note20ultracolor2],
+
+    [role=storeset] #galaxyS21color2:checked ~ #galaxyS21capacity2:checked ~ .options .price[data-capacity=galaxyS21capacity2][data-color=galaxyS21color2],
+    [role=storeset] #galaxyS21color2:checked ~ #galaxyS21capacity2:checked ~ .stores[data-capacity=galaxyS21capacity2][data-color=galaxyS21color2],
+
+    [role=storeset] #note20color3:checked ~ #note20capacity2:checked ~ .options .price[data-capacity=note20capacity2][data-color=note20color3],
+    [role=storeset] #note20color3:checked ~ #note20capacity2:checked ~ .stores[data-capacity=note20capacity2][data-color=note20color3],
+    
+    [role=storeset] #note20ultracolor3:checked ~ #note20ultracapacity2:checked ~ .options .price[data-capacity=note20ultracapacity2][data-color=note20ultracolor3],
+    [role=storeset] #note20ultracolor3:checked ~ #note20ultracapacity2:checked ~ .stores[data-capacity=note20ultracapacity2][data-color=note20ultracolor3],
+
+    [role=storeset] #galaxyS21color3:checked ~ #galaxyS21capacity2:checked ~ .options .price[data-capacity=galaxyS21capacity2][data-color=galaxyS21color3],
+    [role=storeset] #galaxyS21color3:checked ~ #galaxyS21capacity2:checked ~ .stores[data-capacity=galaxyS21capacity2][data-color=galaxyS21color3],
+
+    [role=storeset] #note20ultracolor4:checked ~ #note20ultracapacity2:checked ~ .options .price[data-capacity=note20ultracapacity2][data-color=note20ultracolor4],
+    [role=storeset] #note20ultracolor4:checked ~ #note20ultracapacity2:checked ~ .stores[data-capacity=note20ultracapacity2][data-color=note20ultracolor4],
+
+    [role=storeset] #galaxyS21color4:checked ~ #galaxyS21capacity2:checked ~ .options .price[data-capacity=galaxyS21capacity2][data-color=galaxyS21color4],
+    [role=storeset] #galaxyS21color4:checked ~ #galaxyS21capacity2:checked ~ .stores[data-capacity=galaxyS21capacity2][data-color=galaxyS21color4] {
+        display: inline-block;
+    }
+
+    // 各通路預購辦法
+    .table {
+        nav {
+            text-align: center;
+            margin-top: 10px;
+            margin-bottom: 35px;
+            label,.tab4 {
+                cursor: pointer;
+                display: inline-block;
+                height: 60px;
+                line-height: 60px;
+                width: 20%;
+                margin: 0;
+                background: #f1f1f1;
+                text-align: center;
+                font-weight: 400;
+                // box-shadow: inset 0 0 0 3px #fff;
+                transition-duration: .2s;
+                font-weight: bold;
+                @include media(w1024){
+                    line-height: 45px;
+                    height: 45px;
+                    width: 32%;
+                    font-size: 3.6vw;
+                }
+                +label{
+                    // margin-left: 3px;
+                }
+                i {
+                    -webkit-transform: rotate(90deg);
+                    transform: rotate(90deg);
+                    font-style: normal;
+                    display: inline-block;
+                }
+            }
+            
+            @include media(w1024){
+                margin-top: 8vw;
+                margin-bottom: 5vw;
+                width: 100vw;
+                box-sizing: border-box;
+                padding-right: 8vw;
+                label {
+                    height: 45px;
+                    line-height: 45px;
+                    width: 32%;
+                    +label{
+                        // margin-left: 2%;
+                    }
+                }
+            }
+        }
+        #tab1:checked ~ nav label[for=tab1], 
+        #tab2:checked ~ nav label[for=tab2],
+        #tab3:checked ~ nav label[for=tab3] {
+            // box-shadow: none;
+            color: #fff;
+            /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#00b1e2+0,007bca+100 */
+            background: #00b1e2; /* Old browsers */
+            background: -moz-linear-gradient(-45deg, #00b1e2 0%, #007bca 100%); /* FF3.6-15 */
+            background: -webkit-linear-gradient(-45deg, #00b1e2 0%,#007bca 100%); /* Chrome10-25,Safari5.1-6 */
+            background: linear-gradient(135deg, #00b1e2 0%,#007bca 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00b1e2', endColorstr='#007bca',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+        }
+        
+        @include media(w1024){
+            .tabs {
+                width: 96vw;
+                overflow: auto;
+                padding-right: 4vw;
+            }
+        }
+        .subnav{
+            ul{ 
+                display: none; 
+                text-align: center;
+                // &:nth-child(1){ 
+                //     text-align: center; 
+                //     @include media(w1024){
+                //         text-align: left;
+                //     }
+                // }
+                // &:nth-child(2){ text-align: left; }
+                li{
+                    display: inline-block;
+                    font-size: 19px;
+                    color: #535353;
+                    font-weight: bold;
+                    padding: 0px 25px 15px 0;
+                    cursor: pointer;
+                    position: relative;
+                    @include media(w1024){
+                        font-size: 3.5vw;
+                        padding: 1vw 4vw 1.5vw 0;
+                        padding-left: 0;
+                    }
+                    &:after{
+                        content: "";
+                        display: block;
+                        width: 100%;
+                        height: 3px;
+                        /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#00b1e2+0,007bca+100 */
+                        background: #00b1e2; /* Old browsers */
+                        background: -moz-linear-gradient(-45deg, #00b1e2 0%, #007bca 100%); /* FF3.6-15 */
+                        background: -webkit-linear-gradient(-45deg, #00b1e2 0%,#007bca 100%); /* Chrome10-25,Safari5.1-6 */
+                        background: linear-gradient(135deg, #00b1e2 0%,#007bca 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+                        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00b1e2', endColorstr='#007bca',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+                        margin-top: 7px;
+                        opacity: 0; 
+                        @include media(w1024){
+                            height: 0.6vw;
+                            margin-top: 0.6vw;
+                        }
+                    }
+                    &:hover{
+                        &:after{
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+        }
+        table{
+            display: none;
+            width: 100%;
+            @include media(w1024){
+                width: 250%;
+            }
+            table{
+                display: table;
+                @include media(w1024){
+                    width: 100%;
+                }
+                td{
+                    padding: 0;
+                    border: 0;
+                    line-height: 1.8;
+                    padding: 0 .4em;
+                    
+                    &:first-child {
+                        white-space: normal;
+                        text-align: left;
+                        width: 79%;
+                    }
+                    &:nth-child(2) {
+                        width: auto;
+                    }
+                    @include media(w1024){
+                        display: block;
+                        &:first-child {
+                            width: 100%;
+                        }
+                        &:nth-child(2) {
+                            margin-top: 3vw;
+                        }
+                    }
+                }
+            }
+            td, th {
+                padding: 8px;
+                vertical-align: top;
+                font-size: 16px;
+                @include media(w1024){
+                    font-size: 4vw;
+                }
+            }
+            th {
+                line-height: 50px;
+                text-align: center;
+                background: #535353;
+                color: #fff;
+                font-weight: 400;
+                padding: 0;
+                border: 1px solid #535353;
+                border-right: 1px solid #fff;
+                &:last-child{
+                    border-right: 1px solid #535353;
+                }
+            }
+            td {
+                vertical-align: middle;
+                padding: 30px 15px;
+                // background: #f1f1f1;
+                line-height: 1.8;
+                border: 1px solid #535353;
+                vertical-align: top;
+                &:first-child {
+                    width: 10em;
+                    white-space: nowrap;
+                    text-align: center;
+                    vertical-align: middle;
+                }
+                &:nth-child(3) {
+                    width: 25%;
+                    
+                    @include media(w1024){
+                        width: 28%;
+                    }
+                }
+                p{
+                    margin-bottom: 1em;
+                }
+                .learnmore {
+                    color: #fff;
+                    // background: #18299d;
+                    // border-radius: 1.5em;
+                    border-radius: 30px;
+                    text-decoration: none;
+                    font-weight: 700;
+                    white-space: nowrap;
+                    margin-top: 15px;
+                    p{
+                        padding: 5px 30px;
+                        margin: 0;
+                        font-size: 20px;
+                        // background: #f1f1f1;
+                        font-size: 18px;
+                    }
+                    &:hover{
+                        p{
+                            // padding: 0 15px;
+                            margin: 0;
+                            background: transparent;
+                        }
+                    }
+                }
+            }
+            a {
+                color: #18299d;
+                text-decoration: underline;
+                display: inline-block;
+            }
+            h6 {
+                font-size: 1.1111111111em !important;
+                color: #c25151;
+                font-weight: 700;
+                margin: 0 0 .75em;
+            }
+            ul {
+                padding: 0 0 0 1.2em;
+                li {
+                    list-style: disc;
+                }
+            }
+        }
+    }
+    #tab1:checked ~ .tabs table[for=tab1], 
+    #tab2:checked ~ .tabs table[for=tab2],
+    #tab3:checked ~ .tabs table[for=tab3] {
+        display: table;
+    }
+    #tab1:checked ~ .subnav ul[for=tab1], 
+    #tab2:checked ~ .subnav ul[for=tab2],
+    #tab3:checked ~ .subnav ul[for=tab3] {
+        display: block;
+    }
+
+    // 預購禮
+    .gift {
+        .title{
+            font-size: 20px;
+            color: #016fb8;
+            font-weight: bold;
+            padding-left: 75px;
+            @include media(w1024){
+                padding-left: 0;
+            }
+        }
+        aside {
+            line-height: 3em;
+            span {
+                display: inline-block;
+                vertical-align: top;
+            }
+            p{
+                // font-size: 20px;
+                line-height: 1.7;
+                padding-left: 75px;
+                @include media(w1024){
+                    padding-left: 0;
+                }
+            }
+            b + span {
+                width: auto;
+                max-width: calc(100% - 9em);
+                text-align: left;
+                white-space: normal;
+                padding: .8em 0;
+                line-height: 1.4em;
+            }
+            i {
+                transform: rotate(90deg);
+                font-style: normal;
+                display: inline-block;
+                margin: 0 .65em;
+            }
+            ol {
+                font-size: 16px;
+                margin-left: 78px;
+                margin-top: -.2em;
+                list-style-type: decimal;
+                line-height: 2;
+                padding-left: 1rem;
+                
+                @include media(w1024){
+                    margin-left: 0.5em;
+                    font-size: 4vw;
+                }
+                li {
+                    white-space: normal;
+                }
+            }
+            a{
+                display: inline;
+                color: #18299d;
+                text-decoration: underline;
+            }
+        }
+        .btns{
+            text-align: left;
+            padding-left: 70px;
+            margin-top: 30px;
+            margin-bottom: 80px;
+            @include media(w1024){
+                padding-left: 0;
+                margin-top: 5vw;
+                margin-bottom: 10vw;
+            }
+            a{
+                display: inline-block;
+                padding: 2px;
+                width: 265px;
+                text-align: center;
+                margin-right: 10px;
+                /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#00b1e2+0,007bca+100 */
+                background: #00b1e2; /* Old browsers */
+                background: -moz-linear-gradient(-45deg, #00b1e2 0%, #007bca 100%); /* FF3.6-15 */
+                background: -webkit-linear-gradient(-45deg, #00b1e2 0%,#007bca 100%); /* Chrome10-25,Safari5.1-6 */
+                background: linear-gradient(135deg, #00b1e2 0%,#007bca 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+                filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00b1e2', endColorstr='#007bca',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+                @include media(w1024){
+                    width: 100%;
+                    margin-right: 0;
+                    margin-bottom: 3vw;
+                }
+                &:hover{
+                    p{
+                        background: transparent;
+                        color: #fff;
+                    }
+                }
+            }
+            p{
+                background: #fff;
+                font-size: 18px;
+                color: #000;
+                margin-bottom: 0;
+                padding: 20px 0;
+                font-weight: bold;
+                @include media(w1024){
+                    font-size: 4vw;
+                    padding: 5vw 0;
+                }
+            }
+        }
+        
+        .row{
+           margin-left: 70px;
+           margin-top: 30px;
+            .picbox{
+                img{
+                    display: inline-block;
+                    width: 48%;
+                    &:first-child{ margin-right: 2%; }
+                    @include media(w1024){
+                        width: 100%;
+                        &:first-child{ 
+                            margin-right: 0%; 
+                            margin-bottom: 5vw;
+                        }
+                    }
+                }
+            }
+            .col-sm-6{
+                width: 100%;
+                max-width: 978px;
+                -ms-flex: 0 0 82%;
+                flex: 0 0 82%;
+            }
+            @include media(w1024){
+                margin-left: 0;
+                .col-12{
+                    -webkit-box-flex: 0;
+                    -ms-flex: 0 0 100%;
+                    flex: 0 0 100%;
+                    max-width: 100%;
+                }
+            }
+        }
+        .step-box{
+            width: 93%;
+            position: relative;
+            left: 3%;
+            margin: auto;
+            margin-bottom: 40px;
+            @include media(w1024){
+                width: 100%;
+                left: auto;
+                margin-bottom: 8vw;
+            }
+            img{
+                width: 100%;
+            }
+            .links{
+                a{
+                    // outline: 1px solid red;
+                    position: absolute;
+                    &:nth-child(1){
+                        width: 13%;
+                        height: 6%;
+                        top: 52%;
+                        left: 16%;
+                    }
+                    &:nth-child(2){
+                        cursor: auto;
+                        width: 11%;
+                        height: 12%;
+                        top: 58%;
+                        left:53%;
+                    }
+                    &:nth-child(3){
+                        width: 12%;
+                        height: 12%;
+                        top: 52%;
+                        left:69%;
+                    }
+                    @include media(w1024){
+                        &:nth-child(1){
+                            width: 44%;
+                            height: 2%;
+                            top: 22%;
+                            left: 38%;
+                        }
+                        &:nth-child(2){
+                            width: 40%;
+                            height: 4%;
+                            top: 54%;
+                            left: 46%;
+                        }
+                        &:nth-child(3){
+                            width: 40%;
+                            height: 4%;
+                            top: 69.25%;
+                            left: 40%;
+                        }
+                    }
+                }
+            }
+            .step-btns{
+                width: 100%;
+                position: absolute;
+                bottom: 8%;
+                left: 0;
+                text-align: center;
+                @include media(w1024){
+                    position: relative;
+                    bottom: auto;
+                    left: auto;
+                }
+                a{
+                    color: #fff;
+                    display: inline-block;
+                    line-height: 1;
+                    background: linear-gradient(to right, rgba(0,119,200,1) 0%,rgba(0,179,227,1) 100%);
+                    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0077c8', endColorstr='#00b3e3',GradientType=1 );
+                    text-decoration: none;
+                    margin: 0 1.5%;
+                    padding: 16px 24px;
+                    font-size: 20px;
+                    font-weight: 600;
+                    @include media(w1024){
+                        display: block;
+                        width: 100%;
+                        margin: auto;
+                        margin-top: 5vw;
+                        padding: 3.5vw 0;
+                        font-size: 5.6vw;
+                        letter-spacing: .5vw;
+                        +a{
+                        }
+                    }
+                    font{
+                        color: #ffd735;
+                    }
+                }
+            }
+        }
+        ol{
+            padding-left: 60px;
+            li{
+                list-style: decimal;
+            }
+        }
+        ul{
+            padding-left: 20px;
+            @include media(w1024){
+                padding-left: 1em;
+            }
+            li{
+                list-style: disc;
+            }
+        }
+    }
+
+    // 保固與退貨
+    .return{
+        margin-bottom: 50px;
+        ul{
+            font-size: 16px;
+            line-height: 1.5;
+            padding-left: 95px;
+            @include media(w1024){
+                padding-left: 6vw;
+                font-size: 4vw;
+            }
+            li{
+                list-style: decimal;
+            }
+        }
+        table{
+            margin: 10px 0;
+            @include media(w1024){
+                font-size: 3.75vw;
+            }
+            font{
+                color: #7d7d7d;
+                font-size: 16px;
+                @include media(w1024){
+                    font-size: 3vw;
+                }
+            }
+            th,td{
+                border: 2px solid #fff;
+                vertical-align: middle;
+            }
+            th{
+                color: #fff;
+                /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#0078c8+0,00b2e3+100 */
+                background: rgb(0,120,200); /* Old browsers */
+                background: -moz-linear-gradient(left,  rgba(0,120,200,1) 0%, rgba(0,178,227,1) 100%); /* FF3.6-15 */
+                background: -webkit-linear-gradient(left,  rgba(0,120,200,1) 0%,rgba(0,178,227,1) 100%); /* Chrome10-25,Safari5.1-6 */
+                background: linear-gradient(to right,  rgba(0,120,200,1) 0%,rgba(0,178,227,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+                filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0078c8', endColorstr='#00b2e3',GradientType=1 ); /* IE6-9 */
+                padding: 10px;
+                text-align: center;
+                @include media(w1024){
+                    padding: 2vw;
+                }
+            }
+            td{
+                background: #eaf1fa;
+                padding: 30px 80px;
+                @include media(w1024){
+                    padding: 3vw;
+                }
+            }
+        }
+    }
+
+    // 注意事項
+    .notice{
+        background: #f1f1f1;
+        padding: 0 0 3em;
+        ol {
+            margin-top: .5em;
+            padding-left: 2em;
+            counter-reset: a;
+            margin-left: 70px;
+            @include media(w1024){
+                margin-left: 0;
+            }
+            li{
+                list-style: none;
+                counter-increment: a;
+                &:before {
+                    content: "0" counter(a) ".";
+                    margin-right: .1em;
+                    margin-left: -2em;
+                    display: inline-block;
+                    width: 2em;
+                }
+                &:nth-child(9) ~ li:before {
+                    content: counter(a) ".";
+                }
+            }
+                
+        }
+        ol, p {
+            font-size: 16px;
+            line-height: 2;
+            @include media(w1024){
+                font-size: 4vw;
+            }
+        }
+        i {
+            transform: rotate(90deg);
+            font-style: normal;
+            display: inline-block;
+            margin: 0 .1em;
+        }
+    }
+}
+
+
+
+/* 20210102新增 
+-----------------------------------------------*/
+
+.promobox{
+    max-width: 1200px;
+    width: 100%;
+    margin: auto;
+    .tabbox{
+        width: 96%;
+        margin: auto;
+        display: flex;
+        align-items:flex-end;
+        @include media(w1024){
+            width: 98%;
+        }
+        li{
+            margin-right: 0.5%;
+            background: #f4f4f4;
+            border-top-right-radius: 20px;
+            border-top-left-radius: 20px;
+            font-size: 20px;
+            color: #000;
+            text-align: center;
+            padding: 15px 0;
+            cursor: pointer; 
+            flex: 1;
+            @include media(w1024){
+                font-size: 3.25vw;
+                border-top-right-radius: 2vw;
+                border-top-left-radius: 2vw;
+                padding: 2vw 0;
+                margin-right: 1%
+            }
+            &:last-child{ margin-right: 0; }
+            &:hover,&.select{
+                /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#0094d5+0,0085ce+100 */
+                background: rgb(0,148,213); /* Old browsers */
+                background: -moz-linear-gradient(left,  rgba(0,148,213,1) 0%, rgba(0,133,206,1) 100%); /* FF3.6-15 */
+                background: -webkit-linear-gradient(left,  rgba(0,148,213,1) 0%,rgba(0,133,206,1) 100%); /* Chrome10-25,Safari5.1-6 */
+                background: linear-gradient(to right,  rgba(0,148,213,1) 0%,rgba(0,133,206,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+                filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0094d5', endColorstr='#0085ce',GradientType=1 ); /* IE6-9 */
+                color: #fff;
+                a{ color: #fff; }
+            }
+            &.select{
+                padding-top: 25px;
+                @include media(w1024){
+                    padding-top: 3vw;
+                }
+            }
+        }
+    }
+    .inner{
+        background: #fff;
+        box-shadow: 0px 3px 10px 0px rgba(50, 50, 50, 0.2);
+        padding: 40px 10px 20px;
+        border-radius: 20px;
+        position: relative;
+        @include media(w1024){
+            border-radius: 2vw;
+            box-shadow: 0px 1vw 2vw 0px rgba(50, 50, 50, 0.2);
+            padding: 6vw 1vw 3vw;
+        }
+        &:before{
+            content: "";
+            display: block;
+            width: 100%;
+            height: 10px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#00b2e3+0,0078c8+100 */
+            background: rgb(0,178,227); /* Old browsers */
+            background: -moz-linear-gradient(left,  rgba(0,178,227,1) 0%, rgba(0,120,200,1) 100%); /* FF3.6-15 */
+            background: -webkit-linear-gradient(left,  rgba(0,178,227,1) 0%,rgba(0,120,200,1) 100%); /* Chrome10-25,Safari5.1-6 */
+            background: linear-gradient(to right,  rgba(0,178,227,1) 0%,rgba(0,120,200,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00b2e3', endColorstr='#0078c8',GradientType=1 ); /* IE6-9 */
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+            @include media(w1024){
+                border-top-left-radius: 2vw;
+                border-top-right-radius: 2vw;
+                height: 2vw;
+            }
+        }
+    }
+    .submenu{
+        text-align: center;
+        font-size: 0;
+        margin-bottom: 20px;
+        li{
+            display: inline-block;
+            cursor: pointer;
+            border-radius: 30px;
+            padding: 2px;
+            margin-right: 5px;
+            margin-bottom: 10px;
+            &:last-child{ margin-right: 0;}
+            @include media(w1024){
+                margin-right: 1vw;
+                margin-bottom: 1vw;
+            }
+            p{
+                margin-bottom: 0;
+                padding: 10px;
+                font-size: 20px;
+                background: #fff;
+                border-radius: 30px;
+                color: #535353;
+                @include media(w1024){
+                    font-size: 3.75vw;
+                    padding: 2vw;
+                }
+            }
+            &:hover{
+                /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#00b3e3+0,067ac9+100 */
+                background: #00b3e3; /* Old browsers */
+                background: -moz-linear-gradient(left,  #00b3e3 0%, #067ac9 100%); /* FF3.6-15 */
+                background: -webkit-linear-gradient(left,  #00b3e3 0%,#067ac9 100%); /* Chrome10-25,Safari5.1-6 */
+                background: linear-gradient(to right,  #00b3e3 0%,#067ac9 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+                filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00b3e3', endColorstr='#067ac9',GradientType=1 ); /* IE6-9 */
+
+            }
+        }
+    }
+    .listing{
+        display: flex;
+        flex-wrap: wrap;
+        align-items:stretch;
+        width: 95%;
+        margin: auto;
+        @include media(w1024){
+            width: 92%;
+        }
+        .one{
+            width: 32%;
+            margin-right: 2%;
+            background: #f4f4f4;
+            border-radius: 20px;
+            padding-bottom: 100px;
+            position: relative;
+            margin-bottom: 20px;
+            &:nth-child(3n){
+                margin-right: 0;
+            }
+            @include media(w1024){
+                width: 100%;
+                margin-right: 0;
+                border-radius: 2vw;
+                padding-bottom: 20vw;
+                margin-bottom: 5vw;
+            }
+            .name{
+                text-align: center;
+                background: #535353;
+                color: #fff; 
+                border-top-left-radius: 20px;
+                border-top-right-radius: 20px;
+                padding: 15px 0;
+                font-size: 22px;
+                // margin-bottom: 20px;
+                @include media(w1024){
+                    font-size: 4.25vw;
+                    border-top-left-radius: 2vw;
+                    border-top-right-radius: 2vw;
+                    padding: 3vw 0;
+                    // margin-bottom: 3vw;
+                }
+            }
+            .txt{
+                padding: 20px;
+                @include media(w1024){
+                    padding: 4vw 5vw;
+                }
+                p{
+                    font-size: 20px;
+                    color: 000;
+                    font-weight: bold;
+                    margin-bottom: 10px;
+                    @include media(w1024){
+                        font-size: 4.25vw;
+                        margin-bottom: 2vw;
+                    }
+                }
+                span{
+                    display: block;
+                    font-size: 18px;
+                    line-height: 1.5;
+                    color: #555555;
+                    @include media(w1024){
+                        font-size: 3.75vw;
+                    }
+                }
+            }
+            .btnstyle2{
+                width: 150px;
+                position: absolute;
+                bottom: 30px;
+                left: 50%;
+                margin-left: -75px;
+                @include media(w1024){
+                    width: 50%;
+                    margin-left: -25%;
+                    bottom: 5vw;
+                }
+                p{ 
+                    margin-bottom: 0;
+                    padding: 15px 0;
+                    background: #f4f4f4;
+                }
+                &:hover{
+                    p{ background:transparent;}
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+

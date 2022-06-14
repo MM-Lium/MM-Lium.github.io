@@ -1,0 +1,993 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="index.aspx.cs" Inherits="GOMA.Project.SS2202Rainbow.front.ses_flagship_sp.index" %>
+
+<%@ Import Namespace="GOMA.Project.SS2202Rainbow.helper" %>
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+    <title>三星智慧館 Galaxy S22 | Tab S8 旗艦系列預購享萬元好禮｜台灣三星電子</title>
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Cache-Control" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <meta name="keywords"
+        content="Samsung Galaxy S22| Tab S8 旗艦系列,S22+,S22 Ultra,S22,Tab S8 Ultra, Tab S8+,Tab S8,三星智慧館,預購好禮,新上市,好禮登錄送,手機界的單眼,Galaxy Bud Pro,矽膠薄型背蓋,聯名指環帶驚喜包,ITFIT雙模無線靜音滑鼠,Microsoft 365個人版一年期,全星守護行動裝置意外保險,舊換新,快閃店        " />
+    <meta name="description"
+        content="2022/02/15~2022/02/28至三星智慧館預購Samsung Galaxy S22 | Tab S8 旗艦系列，加碼享最高萬元回饋，還有更多星級禮遇！" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <link rel="stylesheet" href="<%=commonUI.fun.getAppSetting("plugURL")%>ses-flagship-sp/css/bootstrap.css">
+    <link rel="stylesheet" href="<%=commonUI.fun.getAppSetting("plugURL")%>ses-flagship-sp/css/slick.css" />
+    <link rel="stylesheet" href="<%=commonUI.fun.getAppSetting("plugURL")%>ses-flagship-sp/css/slick-theme.css" />
+    <link rel="stylesheet" href="<%=commonUI.fun.getAppSetting("plugURL")%>ses-flagship-sp/css/css_min.css" />
+    <script>
+        var SITENAME = '2022-galaxy-s22-galaxy-tab-s8-ses-sp';
+        //var EVENTNAME = location.href.replace(/(http|https)[:]\/\/(\S+\/)+(\S+)\/((\S+)\.(aspx|html))*([?].*)*([#].*)*/ig, '$3').replace('.aspx', '').replace('.html', '');
+        EVENTNAME = '';
+        var PAGENAME = location.href.replace(
+            /(http|https)[:]\/\/(\S+\/)+(\S+)\/((\S+)\.(aspx|html))*([?].*)*([#].*)*/ig, '$4').replace('.aspx', '')
+            .replace('.html', '');
+        if (!/(http|https)[:]\/\/(\S+\/)+(\S+)\/((\S+)\.(aspx|html))*([?].*)*([#].*)*/ig.test(location.href)) {
+            EVENTNAME = null;
+            PAGENAME = location.href.replace(/(http|https)[:]\/\/(\S+\/)+((\S+)\.(aspx|html))*([?].*)*([#].*)*/ig, '$4')
+                .replace('.aspx', '').replace('.html', '');
+        }
+        if (!PAGENAME) {
+            PAGENAME = 'index';
+        }
+    </script>
+    <!-- Google Analytics -->
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o), m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-100137701-39', 'auto');
+
+        ga('set', 'contentGroup1', 'tw');
+        ga('set', 'contentGroup2', 'tw:campaign');
+        if (EVENTNAME) {
+            ga('set', 'title', 'tw:campaign:' + SITENAME + ':' + EVENTNAME + ':' + PAGENAME);
+            ga('set', 'contentGroup3', 'tw:campaign:' + SITENAME);
+            ga('set', 'contentGroup4', 'tw:campaign:' + SITENAME + ':' + EVENTNAME);
+            ga('set', 'contentGroup5', 'tw:campaign:' + SITENAME + ':' + EVENTNAME + ':' + PAGENAME);
+        } else {
+            ga('set', 'title', 'tw:campaign:mobile:' + SITENAME + ':' + PAGENAME);
+            ga('set', 'contentGroup3', 'tw:campaign:mobile');
+            ga('set', 'contentGroup4', 'tw:campaign:mobile:' + SITENAME);
+            ga('set', 'contentGroup5', 'tw:campaign:mobile:' + SITENAME + ':' + PAGENAME);
+
+        }
+
+        ga('set', 'dimension1', 'tw');
+        ga('set', 'dimension2', 'tw:campaign');
+        ga('set', 'dimension3', 'microsite');
+        ga('set', 'dimension6', document.URL);
+        ga('set', 'dimension7', document.referrer);
+        ga(function (tracker) {
+            ga('set', 'dimension8', tracker.get('clientId'));
+        });
+
+        ga('send', 'pageview');
+    </script>
+    <!-- End Google Analytics -->
+    <!-- Global site tag (gtag.js) - Google Ads: 831199516 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-831199516"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'AW-831199516');
+    </script>
+
+    <!-- 
+    Start of global snippet: Please do not remove
+    Place this snippet between the <head> and </head> tags on every page of your site.
+    -->
+    <!-- Global site tag (gtag.js) - Google Marketing Platform -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=DC-9052290"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'DC-9052290');
+    </script>
+    <!-- End of global snippet: Please do not remove -->
+    <!--
+    Event snippet for TD~RainbowPreorder_MK~tw_PC~ qualified lands_TT~as_FR~pl_PP~microsite on https://2022-galaxy-flagship-preorder.twsamsungcampaign.com/ses-flagship-sp/index.aspx: Please do not remove.
+    Place this snippet on pages with events you’re tracking. 
+    Creation date: 01/25/2022
+    -->
+    <script>
+        gtag('event', 'conversion', {
+            'allow_custom_scripts': true,
+            'send_to': 'DC-9052290/rainb00/tdrai0+standard'
+        });
+    </script>
+    <noscript>
+    <img src="https://ad.doubleclick.net/ddm/activity/src=9052290;type=rainb00;cat=tdrai0;dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;tfua=;npa=;gdpr=${GDPR};gdpr_consent=${GDPR_CONSENT_755};ord=1?" width="1" height="1" alt=""/>
+    </noscript>
+    <!-- End of event snippet: Please do not remove -->
+    <!-- Start Facebook Pixel Code -->
+    <script>
+        !function (f, b, e, v, n, t, s) {
+            if (f.fbq) return; n = f.fbq = function () {
+                n.callMethod ?
+                n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            };
+            if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+            n.queue = []; t = b.createElement(e); t.async = !0;
+            t.src = v; s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s)
+        }(window, document, 'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '1049256285582240');
+        fbq('init', '1831123953691643');
+        fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+      src="https://www.facebook.com/tr?id=513951229005423&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Facebook Pixel Code -->
+    <!-- LINE Tag Base Code -->
+    <!-- Do Not Modify -->
+    <script>
+        (function (g, d, o) {
+            g._ltq = g._ltq || []; g._lt = g._lt || function () { g._ltq.push(arguments) };
+            var h = location.protocol === 'https:' ? 'https://d.line-scdn.net' : 'http://d.line-cdn.net';
+            var s = d.createElement('script'); s.async = 1;
+            s.src = o || h + '/n/line_tag/public/release/v1/lt.js';
+            var t = d.getElementsByTagName('script')[0]; t.parentNode.insertBefore(s, t);
+        })(window, document);
+        _lt('init', {
+            customerType: 'lap',
+            tagId: '54d5d75d-120b-467c-9e62-12a2c90fbe43'
+        });
+        _lt('send', 'pv', ['54d5d75d-120b-467c-9e62-12a2c90fbe43']);
+    </script>
+    <noscript>
+      <img height="1" width="1" style="display:none" src="https://tr.line.me/tag.gif?c_t=lap&t_id=54d5d75d-120b-467c-9e62-12a2c90fbe43&e=pv&noscript=1" />
+    </noscript>
+    <!-- End LINE Tag Base Code -->
+    <!-- Start Yahoo -->
+    <script type="application/javascript">(function (w, d, t, r, u) { w[u] = w[u] || []; w[u].push({ 'projectId': '10000', 'properties': { 'pixelId': '406503', 'userEmail': '<email_address>' } }); var s = d.createElement(t); s.src = r; s.async = true; s.onload = s.onreadystatechange = function () { var y, rs = this.readyState, c = w[u]; if (rs && rs != "complete" && rs != "loaded") { return } try { y = YAHOO.ywa.I13N.fireBeacon; w[u] = []; w[u].push = function (p) { y([p]) }; y(c) } catch (e) { } }; var scr = d.getElementsByTagName(t)[0], par = scr.parentNode; par.insertBefore(s, scr) })(window, document, "script", "https://s.yimg.com/wi/ytc.js", "dotq");</script>
+    <!-- End Yahoo-->
+</head>
+<body>
+    <form id="form1" runat="server">
+
+        <% string queueDate = commonUI.fun.getAppSetting("queueDate"); %>
+
+
+        <div class="loading"></div>
+
+        <!-- gnb header -->
+        <div id="static_header_gnb"></div>
+
+        <!-- 內容 -->
+        <div class="wrapper">
+            <div class="bg">
+                <div class="all"></div>
+            </div>
+            <!-- header -->
+            <div class="myheader">
+                <div class="container">
+                    <ul class="mynav">
+                        <li data-omni-type="microsite" data-omni="nav:kv" class="navbtn" data-page="0"><a
+                            href="javascript:;">首頁</a></li>
+                        <li data-omni-type="microsite" data-omni="nav:ses-sp" class="navbtn" data-page="1"><a
+                            href="javascript:;">預購獨家優惠</a></li>
+                        <li data-omni-type="microsite" data-omni="nav:other-svc" class="navbtn" data-page="4"><a
+                            href="javascript:;">獨家星級禮遇</a></li>
+                        <li data-omni-type="microsite" data-omni="nav:trade-in" class="navbtn" data-page="5"><a
+                            href="javascript:;">舊換新限時優惠</a></li>
+                        <li data-omni-type="microsite" data-omni="nav:pop-up-store" class="navbtn" data-page="6"><a
+                            href="javascript:;">快閃店活動</a></li>
+                        <li data-omni-type="microsite" data-omni="nav:store-event" class="navbtn" data-page="7"><a
+                            href="javascript:;">新門市開幕</a></li>
+                        <li data-omni-type="microsite" data-omni="nav:store-event" class="navbtn" data-page="8"><a
+                            href="javascript:;">門市專屬活動</a></li>
+                        
+                    </ul>
+                    <div class="burger _m" toggle="0">
+                        <img src="<%=commonUI.fun.getAppSetting("plugURL")%>ses-flagship-sp/images/m/buger_block.png" alt="block">
+                        <div class="line"></div>
+                        <div class="line"></div>
+                        <div class="line"></div>
+                        <div class="line"></div>
+                    </div>
+                </div>
+            </div>
+
+            <section class="section sec sec1">
+                <div class="container">
+                    <div class="kv">
+                        <picture>
+                        <source srcset="<%=commonUI.fun.getAppSetting("plugURL")%>ses-flagship-sp/images/kv_1.png" media="(min-width: 769px)" />
+                        <source srcset="<%=commonUI.fun.getAppSetting("plugURL")%>ses-flagship-sp/images/m/kv_1.png" />
+                        <img src="<%=commonUI.fun.getAppSetting("plugURL")%>ses-flagship-sp/images/kv_1.png" class="main" alt="kv_1" />
+                    </picture>
+
+                        <div class="btnbox">
+                            <a data-omni-type="microsite" data-omni="kv:learnmore_kv" class="bt style1"
+                                href="https://2022-galaxy-flagship-preorder.twsamsungcampaign.com/ses_rule.aspx"
+                                target="_blank">
+                                <picture>
+                                <source srcset="<%=commonUI.fun.getAppSetting("plugURL")%>ses-flagship-sp/images/btn_bg1.png" media="(min-width: 769px)" />
+                                <source srcset="<%=commonUI.fun.getAppSetting("plugURL")%>ses-flagship-sp/images/m/btn_bg1.png" />
+                                <img src="<%=commonUI.fun.getAppSetting("plugURL")%>ses-flagship-sp/images/btn_bg1.png" alt="了解更多" />
+                            </picture>
+                                <span>了解更多</span>
+                            </a>
+                            <a data-omni-type="microsite" data-omni="kv:buy_kv" class="bt style1"
+                                href="https://www.samsung.com/tw/samsung-experience-store/locations/" target="_blank">
+                                <picture>
+                                <source srcset="<%=commonUI.fun.getAppSetting("plugURL")%>ses-flagship-sp/images/btn_bg1.png" media="(min-width: 769px)" />
+                                <source srcset="<%=commonUI.fun.getAppSetting("plugURL")%>ses-flagship-sp/images/m/btn_bg1.png" />
+                                <img src="<%=commonUI.fun.getAppSetting("plugURL")%>ses-flagship-sp/images/btn_bg1.png" alt="門市查詢" />
+                            </picture>
+                                <span>門市查詢</span>
+                            </a>
+                            <a data-omni-type="microsite" data-omni="kv:ses-portal" class="bt style2"
+                                href="https://sesmember.twsamsungcampaign.com/Index.aspx" target="_blank">
+                                <picture>
+                                <source srcset="<%=commonUI.fun.getAppSetting("plugURL")%>ses-flagship-sp/images/btn_bg2.png" media="(min-width: 769px)" />
+                                <source srcset="<%=commonUI.fun.getAppSetting("plugURL")%>ses-flagship-sp/images/m/btn_bg2_m.png" />
+                                <img src="<%=commonUI.fun.getAppSetting("plugURL")%>ses-flagship-sp/images/btn_bg2.png" alt="顧客專享平台" />
+                            </picture>
+                                <span>顧客專享平台</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+
+            <section class="section sec sec2">
+                <div class="container">
+                    <div class="secbox">
+                        <picture>
+                        <source srcset="<%=commonUI.fun.getAppSetting("plugURL")%>ses-flagship-sp/images/sec2.png" media="(min-width: 769px)" />
+                        <source srcset="<%=commonUI.fun.getAppSetting("plugURL")%>ses-flagship-sp/images/m/sec2.png" />
+                        <img src="<%=commonUI.fun.getAppSetting("plugURL")%>ses-flagship-sp/images/sec2.png" alt="sec2" />
+                    </picture>
+                        <div class="btnbox t1">
+                            <a data-omni-type="microsite" data-omni="ses-sp:buy_preorderS22" class="bt style1"
+                                href="https://2022-galaxy-flagship-preorder.twsamsungcampaign.com/step1.aspx"
+                                target="_blank">
+                                <picture>
+                                <source srcset="<%=commonUI.fun.getAppSetting("plugURL")%>ses-flagship-sp/images/btn_bg1.png" media="(min-width: 769px)" />
+                                <source srcset="<%=commonUI.fun.getAppSetting("plugURL")%>ses-flagship-sp/images/m/btn_bg1.png" />
+                                <img src="<%=commonUI.fun.getAppSetting("plugURL")%>ses-flagship-sp/images/btn_bg1.png" alt="立即預購" />
+                            </picture>
+                                <span>立即預購</span>
+                            </a>
+                            <a data-omni-type="microsite" data-omni="ses-sp:buy_S22" class="bt style1"
+                                href="https://www.samsung.com/tw/samsung-experience-store/locations/" target="_blank">
+                                <picture>
+                                <source srcset="<%=commonUI.fun.getAppSetting("plugURL")%>ses-flagship-sp/images/btn_bg1.png" media="(min-width: 769px)" />
+                                <source srcset="<%=commonUI.fun.getAppSetting("plugURL")%>ses-flagship-sp/images/m/btn_bg1.png" />
+                                <img src="<%=commonUI.fun.getAppSetting("plugURL")%>ses-flagship-sp/images/btn_bg1.png" alt="查詢門市" />
+                            </picture>
+                                <span>查詢門市</span>
+                            </a>
+                            <a data-omni-type="microsite" data-omni="ses-sp:aps"
+                                href="https://promotion.twsamsungcampaign.com/2022-galaxy-flagship-promotion/aps.aspx"
+                                target="_blank" class="link"></a>
+                        </div>
+                        <div class="btnbox t2">
+                            <a data-omni-type="microsite" data-omni="ses-sp:s22_FreeTrial_ITFIT_AirPurifier" class="bt style2"
+                                href="https://ses-reservation.twsamsungcampaign.com/2022-flagship-galaxyfreetrialprogram/index.aspx"
+                                target="_blank">
+                                <picture>
+                                <source srcset="<%=commonUI.fun.getAppSetting("plugURL")%>ses-flagship-sp/images/btn_bg2.png" media="(min-width: 769px)" />
+                                <source srcset="<%=commonUI.fun.getAppSetting("plugURL")%>ses-flagship-sp/images/m/btn_bg2_m.png" />
+                                <img src="<%=commonUI.fun.getAppSetting("plugURL")%>ses-flagship-sp/images/btn_bg2.png" alt="立即預約" />
+                            </picture>
+                                <span>立即預約</span>
+                            </a>
+                        </div>
+                        <div class="btnbox t3">
+                            <a data-omni-type="microsite" data-omni="ses-sp:learnmore_ses-sp" class="bt style1"
+                            href="https://images.samsung.com/is/content/samsung/assets/tw/downloads/2022-ses-flagship-campaign-night-safari-event-rule.pdf"
+                            target="_blank">
+                            <picture>
+                            <source srcset="<%=commonUI.fun.getAppSetting("plugURL")%>ses-flagship-sp/images/btn_bg1.png" media="(min-width: 769px)" />
+                            <source srcset="<%=commonUI.fun.getAppSetting("plugURL")%>ses-flagship-sp/images/m/btn_bg1.png" />
+                            <img src="<%=commonUI.fun.getAppSetting("plugURL")%>ses-flagship-sp/images/btn_bg1.png" alt="了解更多" />
+                        </picture>
+                            <span>了解更多</span>
+                        </a>
+                       
+                            <a data-omni-type="microsite" data-omni="ses-sp:S22_FreeTrial_ITFIT_LightCamraTripod" class="bt style1" href="https://reurl.cc/OpV1qX"
+                                target="_blank">
+                                <picture>
+                                <source srcset="<%=commonUI.fun.getAppSetting("plugURL")%>ses-flagship-sp/images/btn_bg1.png" media="(min-width: 769px)" />
+                                <source srcset="<%=commonUI.fun.getAppSetting("plugURL")%>ses-flagship-sp/images/m/btn_bg1.png" />
+                                <img src="<%=commonUI.fun.getAppSetting("plugURL")%>ses-flagship-sp/images/btn_bg1.png" alt="立即預約" />
+                            </picture>
+                                <span>立即預約</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section sec sec3">
+                <div class="container">
+                    <div id="endBox" class="secbox noqueue hide">
+                        <picture>
+                        <source srcset="<%=commonUI.fun.getAppSetting("plugURL")%>ses-flagship-sp/images/sec3.png" media="(min-width: 769px)" />
+                        <source srcset="<%=commonUI.fun.getAppSetting("plugURL")%>ses-flagship-sp/images/m/sec3.png" />
+                        <img src="<%=commonUI.fun.getAppSetting("plugURL")%>ses-flagship-sp/images/sec3.png" alt="sec3" />
+                    </picture>
+                        <div class="btnbox">
+                            <a data-omni-type="microsite" data-omni="pick-up:pick-up" class="bt style1"
+                                href="https://2022-galaxy-flagship-preorder.twsamsungcampaign.com/step1.aspx"
+                                target="_blank">
+                                <picture>
+                                <source srcset="<%=commonUI.fun.getAppSetting("plugURL")%>ses-flagship-sp/images/btn_bg1.png" media="(min-width: 769px)" />
+                                <source srcset="<%=commonUI.fun.getAppSetting("plugURL")%>ses-flagship-sp/images/m/btn_bg1.png" />
+                                <img src="<%=commonUI.fun.getAppSetting("plugURL")%>ses-flagship-sp/images/btn_bg1.png" alt="立即預約取機" />
+                            </picture>
+                                <span>立即預約取機</span>
+                            </a>
+                            <a data-omni-type="microsite" data-omni="pick-up:pick-up-rule" class="bt style1" href="https://2022-galaxy-flagship-preorder.twsamsungcampaign.com/ses_rule.aspx"
+                                target="_blank">
+                                <picture>
+                                <source srcset="<%=commonUI.fun.getAppSetting("plugURL")%>ses-flagship-sp/images/btn_bg1.png" media="(min-width: 769px)" />
+                                <source srcset="<%=commonUI.fun.getAppSetting("plugURL")%>ses-flagship-sp/images/m/btn_bg1.png" />
+                                <img src="<%=commonUI.fun.getAppSetting("plugURL")%>ses-flagship-sp/images/btn_bg1.png" alt="查詢活動辦法" />
+                            </picture>
+                                <span>查詢活動辦法</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div id="queueBox" class="secbox queue" data-d="<%=commonUI.fun.getLocalDTime() >= Convert.ToDateTime(queueDate) ? "X" : "O"%>">
+                        <picture>
+                        <source srcset="<%=commonUI.fun.getAppSetting("plugURL")%>ses-flagship-sp/images/sec3_2.png" media="(min-width: 769px)" />
+                        <source srcset="<%=commonUI.fun.getAppSetting("plugURL")%>ses-flagship-sp/images/m/sec3_2.png" />
+                        <img src="<%=commonUI.fun.getAppSetting("plugURL")%>ses-flagship-sp/images/sec3_2.png" alt="sec3_2" />
+                    </picture>
+                        <div class="people changenum">
+                            <iframe src="<%=commonUI.fun.getAppSetting("plugURL")%>ses-flagship-sp/images/peo/peo.html" class="peo_frame"></iframe>
+                            <div class="allnumber" data-e="<%=commonUI.fun.getLocalDTime() >= Convert.ToDateTime(commonUI.fun.getAppSetting("startDate")) ? "E" : "S"%>">
+                                <div class="number">
+                                    <img src="<%=commonUI.fun.getAppSetting("plugURL")%>ses-flagship-sp/images/sec3_number.png" alt="">
+                                    <p class="num _1" data-number="<%=s1[0]%>">
+                                        <img src="<%=commonUI.fun.getAppSetting("plugURL")%>ses-flagship-sp/images/number/<%=s1[0]%>.png">
+                                    </p>
+                                    <span class="primary"></span>
+                                    <span class="secondary"></span>
+                                </div>
+                                <div class="number">
+                                    <img src="<%=commonUI.fun.getAppSetting("plugURL")%>ses-flagship-sp/images/sec3_number.png" alt="">
+                                    <p class="num _2" data-number="<%=s1[1]%>">
+                                        <img src="<%=commonUI.fun.getAppSetting("plugURL")%>ses-flagship-sp/images/number/<%=s1[1]%>.png">
+                                    </p>
+                                    <span class="primary"></span>
+                                    <span class="secondary"></span>
+                                </div>
+                                <div class="number">
+                                    <img src="<%=commonUI.fun.getAppSetting("plugURL")%>ses-flagship-sp/images/sec3_number.png" alt="">
+                                    <p class="num _3" data-number="<%=s1[2]%>">
+                                        <img src="<%=commonUI.fun.getAppSetting("plugURL")%>ses-flagship-sp/images/number/<%=s1[2]%>.png">
+                                    </p>
+                                    <span class="primary"></span>
+                                    <span class="secondary"></span>
+                                </div>
+                                <div class="number">
+                                    <img src="<%=commonUI.fun.getAppSetting("plugURL")%>ses-flagship-sp/images/sec3_number.png" alt="">
+                                    <p class="num _4" data-number="<%=s1[3]%>">
+                                        <img src="<%=commonUI.fun.getAppSetting("plugURL")%>ses-flagship-sp/images/number/<%=s1[3]%>.png">
+                                    </p>
+                                    <span class="primary"></span>
+                                    <span class="secondary"></span>
+                                </div>
+                            </div>
+                            <input type="hidden" name="htoken" value="<%=clientToken %>" />
+                            <input type="hidden" name="hpath" value="<%=commonUI.fun.getAppSetting("plugURL")%>ses-flagship-sp/images/number/" />
+                            <input type="hidden" name="startDate" value="<%=commonUI.fun.getAppSetting("startDate")%>" />
+                            <input type="hidden" name="queueDate" value="<%=queueDate%>" />
+                            <input type="hidden" name="soldNum" value="<%=string.Join("", s1)%>" />
+                            <input type="hidden" name="soldOut" value="N" />
+
+                        </div>
+                        <div class="btnbox">
+                            <a data-omni-type="microsite" data-omni="pick-up:buy_preorder_s22" class="bt style1 btn_buy"
+                                href="https://2022-galaxy-flagship-preorder.twsamsungcampaign.com/step1.aspx">
+                                <picture>
+                                <source srcset="<%=commonUI.fun.getAppSetting("plugURL")%>ses-flagship-sp/images/btn_bg1.png" media="(min-width: 769px)" />
+                                <source srcset="<%=commonUI.fun.getAppSetting("plugURL")%>ses-flagship-sp/images/m/btn_bg1.png" />
+                                <img src="<%=commonUI.fun.getAppSetting("plugURL")%>ses-flagship-sp/images/btn_bg1.png" alt="立即預購" />
+                            </picture>
+                                <span>立即預購</span>
+                            </a>
+                            <a data-omni-type="microsite" data-omni="pick-up:pick-up-rule_online" class="bt style1" href="https://2022-galaxy-flagship-preorder.twsamsungcampaign.com/ses_rule.aspx"
+                                target="_blank">
+                                <picture>
+                                <source srcset="<%=commonUI.fun.getAppSetting("plugURL")%>ses-flagship-sp/images/btn_bg1.png" media="(min-width: 769px)" />
+                                <source srcset="<%=commonUI.fun.getAppSetting("plugURL")%>ses-flagship-sp/images/m/btn_bg1.png" />
+                                <img src="<%=commonUI.fun.getAppSetting("plugURL")%>ses-flagship-sp/images/btn_bg1.png" alt="查詢活動辦法" />
+                            </picture>
+                                <span>查詢活動辦法</span>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <section class="section sec sec4 ">
+                <div class="container">
+                    <div class="secbox">
+                        <picture>
+                        <source srcset="<%=commonUI.fun.getAppSetting("plugURL")%>ses-flagship-sp/images/sec4.png" media="(min-width: 769px)" />
+                        <source srcset="<%=commonUI.fun.getAppSetting("plugURL")%>ses-flagship-sp/images/m/sec4.png" />
+                        <img src="<%=commonUI.fun.getAppSetting("plugURL")%>ses-flagship-sp/images/sec4.png" alt="sec4" />
+                    </picture>
+                        <div class="btnbox t1">
+                            <a data-omni-type="microsite" data-omni="login-gift:buy_preorder_s22_s8" class="bt style1"
+                                href="https://2022-galaxy-flagship-preorder.twsamsungcampaign.com/step1.aspx"
+                                target="_blank">
+                                <picture>
+                                <source srcset="<%=commonUI.fun.getAppSetting("plugURL")%>ses-flagship-sp/images/btn_bg1.png" media="(min-width: 769px)" />
+                                <source srcset="<%=commonUI.fun.getAppSetting("plugURL")%>ses-flagship-sp/images/m/btn_bg1.png" />
+                                <img src="<%=commonUI.fun.getAppSetting("plugURL")%>ses-flagship-sp/images/btn_bg1.png" alt="立即預購" />
+                            </picture>
+                                <span>立即預購</span>
+                            </a>
+                            <a data-omni-type="microsite" data-omni="login-gift:buy_store" class="bt style1"
+                                href="https://www.samsung.com/tw/samsung-experience-store/locations/" target="_blank">
+                                <picture>
+                                <source srcset="<%=commonUI.fun.getAppSetting("plugURL")%>ses-flagship-sp/images/btn_bg1.png" media="(min-width: 769px)" />
+                                <source srcset="<%=commonUI.fun.getAppSetting("plugURL")%>ses-flagship-sp/images/m/btn_bg1.png" />
+                                <img src="<%=commonUI.fun.getAppSetting("plugURL")%>ses-flagship-sp/images/btn_bg1.png" alt="查詢門市" />
+                            </picture>
+                                <span>查詢門市</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section sec sec5 ">
+                <div class="container">
+                    <div class="secbox">
+                        <picture>
+                        <source srcset="<%=commonUI.fun.getAppSetting("plugURL")%>ses-flagship-sp/images/sec5.png" media="(min-width: 769px)" />
+                        <source srcset="<%=commonUI.fun.getAppSetting("plugURL")%>ses-flagship-sp/images/m/sec5.png" />
+                        <img src="<%=commonUI.fun.getAppSetting("plugURL")%>ses-flagship-sp/images/sec5.png" alt="sec5" />
+                    </picture>
+
+                        <div class="allgift">
+                            <div class="gift">
+                                <a data-omni-type="microsite" data-omni="other-svc:creditcard"
+                                    href="https://promotion.twsamsungcampaign.com/2022-galaxy-flagship-promotion/bank.aspx#creditcard"
+                                    target="_blank">
+                                    <img src="<%=commonUI.fun.getAppSetting("plugURL")%>ses-flagship-sp/images/sec5_gift1.png" alt="creditcard">
+                                </a>
+                            </div>
+                            <div class="gift">
+                                <a data-omni-type="microsite" data-omni="other-svc:bank"
+                                    href="https://promotion.twsamsungcampaign.com/2022-galaxy-flagship-promotion/bank.aspx"
+                                    target="_blank">
+                                    <img src="<%=commonUI.fun.getAppSetting("plugURL")%>ses-flagship-sp/images/sec5_gift2.png" alt="bank">
+                                </a>
+                            </div>
+                            <div class="gift">
+                                <a data-omni-type="microsite" data-omni="other-svc:s-care"
+                                    href="https://promotion.twsamsungcampaign.com/2022-galaxy-flagship-promotion/bank.aspx#samsungcare"
+                                    target="_blank">
+                                    <img src="<%=commonUI.fun.getAppSetting("plugURL")%>ses-flagship-sp/images/sec5_gift3.png" alt="s-care">
+                                </a>
+                            </div>
+                            <div class="gift">
+                                <a data-omni-type="microsite" data-omni="other-svc:s-pay"
+                                    href="https://promotion.twsamsungcampaign.com/2022-galaxy-flagship-promotion/bank.aspx#samsungpay"
+                                    target="_blank">
+                                    <img src="<%=commonUI.fun.getAppSetting("plugURL")%>ses-flagship-sp/images/sec5_gift4.png" alt="s-pay">
+                                </a>
+                            </div>
+                            <div class="gift">
+                                <a data-omni-type="microsite" data-omni="other-svc:warranty"
+                                    href="https://sesmember.twsamsungcampaign.com/rule1.aspx" target="_blank">
+                                    <img src="<%=commonUI.fun.getAppSetting("plugURL")%>ses-flagship-sp/images/sec5_gift5.png" alt="warranty">
+                                </a>
+                            </div>
+                            <div class="gift">
+                                <a data-omni-type="microsite" data-omni="other-svc:youtube_premium"
+                                    href="https://www.samsung.com/tw/campaign/galaxy-youtube-premium-promotion/" target="_blank">
+                                    <img src="<%=commonUI.fun.getAppSetting("plugURL")%>ses-flagship-sp/images/sec5_gift6.png" alt="youtube_premium">
+                                </a>
+                            </div>
+                            <div class="gift">
+                                <a data-omni-type="microsite" data-omni="other-svc:GalaxyStore"
+                                    href="https://promotion.twsamsungcampaign.com/2022-galaxy-flagship-promotion/bank.aspx#galaxystore"
+                                    target="_blank">
+                                    <img src="<%=commonUI.fun.getAppSetting("plugURL")%>ses-flagship-sp/images/sec5_gift7.png" alt="GalaxyStore">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section sec sec6 ">
+                <div class="container">
+                    <div class="secbox">
+                        <picture>
+                        <source srcset="<%=commonUI.fun.getAppSetting("plugURL")%>ses-flagship-sp/images/sec6.png" media="(min-width: 769px)" />
+                        <source srcset="<%=commonUI.fun.getAppSetting("plugURL")%>ses-flagship-sp/images/m/sec6.png" />
+                        <img src="<%=commonUI.fun.getAppSetting("plugURL")%>ses-flagship-sp/images/sec6.png" alt="sec6" />
+                    </picture>
+
+                        <img src="<%=commonUI.fun.getAppSetting("plugURL")%>ses-flagship-sp/images/sec6_phone.png" class="phone _pc" alt="">
+                        <div class="btnbox">
+                            <a data-omni-type="microsite" data-omni="trade-in:lo_more" class="bt style2 libtn"
+                                href="javascript:;" data-lb="lb1">
+                                <picture>
+                                <source srcset="<%=commonUI.fun.getAppSetting("plugURL")%>ses-flagship-sp/images/btn_bg2.png" media="(min-width: 769px)" />
+                                <source srcset="<%=commonUI.fun.getAppSetting("plugURL")%>ses-flagship-sp/images/m/btn_bg2_m.png" />
+                                <img src="<%=commonUI.fun.getAppSetting("plugURL")%>ses-flagship-sp/images/btn_bg2.png" alt="Apple最高折價金額" />
+                            </picture>
+                                <span>Apple最高折價金額</span>
+                            </a>
+
+                            <a data-omni-type="microsite" data-omni="trade-in:calculator" class="bt style2"
+                                href="https://sesmember.twsamsungcampaign.com/tradein_price.aspx#/bonus-calculator"
+                                target="_blank">
+                                <picture>
+                                <source srcset="<%=commonUI.fun.getAppSetting("plugURL")%>ses-flagship-sp/images/btn_bg2.png" media="(min-width: 769px)" />
+                                <source srcset="<%=commonUI.fun.getAppSetting("plugURL")%>ses-flagship-sp/images/m/btn_bg2_m.png" />
+                                <img src="<%=commonUI.fun.getAppSetting("plugURL")%>ses-flagship-sp/images/btn_bg2.png" alt="查詢更多舊機加碼金額" />
+                            </picture>
+                                <span>查詢更多舊機加碼金額</span>
+                            </a>
+                        </div>
+
+                    </div>
+
+                </div>
+            </section>
+            <section class="section sec sec7 ">
+                <div class="container">
+
+                    <div class="secbox">
+                        <picture>
+                        <source srcset="<%=commonUI.fun.getAppSetting("plugURL")%>ses-flagship-sp/images/sec7.png" media="(min-width: 769px)" />
+                        <source srcset="<%=commonUI.fun.getAppSetting("plugURL")%>ses-flagship-sp/images/m/sec7.png" />
+                        <img src="<%=commonUI.fun.getAppSetting("plugURL")%>ses-flagship-sp/images/sec7.png" alt="sec7" />
+                    </picture>
+                        <img src="<%=commonUI.fun.getAppSetting("plugURL")%>ses-flagship-sp/images/sec7_gift.png" class="gift _pc" alt="">
+
+                        <div class="allstore">
+                            <div class="store">
+                                <div class="city">
+                                    台北
+                                </div>
+                                <div class="date">
+                                    2/15 - 3/30
+                                </div>
+                                <div class="where">
+                                    <p>京站時尚廣場 1F</p>
+                                    <span>台北市大同區承德路一段1號</span>
+                                </div>
+                                <div class="plus libtn" data-lb="lb3" data-con="n1"><img src="<%=commonUI.fun.getAppSetting("plugURL")%>ses-flagship-sp/images/plus.png" alt=""></div>
+                                <div class="icon">
+                                    <a data-omni-type="microsite" data-omni="pop-up-store:buy_map01"
+                                        href="https://goo.gl/maps/4G786GyRDGywzzYY7" target="_blank">
+                                        <img src="<%=commonUI.fun.getAppSetting("plugURL")%>ses-flagship-sp/images/map.png" alt="map01">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="store">
+                                <div class="date">
+                                    2/21 - 3/13
+                                </div>
+                                <div class="where">
+                                    <p>新光三越 台北南西店 1F</p>
+                                    <span>台北市中山區南京西路12號</span>
+                                </div>
+                                <div class="plus" style="visibility: hidden;"></div>
+                                <div class="icon">
+                                    <a data-omni-type="microsite" data-omni="pop-up-store:buy_map02"
+                                        href="https://goo.gl/maps/rFqGvhKvXpoeY6e57" target="_blank">
+                                        <img src="<%=commonUI.fun.getAppSetting("plugURL")%>ses-flagship-sp/images/map.png" alt="map02">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="store">
+                                <div class="date">
+                                    2/21 - 3/13
+                                </div>
+                                <div class="where">
+                                    <p>新光三越 信義新天地A8 1F</p>
+                                    <span>台北市信義區松高路12號</span>
+                                </div>
+                                <div class="plus" style="visibility: hidden;"></div>
+                                <div class="icon">
+                                    <a data-omni-type="microsite" data-omni="pop-up-store:buy_map03"
+                                        href="https://goo.gl/maps/h34FqaaADxEgNbJdA" target="_blank">
+                                        <img src="<%=commonUI.fun.getAppSetting("plugURL")%>ses-flagship-sp/images/map.png" alt="map03">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="store">
+                                <div class="date">
+                                    2/15 - 3/7
+                                </div>
+                                <div class="where">
+                                    <p>遠東SOGO 台北忠孝館 1F</p>
+                                    <span>台北市大安區忠孝東路四段45號</span>
+                                </div>
+                                <div class="plus libtn" data-lb="lb3" data-con="n2"><img src="<%=commonUI.fun.getAppSetting("plugURL")%>ses-flagship-sp/images/plus.png" alt=""></div>
+                                <div class="icon">
+                                    <a data-omni-type="microsite" data-omni="pop-up-store:buy_map04"
+                                        href="https://goo.gl/maps/uNi4LDroK4WD9pNa9" target="_blank">
+                                        <img src="<%=commonUI.fun.getAppSetting("plugURL")%>ses-flagship-sp/images/map.png" alt="map04">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="store">
+                                <div class="city">
+                                    桃園
+                                </div>
+                                <div class="date">
+                                    2/15 - 3/20
+                                </div>
+                                <div class="where">
+                                    <p>台茂購物中心 1F</p>
+                                    <span>桃園市蘆竹區南崁路一段112號</span>
+                                </div>
+                                <div class="plus libtn" data-lb="lb3" data-con="n3"><img src="<%=commonUI.fun.getAppSetting("plugURL")%>ses-flagship-sp/images/plus.png" alt=""></div>
+                                <div class="icon">
+                                    <a data-omni-type="microsite" data-omni="pop-up-store:buy_map05"
+                                        href="https://goo.gl/maps/a9V3kr1oA3qoZvMs8" target="_blank">
+                                        <img src="<%=commonUI.fun.getAppSetting("plugURL")%>ses-flagship-sp/images/map.png" alt="map05">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="store">
+                                <div class="city">
+                                    台南
+                                </div>
+                                <div class="date">
+                                    2/21 - 3/31
+                                </div>
+                                <div class="where">
+                                    <p>新光三越 台南新天地 1F</p>
+                                    <span>台南市中西區西門路一段658號</span>
+                                </div>
+                                <div class="plus libtn" data-lb="lb3" data-con="n4"><img src="<%=commonUI.fun.getAppSetting("plugURL")%>ses-flagship-sp/images/plus.png" alt=""></div>
+                                <div class="icon">
+                                    <a data-omni-type="microsite" data-omni="pop-up-store:buy_map06"
+                                        href="https://goo.gl/maps/gcnNu1nQUUm3Qa4h6" target="_blank">
+                                        <img src="<%=commonUI.fun.getAppSetting("plugURL")%>ses-flagship-sp/images/map.png" alt="map06">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section sec sec11 ">
+                <div class="container">
+                    <div class="secbox">
+                        <picture>
+                            <source srcset="<%=commonUI.fun.getAppSetting("plugURL")%>ses-flagship-sp/images/sec11.png" media="(min-width: 769px)" />
+                            <source srcset="<%=commonUI.fun.getAppSetting("plugURL")%>ses-flagship-sp/images/m/sec11.png" />
+                            <img src="<%=commonUI.fun.getAppSetting("plugURL")%>ses-flagship-sp/images/sec11.png" alt="sec11" />
+                        </picture>
+                        <div class="btnbox">
+                            <a data-omni-type="microsite" data-omni="ses-sp:free-trial-booking" class="bt style2" href="https://samsung-education-promotion.twsamsungcampaign.com/" target="_blank">
+                                <picture>
+                                    <source srcset="<%=commonUI.fun.getAppSetting("plugURL")%>ses-flagship-sp/images/btn_bg2.png" media="(min-width: 769px)">
+                                    <source srcset="<%=commonUI.fun.getAppSetting("plugURL")%>ses-flagship-sp/images/m/btn_bg2_m.png">
+                                    <img src="<%=commonUI.fun.getAppSetting("plugURL")%>ses-flagship-sp/images/btn_bg2.png" alt="教職員/學生購機優惠">
+                                </picture>
+                                <span>教職員/學生購機優惠</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section sec sec8 ">
+                <div class="container">
+                    <div class="secbox">
+                        <picture>
+                        <source srcset="<%=commonUI.fun.getAppSetting("plugURL")%>ses-flagship-sp/images/sec8.png" media="(min-width: 769px)" />
+                        <source srcset="<%=commonUI.fun.getAppSetting("plugURL")%>ses-flagship-sp/images/m/sec8.png" />
+                        <img src="<%=commonUI.fun.getAppSetting("plugURL")%>ses-flagship-sp/images/sec8.png" alt="sec8" />
+                    </picture>
+                        <div class="btnbox">
+                            <a data-omni-type="microsite" data-omni="store-event:freetrial" class="bt style1"
+                                href="https://ses-reservation.twsamsungcampaign.com/2022-flagship-galaxyfreetrialprogram/index.aspx"
+                                target="_blank">
+                                <picture>
+                                <source srcset="<%=commonUI.fun.getAppSetting("plugURL")%>ses-flagship-sp/images/btn_bg1.png" media="(min-width: 769px)" />
+                                <source srcset="<%=commonUI.fun.getAppSetting("plugURL")%>ses-flagship-sp/images/m/btn_bg1.png" />
+                                <img src="<%=commonUI.fun.getAppSetting("plugURL")%>ses-flagship-sp/images/btn_bg1.png" alt="立即前往" />
+                            </picture>
+                                <span>立即前往</span>
+                            </a>
+                            <a data-omni-type="microsite" data-omni="store-event:roadshow" class="bt style1"
+                                href="https://ses-exclusive-promotion.twsamsungcampaign.com/roadshow/" target="_blank">
+                                <picture>
+                                <source srcset="<%=commonUI.fun.getAppSetting("plugURL")%>ses-flagship-sp/images/btn_bg1.png" media="(min-width: 769px)" />
+                                <source srcset="<%=commonUI.fun.getAppSetting("plugURL")%>ses-flagship-sp/images/m/btn_bg1.png" />
+                                <img src="<%=commonUI.fun.getAppSetting("plugURL")%>ses-flagship-sp/images/btn_bg1.png" alt="立即前往" />
+                            </picture>
+                                <span>立即前往</span>
+                            </a>
+                            <a data-omni-type="microsite" data-omni="store-event:workshop" class="bt style1"
+                                href="https://galaxy-workshop-mini-school.twsamsungcampaign.com/" target="_blank">
+                                <picture>
+                                <source srcset="<%=commonUI.fun.getAppSetting("plugURL")%>ses-flagship-sp/images/btn_bg1.png" media="(min-width: 769px)" />
+                                <source srcset="<%=commonUI.fun.getAppSetting("plugURL")%>ses-flagship-sp/images/m/btn_bg1.png" />
+                                <img src="<%=commonUI.fun.getAppSetting("plugURL")%>ses-flagship-sp/images/btn_bg1.png" alt="立即前往" />
+                            </picture>
+                                <span>立即前往</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            
+
+            <section class="section sec sec9">
+                <div class="container">
+                    <div class="btnbox">
+                        <a data-omni-type="microsite" data-omni="moreinfo:learnmore" class="bt style1"
+                            href="https://2022-galaxy-flagship-preorder.twsamsungcampaign.com/ses_rule.aspx"
+                            target="_blank">
+                            <picture>
+                            <source srcset="<%=commonUI.fun.getAppSetting("plugURL")%>ses-flagship-sp/images/btn_bg1.png" media="(min-width: 769px)" />
+                            <source srcset="<%=commonUI.fun.getAppSetting("plugURL")%>ses-flagship-sp/images/m/btn_bg1.png" />
+                            <img src="<%=commonUI.fun.getAppSetting("plugURL")%>ses-flagship-sp/images/btn_bg1.png" alt="活動辦法" />
+                        </picture>
+                            <span>活動辦法</span>
+                        </a>
+                        <a data-omni-type="microsite" data-omni="moreinfo:ses-portal" class="bt style2"
+                            href="https://sesmember.twsamsungcampaign.com/Index.aspx" target="_blank">
+                            <picture>
+                            <source srcset="<%=commonUI.fun.getAppSetting("plugURL")%>ses-flagship-sp/images/btn_bg2.png" media="(min-width: 769px)" />
+                            <source srcset="<%=commonUI.fun.getAppSetting("plugURL")%>ses-flagship-sp/images/m/btn_bg2_m.png" />
+                            <img src="<%=commonUI.fun.getAppSetting("plugURL")%>ses-flagship-sp/images/btn_bg2.png" alt="三星智慧館-顧客專享平台" />
+                        </picture>
+                            <span>三星智慧館-顧客專享平台</span>
+                        </a>
+                        <a data-omni-type="microsite" data-omni="moreinfo:buy_store" class="bt style1"
+                            href="https://www.samsung.com/tw/samsung-experience-store/locations/" target="_blank">
+                            <picture>
+                            <source srcset="<%=commonUI.fun.getAppSetting("plugURL")%>ses-flagship-sp/images/btn_bg1.png" media="(min-width: 769px)" />
+                            <source srcset="<%=commonUI.fun.getAppSetting("plugURL")%>ses-flagship-sp/images/m/btn_bg1.png" />
+                            <img src="<%=commonUI.fun.getAppSetting("plugURL")%>ses-flagship-sp/images/btn_bg1.png" alt="門市查詢" />
+                        </picture>
+                            <span>門市查詢</span>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section sec10">
+                <div class="container">
+                    <div class="secbox">
+                        <div class="title">
+                            <p>個人資料保護法告知事項</p>
+                            <span></span>
+                        </div>
+                        <div class="txt">
+                            台灣三星電子 (股)
+                        台灣三星電子 (股)
+                        向您蒐集個人資料，蒐集之目的係作為活動聯繫、將來行銷資訊分享以及內部數據分析使用。台灣三星將於蒐集後自行或委託第三人於上述蒐集目的範圍內處理或使用您的個人資料。您可依法向台灣三星請求查詢閱覽、製給複製本、補充更正、停止蒐集處理利用或取消您所提供的個人資料。您也可以選擇不提供個人資料，但您的參加或得獎資格可能因程序未完備而喪失。<br>
+                            <a
+                                href="https://www.samsung.com/tw/info/privacy/" target="_blank" class="link">了解三星電子隱私權政策</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <div data-omni-type="microsite" data-omni="kv:z-series_kv" class="sidebtn navbtn" data-page="1">
+                <div class="box">
+                    <img src="<%=commonUI.fun.getAppSetting("plugURL")%>ses-flagship-sp/images/cta.gif" alt="">
+                </div>
+            </div>
+            <div class="backtop2">
+                <div class="container">
+                    <p>回到頁頂</p>
+                </div>
+            </div>
+            <!-- lightbox -->
+            <div class="lb lb_1" data-lb="lb1">
+                <div class="lbbox">
+                    <img class="btn_x" src="<%=commonUI.fun.getAppSetting("plugURL")%>ses-flagship-sp/images/lb_close.png" alt="btnClose">
+                    <picture>
+                    <source srcset="<%=commonUI.fun.getAppSetting("plugURL")%>ses-flagship-sp/images/lb_1.png" media="(min-width: 769px)">
+                    <source srcset="<%=commonUI.fun.getAppSetting("plugURL")%>ses-flagship-sp/images/m/lb_1.png">
+                    <img src="<%=commonUI.fun.getAppSetting("plugURL")%>ses-flagship-sp/images/lb_1.png" class="main" alt="btnClose">
+                </picture>
+                </div>
+            </div>
+
+            <div class="lb lb_3" data-lb="lb3">
+                <div class="lbbox">
+                    <a href="javascript:;" class="btn_x btnClose"><img src="<%=commonUI.fun.getAppSetting("plugURL")%>ses-flagship-sp/images/lb_close.png" alt=""></a>
+
+                    <div class="toptile">
+                        <picture>
+                            <img src="<%=commonUI.fun.getAppSetting("plugURL")%>ses-flagship-sp/images/lb_3_toptitle.png" alt="">
+                        </picture>
+                    </div>
+
+                    <div class="content" data-con="n1">
+                        <div class="title">
+                            <p>京站時尚廣場 1 F</p>
+                            <span>2/15~3/30</span>
+                        </div>
+                        <div class="txtbox">
+                            <!-- <div class="sub">累計消費滿萬送千</div> -->
+                            <ul class="list">
+                                <li><span>買Galaxy S22 旗艦系列加碼送$1,000禮券，共70名<br>數量有限，送完為止</span></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="content" data-con="n2">
+                        <div class="title">
+                            <p>遠東SOGO 台北忠孝館 1F</p>
+                            <span>2/15~3/7</span>
+                        </div>
+                        <div class="txtbox">
+                            <ul class="list">
+                                <li><span>買Galaxy S22 旗艦系列加碼送$600禮券，共100名<br>數量有限，送完為止。</span></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="content" data-con="n3">
+                        <div class="title">
+                            <p>台茂購物中心 1F</p>
+                            <span>2/15~3/20</span>
+                        </div>
+                        <div class="txtbox">
+                            <ul class="list">
+                                <li><span>買Galaxy S22 旗艦系列加碼送摺疊旅行袋<br>數量有限，送完為止。</span></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="content" data-con="n4">
+                        <div class="title">
+                            <p>新光三越 台南新天地 1F</p>
+                            <span>2/21~3/31</span>
+                        </div>
+                        <div class="txtbox">
+                            <ul class="list">
+                                <li><span>買Galaxy S22 旗艦系列加碼送$500全聯禮券<br>數量有限，送完為止。</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+
+        </div>
+
+
+
+        <!-- gnb footer -->
+        <div id="static_footer"></div>
+
+
+        <!-- JS -->
+        <script src="<%=commonUI.fun.getAppSetting("plugURL")%>ses-flagship-sp/js.lib/jquery-3.3.1.min.js"></script>
+        <script src="<%=commonUI.fun.getAppSetting("plugURL")%>ses-flagship-sp/js.lib/TweenMax.min.js"></script>
+        <script src="<%=commonUI.fun.getAppSetting("plugURL")%>ses-flagship-sp/js.lib/imagesloaded.js"></script>
+        <script src="<%=commonUI.fun.getAppSetting("plugURL")%>ses-flagship-sp/js.lib/jquery.animateImages.js"></script>
+        <script src="https://twsamsungcampaign.azureedge.net/common_api/js/event-common-api.js"></script>
+        <script src="<%=commonUI.fun.getAppSetting("plugURL")%>ses-flagship-sp/js/template.js"></script>
+        <script src="<%=commonUI.fun.getAppSetting("plugURL")%>ses-flagship-sp/js/script.js"></script>
+        <script language="JavaScript" type="text/javascript"
+            src="https://twsamsungcampaign.azureedge.net/common/js/VisitorAPI.js"></script>
+        <script language="JavaScript" type="text/javascript"
+            src="https://twsamsungcampaign.azureedge.net/common/js/s_code_next_microsite.js"></script>
+        <script type="text/javascript">
+            s.channel = 'tw:campaign';
+            s.prop1 = 'tw';
+            if (EVENTNAME) {
+                s.pageName = 'tw:campaign:' + SITENAME + ':' + EVENTNAME + ':' + PAGENAME;
+                s.hier1 = 'tw>campaign>' + SITENAME + '>' + EVENTNAME + '>' + PAGENAME;
+                s.prop2 = 'tw:campaign';
+                s.prop3 = 'tw:campaign:' + SITENAME;
+                s.prop4 = 'tw:campaign:' + SITENAME + ':' + EVENTNAME + '';
+                s.prop5 = 'tw:campaign:' + SITENAME + ':' + EVENTNAME + ':' + PAGENAME;
+            } else {
+                s.pageName = 'tw:campaign:mobile:' + SITENAME + ':' + PAGENAME;
+                s.hier1 = 'tw>campaign>mobile>' + SITENAME + '>' + PAGENAME;
+                s.prop2 = 'tw:campaign';
+                s.prop3 = 'tw:campaign:mobile';
+                s.prop4 = 'tw:campaign:mobile:' + SITENAME;
+                s.prop5 = 'tw:campaign:mobile:' + SITENAME + ':' + PAGENAME;
+            }
+            var s_code = s.t();
+            if (s_code) document.write(s_code);
+
+            function click_s_code_v33() {
+                var omni = encodeURIComponent($(this).data('omni')).replace(/%3A/ig, ':');
+                var e_name = 'tw:campaign:mobile:' + SITENAME + ':' + PAGENAME + ':' + omni;
+
+                if (EVENTNAME) {
+                    e_name = 'tw:campaign:mobile:' + SITENAME + ':' + EVENTNAME + ':' + PAGENAME + ':' + omni;
+                }
+                if (e_name) {
+                    s.linkTrackVars = 'eVar33,events';
+                    s.linkTrackEvents = 'event45';
+                    s.eVar33 = e_name;
+                    s.events = 'event45';
+                    s.tl(this, 'o', e_name);
+                    s.eVar33 = null;
+                }
+                ga('send', 'event', 'microsite', /buy_now/.test(e_name) ? 'buy now' : /buy/.test(e_name) ? 'sale_link' :
+                    /submit/.test(e_name) ? 'submit' : 'click', e_name);
+                //gtag_report_conversion(this.href);
+
+                if (/buy|preorder/.test(e_name)) {
+                    gtag('event', 'conversion', {
+                        'allow_custom_scripts': true,
+                        'send_to': 'DC-9052290/rainb00/tdrai00+standard'
+                    });
+                    gtag('event', 'conversion', {
+                        'send_to': 'AW-831199516/o3LKCM7MuZMDEJyyrIwD',                       
+                    });
+
+                    fbq('track', 'Lead', {
+                        product_id: 'SES_RAINBOW_PREORDER'
+                    });
+
+                    _lt('send', 'cv', {
+                        type: 'SESRWBTN'
+                    }, ['54d5d75d-120b-467c-9e62-12a2c90fbe43']);
+
+                    code2yahoo();
+                }
+
+                return;
+            }
+
+            function code2yahoo() {
+                window.dotq = window.dotq || [];
+                window.dotq.push(
+                    {
+                        'projectId': '10000',
+                        'properties': {
+                            'pixelId': '406503',
+                            'qstrings': {
+                                'et': 'custom',
+                                'ea': '01SES_rainbow_20220125'
+                            }
+                        }
+                    }); 
+            }
+
+            $(function ($) {
+                $('[data-omni-type][data-omni]').on('click', click_s_code_v33);
+            });
+        </script>
+    </form>
+</body>
+</html>

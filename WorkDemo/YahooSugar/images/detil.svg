@@ -1,0 +1,33 @@
+<svg id="_" data-name="?" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="50.001" height="55.77" viewBox="0 0 26 29">
+  <defs>
+    <style>
+      .cls-1 {
+        stroke: #4e4e4d;
+        stroke-linejoin: round;
+        stroke-width: 1px;
+      }
+
+      .cls-2 {
+        fill: #fe5919;
+        filter: url(#filter);
+      }
+
+      .cls-3 {
+        font-size: 18px;
+        fill: #fff;
+        text-anchor: middle;
+        font-family: Arial;
+        font-weight: 700;
+      }
+    </style>
+    <filter id="filter" x="0" y="0" width="26" height="29" filterUnits="userSpaceOnUse">
+      <feOffset result="offset" dy="3" in="SourceAlpha"/>
+      <feGaussianBlur result="blur"/>
+      <feFlood result="flood" flood-color="#c43700"/>
+      <feComposite result="composite" operator="in" in2="blur"/>
+      <feBlend result="blend" in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <circle id="橢圓_874" data-name="橢圓 874" class="cls-2" cx="13" cy="13" r="13"/>
+  <text id="_2" data-name="?" class="cls-3" x="13" y="19.928">?</text>
+</svg>
