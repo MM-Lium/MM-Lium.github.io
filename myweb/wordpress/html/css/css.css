@@ -227,6 +227,30 @@ table {
     opacity: 1;
   }
 }
+@-moz-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-ms-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-o-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 @keyframes fadeIn {
   0% {
     opacity: 0;
@@ -236,6 +260,30 @@ table {
   }
 }
 @-webkit-keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@-moz-keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@-ms-keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@-o-keyframes fadeOut {
   0% {
     opacity: 1;
   }
@@ -331,6 +379,30 @@ a {
     background-position: 0 100%;
   }
 }
+@-moz-keyframes aniPlay {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 0 100%;
+  }
+}
+@-ms-keyframes aniPlay {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 0 100%;
+  }
+}
+@-o-keyframes aniPlay {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 0 100%;
+  }
+}
 @keyframes aniPlay {
   from {
     background-position: 0 0;
@@ -340,6 +412,39 @@ a {
   }
 }
 @-webkit-keyframes leftar {
+  0% {
+    right: 12%;
+  }
+  50% {
+    right: 15%;
+  }
+  100% {
+    right: 12%;
+  }
+}
+@-moz-keyframes leftar {
+  0% {
+    right: 12%;
+  }
+  50% {
+    right: 15%;
+  }
+  100% {
+    right: 12%;
+  }
+}
+@-ms-keyframes leftar {
+  0% {
+    right: 12%;
+  }
+  50% {
+    right: 15%;
+  }
+  100% {
+    right: 12%;
+  }
+}
+@-o-keyframes leftar {
   0% {
     right: 12%;
   }
@@ -405,8 +510,6 @@ span:active {
 }
 
 .flex {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
 
@@ -459,8 +562,6 @@ span:active {
   width: 100%;
   margin: 0 auto;
   height: 200px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
 .intro .main_nav ul li {
@@ -469,24 +570,16 @@ span:active {
   margin: 0 auto;
 }
 .intro .main_nav ul li:nth-child(1) {
-  -webkit-transform: translateX(384%);
-      -ms-transform: translateX(384%);
-          transform: translateX(384%);
+  transform: translateX(384%);
 }
 .intro .main_nav ul li:nth-child(2) {
-  -webkit-transform: translateX(192%);
-      -ms-transform: translateX(192%);
-          transform: translateX(192%);
+  transform: translateX(192%);
 }
 .intro .main_nav ul li:nth-child(4) {
-  -webkit-transform: translateX(-192%);
-      -ms-transform: translateX(-192%);
-          transform: translateX(-192%);
+  transform: translateX(-192%);
 }
 .intro .main_nav ul li:nth-child(5) {
-  -webkit-transform: translateX(-384%);
-      -ms-transform: translateX(-384%);
-          transform: translateX(-384%);
+  transform: translateX(-384%);
 }
 .intro .main_nav ul a {
   background-color: #fff;
@@ -502,8 +595,6 @@ span:active {
   line-height: 4;
 }
 .intro .main_nav.ready ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
 .intro .main_nav.ready ul li {
@@ -529,13 +620,9 @@ span:active {
   }
 }
 .sec .btnbox {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   text-align: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
 }
 @media screen and (max-width: 768px) {
   .sec .btnbox {
@@ -674,8 +761,6 @@ span:active {
   background: rgba(0, 0, 0, 0.8);
   z-index: -1;
   opacity: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
 
@@ -741,27 +826,19 @@ span:active {
 }
 /* ani -----------------------------------------------------------*/
 .playani .btn_nav .line span:nth-child(1) {
-  -webkit-animation: btnani 0.5s linear forwards;
-          animation: btnani 0.5s linear forwards;
+  animation: btnani 0.5s linear forwards;
 }
 .playani .btn_nav .line span:nth-child(2) {
-  -webkit-animation: btnani 0.5s linear forwards;
-          animation: btnani 0.5s linear forwards;
-  -webkit-animation-delay: 0.3s;
-          animation-delay: 0.3s;
+  animation: btnani 0.5s linear forwards;
+  animation-delay: 0.3s;
 }
 .playani .btn_nav .line span:nth-child(3) {
-  -webkit-animation: btnani2 0.5s linear forwards;
-          animation: btnani2 0.5s linear forwards;
-  -webkit-animation-delay: 0.6s;
-          animation-delay: 0.6s;
+  animation: btnani2 0.5s linear forwards;
+  animation-delay: 0.6s;
 }
 .playani .btn_nav .txt {
-  -webkit-animation: btntxt 0.5s 0.5s ease-in-out forwards;
-          animation: btntxt 0.5s 0.5s ease-in-out forwards;
+  animation: btntxt 0.5s 0.5s ease-in-out forwards;
 }
 .playani .sidebar {
-  -webkit-animation: sideani 2s ease-in-out forwards;
-          animation: sideani 2s ease-in-out forwards;
-}
-/*# sourceMappingURL=css.css.map */
+  animation: sideani 2s ease-in-out forwards;
+}/*# sourceMappingURL=css.css.map */

@@ -5,8 +5,6 @@
 ----------  RESET
 *******************************************************************************************************************************
 */
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@900&display=swap");
 html,
 body,
 div,
@@ -95,7 +93,7 @@ blockquote:before,
 blockquote:after,
 q:before,
 q:after {
-  content: '';
+  content: "";
   content: none;
 }
 
@@ -130,7 +128,30 @@ table {
     opacity: 1;
   }
 }
-
+@-moz-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-ms-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-o-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 @keyframes fadeIn {
   0% {
     opacity: 0;
@@ -139,7 +160,6 @@ table {
     opacity: 1;
   }
 }
-
 @-webkit-keyframes fadeOut {
   0% {
     opacity: 1;
@@ -148,7 +168,30 @@ table {
     opacity: 0;
   }
 }
-
+@-moz-keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@-ms-keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@-o-keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
 @keyframes fadeOut {
   0% {
     opacity: 1;
@@ -157,7 +200,6 @@ table {
     opacity: 0;
   }
 }
-
 /* -------------
     ALL USE
 ------------- */
@@ -213,7 +255,6 @@ a {
 ._m {
   display: none;
 }
-
 @media screen and (max-width: w768px) {
   ._m {
     display: block;
@@ -239,7 +280,30 @@ a {
     background-position: 0 100%;
   }
 }
-
+@-moz-keyframes aniPlay {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 0 100%;
+  }
+}
+@-ms-keyframes aniPlay {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 0 100%;
+  }
+}
+@-o-keyframes aniPlay {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 0 100%;
+  }
+}
 @keyframes aniPlay {
   from {
     background-position: 0 0;
@@ -248,7 +312,6 @@ a {
     background-position: 0 100%;
   }
 }
-
 @-webkit-keyframes leftar {
   0% {
     right: 12%;
@@ -260,7 +323,39 @@ a {
     right: 12%;
   }
 }
-
+@-moz-keyframes leftar {
+  0% {
+    right: 12%;
+  }
+  50% {
+    right: 15%;
+  }
+  100% {
+    right: 12%;
+  }
+}
+@-ms-keyframes leftar {
+  0% {
+    right: 12%;
+  }
+  50% {
+    right: 15%;
+  }
+  100% {
+    right: 12%;
+  }
+}
+@-o-keyframes leftar {
+  0% {
+    right: 12%;
+  }
+  50% {
+    right: 15%;
+  }
+  100% {
+    right: 12%;
+  }
+}
 @keyframes leftar {
   0% {
     right: 12%;
@@ -272,7 +367,6 @@ a {
     right: 12%;
   }
 }
-
 /* main */
 /* BODY,HTML
 --------------------------------------------------------------------------------------*/
@@ -281,7 +375,9 @@ body {
   width: 100%;
   background-color: #fff;
   overflow: hidden;
-  font-family: 'Noto Sans Mono', monospace, 'Noto Sans TC', sans-serif;
+  @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@900&display=swap");
+  @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@900&display=swap");
+  font-family: "Noto Sans Mono", monospace, "Noto Sans TC", sans-serif;
 }
 
 html {
@@ -325,13 +421,11 @@ section {
   margin: auto;
   margin-bottom: 45px;
 }
-
 @media screen and (max-width: 1160px) {
   .sectitle {
     width: 42%;
   }
 }
-
 @media screen and (max-width: 768px) {
   .sectitle {
     width: 70%;
@@ -349,7 +443,6 @@ section {
   width: 100%;
   background: #666;
 }
-
 @media screen and (max-width: 768px) {
   .myheader {
     height: 14vw;
@@ -362,29 +455,21 @@ section {
 .section .page {
   width: 100%;
 }
-
 .section .btnbox {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   text-align: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
 }
-
 @media screen and (max-width: 768px) {
   .section .btnbox {
     margin-left: 0;
   }
 }
-
 .section .btnbox .bt {
   width: 35%;
   height: 50px;
   margin: 0 20px;
 }
-
 @media screen and (max-width: 768px) {
   .section .btnbox .bt {
     width: 50%;
@@ -392,13 +477,11 @@ section {
     margin: auto;
   }
 }
-
 .section .btnbox .bt2 {
   width: 35%;
   height: 50px;
   margin: 0 20px;
 }
-
 @media screen and (max-width: 768px) {
   .section .btnbox .bt2 {
     width: 45%;
@@ -406,7 +489,6 @@ section {
     margin: 0 10px;
   }
 }
-
 .section .btnbox .btn,
 .section .btnbox .btn2 {
   outline: none;
@@ -416,14 +498,12 @@ section {
   margin: 0 20px;
   color: #fff;
 }
-
 @media screen and (max-width: 768px) {
   .section .btnbox .btn,
-  .section .btnbox .btn2 {
-    padding: 1.30208vw 0.65104vw;
+.section .btnbox .btn2 {
+    padding: 1.3020833333vw 0.6510416667vw;
   }
 }
-
 .section .btnbox .btn span,
 .section .btnbox .btn2 span {
   position: relative;
@@ -433,15 +513,13 @@ section {
   padding-bottom: 1%;
   border-bottom: 2px #000 solid;
 }
-
 @media screen and (max-width: 768px) {
   .section .btnbox .btn span,
-  .section .btnbox .btn2 span {
-    padding: 1.17188vw 6.51042vw;
-    font-size: 4.55729vw;
+.section .btnbox .btn2 span {
+    padding: 1.171875vw 6.5104166667vw;
+    font-size: 4.5572916667vw;
   }
 }
-
 .section .btnbox .btn.on,
 .section .btnbox .btn2.on {
   padding: 8px 0px;
@@ -449,20 +527,17 @@ section {
   background-color: #000;
   color: #fff;
 }
-
 @media screen and (max-width: 768px) {
   .section .btnbox .btn.on,
-  .section .btnbox .btn2.on {
-    padding: 1.04167vw 0vw;
+.section .btnbox .btn2.on {
+    padding: 1.0416666667vw 0vw;
   }
 }
-
 .section .btnbox .btn.on span,
 .section .btnbox .btn2.on span {
   color: #fff;
   padding: 10px 20px;
 }
-
 .section .btnbox .btn:hover,
 .section .btnbox .btn2:hover {
   padding: 8px 0px;
@@ -470,48 +545,40 @@ section {
   background-color: #000;
   color: #fff;
 }
-
 @media screen and (max-width: 768px) {
   .section .btnbox .btn:hover,
-  .section .btnbox .btn2:hover {
-    padding: 1.43229vw 0.39062vw;
+.section .btnbox .btn2:hover {
+    padding: 1.4322916667vw 0.390625vw;
   }
 }
-
 .section .btnbox .btn:hover span,
 .section .btnbox .btn2:hover span {
   color: #fff;
   padding: 10px 20px;
 }
-
 .section .btnbox .btn2 {
   padding: 2px 3px;
   margin: 0;
 }
-
 .section .btnbox .btn2:hover {
   padding: 3px 4px;
 }
-
 .section .btnbox .btn2:hover span {
   font-size: 18px;
   padding: 4px 0;
 }
-
 @media screen and (max-width: 768px) {
   .section .btnbox .btn2:hover span {
     font-size: 4vw;
     padding: 3px 0px;
   }
 }
-
 .section .btnbox .btn2 span {
   padding: 3px 12px;
   padding-top: 5px;
   display: inline-block;
   width: 100%;
 }
-
 @media screen and (max-width: 768px) {
   .section .btnbox .btn2 span {
     font-size: 3.5vw;
@@ -526,34 +593,25 @@ section {
   position: absolute;
   left: 0%;
   top: 0%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
   width: 100%;
   margin: auto;
   background-color: transparent;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  -webkit-transform: scale(0);
-          transform: scale(0);
+  box-sizing: border-box;
+  transform: scale(0);
   opacity: 0;
   border: 10px solid #333;
 }
 
 .section.kv .container {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   height: 100%;
 }
-
 .section.kv .main {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+  flex: 1;
   left: 0;
   margin: auto;
 }
-
 .section.kv .myname {
   font-size: 100px;
   padding-left: 20px;
@@ -562,121 +620,91 @@ section {
   position: relative;
   margin-bottom: 100px;
 }
-
 .section.kv .mylink {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
   width: 50%;
   margin: auto;
   position: relative;
 }
-
 .section.kv .mylink .box {
   width: 100%;
   background-color: #000;
   margin: 20px auto;
   border: 5px solid #fff;
   cursor: pointer;
-  -webkit-transition: all .5s linear;
-  transition: all .5s linear;
+  transition: all 0.5s linear;
   border-radius: 10px 0 10px 0;
-  -webkit-box-shadow: 2px 2px 1px #000;
-          box-shadow: 2px 2px 1px #000;
+  box-shadow: 2px 2px 1px #000;
 }
-
 .section.kv .mylink .box .title {
   color: #fff;
   padding: 50px 0;
   font-size: 40px;
   text-align: center;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   font-weight: bold;
   text-shadow: 0 0 1px #000, 1px 1px 1px #000, 2px 2px 1px #000, -1px -1px 1px #000;
 }
-
 .section.kv .mylink .box:hover {
   background-color: rgba(0, 0, 0, 0.1);
   border: 5px dashed #fff;
   border-radius: 0 10px 0 10px;
-  -webkit-box-shadow: none;
-          box-shadow: none;
+  box-shadow: none;
 }
-
 .section.kv .mylink .box:hover .title {
   color: #000;
   opacity: 0.85;
   text-shadow: 0 0 1px #fff, 1px 1px 1px #fff, 2px 2px 1px #fff, -1px -1px 1px #fff;
 }
-
 .section.kv .hoverText {
   padding-left: 20px;
   color: #fff;
   font-size: 200px;
   position: absolute;
-  -webkit-transition: all 0.25s ease-in;
   transition: all 0.25s ease-in;
   top: -200px;
   opacity: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
-
 .section.kv .hoverText.show {
   top: 0;
   opacity: 1;
 }
-
 .section.kv .hoverText.big div:nth-child(even) {
   color: #000;
 }
-
 .section.kv .hoverText.big div:nth-child(odd) {
   color: #fff;
 }
-
 .section.kv .hoverText.small div:nth-child(even) {
   color: #fff;
 }
-
 .section.kv .hoverText.small div:nth-child(odd) {
   color: #000;
 }
-
 .section.kv .menu {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+  flex: 1;
   height: 100%;
   padding: 10px;
   background-color: #000;
   border-left: 15px dashed #fff;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 .section._1 .page {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
-
 .section._1 .page .box {
   width: 25%;
   margin: 0 auto;
   border: 1px solid #000;
 }
-
 .section._1 .page .box .title {
   padding: 50px 0;
   font-size: 20px;
   text-align: center;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   font-weight: bold;
 }
 
@@ -691,8 +719,6 @@ section {
   background: rgba(0, 0, 0, 0.8);
   z-index: -1;
   opacity: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
 
@@ -702,13 +728,11 @@ section {
   margin: auto;
   position: relative;
 }
-
 @media screen and (max-width: 768px) {
   .lbbox {
     width: 90%;
   }
 }
-
 .lbbox .btn_x {
   width: 40px;
   position: absolute;
@@ -716,17 +740,15 @@ section {
   right: -50px;
   cursor: pointer;
 }
-
 @media screen and (max-width: 1366px) {
   .lbbox .btn_x {
     top: 0;
     right: -60px;
   }
 }
-
 @media screen and (max-width: 768px) {
   .lbbox .btn_x {
-    width: 5.20833vw;
+    width: 5.2083333333vw;
     top: -8vw;
     right: 0;
   }
@@ -738,40 +760,27 @@ section {
 }
 
 @font-face {
-  font-family: 'DFHsiuW3-B5';
+  font-family: "DFHsiuW3-B5";
   src: url("../font/DFHsiu-W3-WIN-BF.woff2") format("woff2"), url("../font/DFHsiu-W3-WIN-BF.woff") format("woff");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
-
 /* ani -----------------------------------------------------------*/
 .playani .btn_nav .line span:nth-child(1) {
-  -webkit-animation: btnani 0.5s linear forwards;
-          animation: btnani 0.5s linear forwards;
+  animation: btnani 0.5s linear forwards;
 }
-
 .playani .btn_nav .line span:nth-child(2) {
-  -webkit-animation: btnani 0.5s linear forwards;
-          animation: btnani 0.5s linear forwards;
-  -webkit-animation-delay: .3s;
-          animation-delay: .3s;
+  animation: btnani 0.5s linear forwards;
+  animation-delay: 0.3s;
 }
-
 .playani .btn_nav .line span:nth-child(3) {
-  -webkit-animation: btnani2 0.5s linear forwards;
-          animation: btnani2 0.5s linear forwards;
-  -webkit-animation-delay: .6s;
-          animation-delay: .6s;
+  animation: btnani2 0.5s linear forwards;
+  animation-delay: 0.6s;
 }
-
 .playani .btn_nav .txt {
-  -webkit-animation: btntxt 0.5s 0.5s ease-in-out forwards;
-          animation: btntxt 0.5s 0.5s ease-in-out forwards;
+  animation: btntxt 0.5s 0.5s ease-in-out forwards;
 }
-
 .playani .sidebar {
-  -webkit-animation: sideani 2s ease-in-out forwards;
-          animation: sideani 2s ease-in-out forwards;
-}
-/*# sourceMappingURL=css.css.map */
+  animation: sideani 2s ease-in-out forwards;
+}/*# sourceMappingURL=css.css.map */
