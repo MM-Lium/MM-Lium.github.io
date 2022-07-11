@@ -1,0 +1,577 @@
+@charset "UTF-8";
+/* base */
+/*==================================================*\
+        Mixins
+\*==================================================*/
+/*** Pseudo Class ***/
+/** 
+ * div:after{
+ *     @include pseudo;
+ *     top: -1rem; left: -1rem;
+ *     width: 1rem; height: 1rem;
+ * }
+ */
+/*** Media Queries (Mobile First) ***/
+/**
+* .site-header {
+*     padding: 2rem;
+*     font-size: 1.8rem;
+*
+*     @include mq('tablet-wide') {
+*         padding-top: 4rem;
+*         font-size: 2.4rem;
+*     }
+* }
+*/
+/*** Input Placeholder Style ***/
+/**
+* input,  
+* textarea {  
+*     @include placeholderStyle {
+*         color: $grey;
+*     }
+* }
+*/
+/*** Flexbox Setting ***/
+/**
+*	example:
+*	.element {
+*      @include setFlex(stretch, space-between);
+*	}
+*/
+/*** Responsive Ratio ***/
+/**
+* .ifr-wrap{
+*     @include responsive-ratio(16,9);
+* }
+*/
+/*** z-index Setting ***/
+/**
+* example:
+* .site-header {
+*     z-index: z("lightbox");
+* }
+*/
+/*** Width && Height ***/
+/**
+*	example:
+*	.element {
+*      @include wh(100%);
+*	}
+*/
+/*** Full Page Popup ***/
+/**
+*	example:
+*	.element {
+*      @include fullPopup();
+*	}
+*/
+/*** Arrow ***/
+/**
+*  $direction:
+*    1: ↑
+*    2: →
+*    3: ↓
+*    4: ←
+*	example:
+*	.element {
+*      @include arrow($bdc: #000000);
+*	}
+*/
+/*** Triangle ***/
+/**
+*  $direction:
+*    1: ↑
+*    2: →
+*    3: ↓
+*    4: ←
+*	example:
+*	.element {
+*      @include artrianglerow($bdc: #000000);
+*	}
+*/
+/*** Text Indent ***/
+/**
+*  有前綴符號或文字，但又需要文字對齊時使用
+*	example:
+*	.element {
+*      @include textIndent(7px);
+*	}
+*/
+/*
+*******************************************************************************************************************************
+----------  RESET
+*******************************************************************************************************************************
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+font,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+:focus {
+  outline: 0;
+}
+
+ins {
+  text-decoration: none;
+}
+
+del {
+  text-decoration: line-through;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* pc */
+/* -------------
+    $ scss
+------------- */
+/* font */
+/* color */
+/* mixin */
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-moz-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-ms-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-o-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@-moz-keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@-ms-keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@-o-keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+/* -------------
+    ALL USE
+------------- */
+img {
+  width: 100%;
+  display: block;
+}
+
+a {
+  display: block;
+  text-decoration: none;
+}
+
+.c {
+  clear: both;
+}
+
+.table {
+  display: table;
+}
+
+.tr {
+  display: table-row;
+}
+
+.th, .td {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.hide {
+  display: none;
+}
+
+.ab {
+  position: absolute;
+}
+
+.clearfix:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.float-l {
+  float: left;
+}
+
+.float-r {
+  float: right;
+}
+
+._m {
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  ._m {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  ._pc {
+    display: none;
+  }
+}
+
+.autoW {
+  width: auto;
+}
+
+/* vw換算 */
+@-webkit-keyframes aniPlay {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 0 100%;
+  }
+}
+@-moz-keyframes aniPlay {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 0 100%;
+  }
+}
+@-ms-keyframes aniPlay {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 0 100%;
+  }
+}
+@-o-keyframes aniPlay {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 0 100%;
+  }
+}
+@keyframes aniPlay {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 0 100%;
+  }
+}
+@-webkit-keyframes leftar {
+  0% {
+    right: 12%;
+  }
+  50% {
+    right: 15%;
+  }
+  100% {
+    right: 12%;
+  }
+}
+@-moz-keyframes leftar {
+  0% {
+    right: 12%;
+  }
+  50% {
+    right: 15%;
+  }
+  100% {
+    right: 12%;
+  }
+}
+@-ms-keyframes leftar {
+  0% {
+    right: 12%;
+  }
+  50% {
+    right: 15%;
+  }
+  100% {
+    right: 12%;
+  }
+}
+@-o-keyframes leftar {
+  0% {
+    right: 12%;
+  }
+  50% {
+    right: 15%;
+  }
+  100% {
+    right: 12%;
+  }
+}
+@keyframes leftar {
+  0% {
+    right: 12%;
+  }
+  50% {
+    right: 15%;
+  }
+  100% {
+    right: 12%;
+  }
+}
+/* main */
+/* BODY,HTML
+--------------------------------------------------------------------------------------*/
+html,
+body {
+  width: 100%;
+  overflow: hidden;
+  background-color: #000;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+a:focus,
+a:visited,
+a:active,
+span:active {
+  background: transparent;
+  outline: none;
+  outline-offset: none;
+}
+
+:root {
+  --base:#fff00;
+  --spa:10px;
+  --blur:10px;
+}
+
+.page {
+  width: 80%;
+  margin: auto;
+}
+.page .control {
+  display: flex;
+}
+.page .control .btn {
+  margin: auto;
+}
+.page .control .btn p {
+  color: #fff;
+  font-size: 40px;
+  display: inline-block;
+  vertical-align: middle;
+  font-family: "微軟正黑體";
+}
+.page .control .btn .line {
+  display: inline-block;
+  width: 300px;
+  height: 10px;
+  background-color: #fff;
+  border-radius: 50px;
+  vertical-align: middle;
+  position: relative;
+}
+.page .control .btn .bull {
+  width: 10px;
+  height: 10px;
+  border-radius: 50px;
+  background-color: red;
+  position: absolute;
+  top: 0;
+}
+.page .control .btn .pic {
+  max-width: 300px;
+}
+.page .control .btn img {
+  width: auto;
+}
+
+footer p, header h1 {
+  padding: 5%;
+  font-size: 20px;
+  text-align: center;
+  color: #fff;
+  font-family: "微軟正黑體";
+  font-weight: bold;
+}
+
+/* loading -----------------------------------------------------------*/
+.loading {
+  background: #000;
+}
+
+@font-face {
+  font-family: "DFHsiuW3-B5";
+  src: url("../font/DFHsiu-W3-WIN-BF.woff2") format("woff2"), url("../font/DFHsiu-W3-WIN-BF.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+/* ani -----------------------------------------------------------*/
+.playani .btn_nav .line span:nth-child(1) {
+  animation: btnani 0.5s linear forwards;
+}
+.playani .btn_nav .line span:nth-child(2) {
+  animation: btnani 0.5s linear forwards;
+  animation-delay: 0.3s;
+}
+.playani .btn_nav .line span:nth-child(3) {
+  animation: btnani2 0.5s linear forwards;
+  animation-delay: 0.6s;
+}
+.playani .btn_nav .txt {
+  animation: btntxt 0.5s 0.5s ease-in-out forwards;
+}
+.playani .sidebar {
+  animation: sideani 2s ease-in-out forwards;
+}/*# sourceMappingURL=css.css.map */

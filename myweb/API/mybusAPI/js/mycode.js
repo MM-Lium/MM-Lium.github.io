@@ -24,7 +24,6 @@
 
     let $location = document.querySelector('.location select')
     let nowViewData = [];
-    let $pageNo = 1;
     let $locationNo = 15;
 
     /** 取得下拉縣市  */
@@ -98,6 +97,7 @@
         let viewTown = [];
         let viewPage = '';
         let allpage = '';
+        let $pageNo = 1;
 
         $pageNo = Math.round(nowViewData.length / $locationNo);
 

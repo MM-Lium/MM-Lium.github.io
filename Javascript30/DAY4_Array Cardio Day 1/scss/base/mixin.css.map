@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": ";AAAA;;sDAEsD;AAEtD,sBAAsB;AACtB;;;;;;GAMG;AASH,sCAAsC;AACtC;;;;;;;;;;EAUE;AA0BF,iCAAiC;AACjC;;;;;;;EAOE;AAWF,yBAAyB;AACzB;;;;;EAKE;AAaF,0BAA0B;AAC1B;;;;EAIE;AAgBF,yBAAyB;AACzB;;;;;EAKE;AAiBF,yBAAyB;AACzB;;;;;EAKE;AAQF,yBAAyB;AACzB;;;;;EAKE;AAWF,eAAe;AACf;;;;;;;;;;EAUE;AA8BF,kBAAkB;AAClB;;;;;;;;;;EAUE;AAWF,qBAAqB;AACrB;;;;;;EAME",
+    "sources": [
+        "mixin.scss"
+    ],
+    "names": [],
+    "file": "mixin.css"
+}
