@@ -135,7 +135,11 @@
         // console.log(_peo3);
 
         // //第二種方法
-        // let _peo3 = inventors.sort((_first,_second)=>_first.year > _second.year ? 1:-1);
+        // let _peo3 = inventors.sort((_first,_second)=>_first.year > _second.year ? 1:-1); //一樣的話就會換位置
+        // console.log(_peo3);
+
+        // //第三種方法
+        // let _peo3 = inventors.sort((_first,_second)=>_first.year - _second.year); //一樣的話不動順序
         // console.log(_peo3);
 
         // Array.prototype.reduce()
@@ -179,6 +183,14 @@
         //     // }
 
         //     return last_guy > next_guy ? -1 : 1;
+        // })
+
+        // //第2種方法
+        // let _peo5 = inventors.sort((last, next) => {
+        //     let last_guy = last.passed - last.year;
+        //     let next_guy = next.passed - next.year;
+
+        //     return last_guy - next_guy;
         // })
         // console.log(_peo5);
 

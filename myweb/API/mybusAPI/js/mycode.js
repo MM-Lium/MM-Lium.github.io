@@ -92,16 +92,13 @@
 
     /** 輸出全部景點至頁面  */
     function createView() {
-        let viewBox = '';
+        let viewBox="";
         let allviewTown = [];
         let viewTown = [];
         let viewPage = '';
         let allpage = '';
-        let $pageNo = 1;
 
-        $pageNo = Math.round(nowViewData.length / $locationNo);
-
-        console.log(nowViewData);
+        console.log(nowViewData.length);
 
         for (i = 0; i < nowViewData.length; i++) {
             let $mytit = nowViewData[i].dataName ? nowViewData[i].dataName : "";
@@ -118,31 +115,29 @@
                 '<div class="txt">' + $mytxt + '' + '</div>' +
                 '</div></div>';
 
-            if (nowViewData.length >= 15 && i >= 15 && i % $locationNo == 0) {
-                if (Math.ceil(i / $locationNo) == 1) {
-                    viewPage += '<section class="myplace on" data-page="' + parseInt(i / $locationNo) + '">' + viewBox + '</section>';
-                    allpage += '<div class="page on">' + parseInt(i / $locationNo) + '</div>'
-                    viewBox = '';
-                } else {
-                    viewPage += '<section class="myplace" data-page="' + parseInt(i / $locationNo) + '">' + viewBox + '</section>';
-                    allpage += '<div class="page">' + parseInt(i / $locationNo) + '</div>'
-                    viewBox = '';
-                }
+            if (nowViewData.length >= 15 && i >= 14 && (i+1) % $locationNo == 0) {
 
-            } else if (i == nowViewData.length - 1) {
-                if (nowViewData.length <= 15) {
+                if (Math.ceil(i / $locationNo) == 1) {
+                    viewPage += '<section class="myplace on" data-page="' + parseInt(i / $locationNo +1) + '">' + viewBox + '</section>';
+                    allpage += '<div class="page on">' + parseInt(i / $locationNo+1) + '</div>'
+                    viewBox = "";
+                } else {
+                    viewPage += '<section class="myplace" data-page="' + parseInt(i / $locationNo+1) + '">' + viewBox + '</section>';
+                    allpage += '<div class="page">' + parseInt(i / $locationNo+1) + '</div>'
+                    viewBox = "";
+                }
+            } else if (i == (nowViewData.length - 1)) {
+                if (nowViewData.length <= 14) {
                     viewPage += '<section class="myplace on" data-page="' + Math.ceil(i / $locationNo) + '">' + viewBox + '</section>';
                     allpage += '<div class="page on">' + Math.ceil(i / $locationNo) + '</div>'
-                    viewBox = '';
+                    viewBox = "";
 
                 } else {
                     viewPage += '<section class="myplace" data-page="' + Math.ceil(i / $locationNo) + '">' + viewBox + '</section>';
                     allpage += '<div class="page">' + Math.ceil(i / $locationNo) + '</div>'
-                    viewBox = '';
+                    viewBox = "";
                 }
-
             }
-
             allviewTown.push($mytown);
         }
 
@@ -151,6 +146,7 @@
         })
 
         for (j = 0; j < allviewTown.length; j++) {
+
             viewTown += '<div class="box">' + allviewTown[j] + '</div>';
         }
 
